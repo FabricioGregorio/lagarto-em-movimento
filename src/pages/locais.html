@@ -16,291 +16,34 @@
   </head>
   <body>
 
-    <header class="main-header internal-header">
-      <div class="header-overlay">
-        
-        <nav class="main-nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="../../index.html" class="nav-link">
-                <div class="icon-circle"><i class="fa-solid fa-house"></i></div>
-                <span>INÍCIO</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="locais.html" class="nav-link active">
-                <div class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></div>
-                <span>LOCAIS</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="sobre.html" class="nav-link">
-                <div class="icon-circle"><i class="fa-solid fa-circle-info"></i></div>
-                <span>SOBRE O PROJETO</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="equipe.html" class="nav-link">
-                <div class="icon-circle"><i class="fa-solid fa-users"></i></div>
-                <span>EQUIPE</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="configuracoes.html" class="nav-link">
-                <div class="icon-circle"><i class="fa-solid fa-gear"></i></div>
-                <span>CONFIGURAÇÕES</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+    <div id="header-component"></div>
 
-        <div class="hero-content container text-center">
-            <h1 class="hero-title fs-1 mb-2">GUIA DE LOCAIS</h1> 
-            <p class="hero-subtitle">Todos os pontos de esporte e lazer mapeados</p>
+    <div class="bg-gray-theme py-5 text-center"> <div class="container">
+        <div class="title-wrapper">
+            <h1 class="font-zilla text-uppercase mb-0" style="color: var(--primary-color);">Guia Completo</h1>
         </div>
-
-      </div>
-    </header>
-
-    <div class="bg-light py-4 text-center">
-        <div class="container">
-            <h1 class="font-zilla text-uppercase" style="color: var(--primary-color);">Guia Completo</h1>
-            <p class="text-muted">Todos os pontos mapeados na cidade</p>
-        </div>
+        <p class="subtitle-styled">Todos os pontos mapeados na cidade</p>
     </div>
+</div>
 
     <section id="locais" class="py-5 section-locais">
-      <div class="container">
-        <div class="row g-4">
-          
-          <div class="col-md-4">
-            <div class="card custom-card h-100 shadow-sm">
-              <div class="card-img-wrapper">
-                <img src="../assets/img/locais/bannerLAG.jpg" class="card-img-top" alt="Praça do Tanque Grande">
-                <div class="badges-container">
-                    <span class="category-badge badge-historia">História</span>
-                    <span class="category-badge">Ar Livre</span>
+        <div class="container">
+            <div class="row g-4">
+            
+            <section id="locais" class="py-5 section-locais">
+                <div class="container">
+                    <div class="row g-4" id="locais-container">
+                    </div>
                 </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Tanque Grande</h5>
-                <p class="card-text">
-                  Um marco histórico da cidade. Além de sua importância cultural, oferece uma ampla área para caminhadas.
-                </p>
-                <ul class="list-unstyled mt-3 mb-4 details-list">
-                  <li><i class="fa-solid fa-location-dot text-primary-custom"></i> Centro de Lagarto</li>
-                  <li><i class="fa-regular fa-clock text-primary-custom"></i> Pico: 17h - 19h</li>
-                </ul>
-              </div>
-              <div class="card-footer bg-white border-0 pb-3">
-                <a href="#" class="btn btn-outline-custom w-100">Ver no Mapa</a>
-              </div>
-            </div>
-          </div>
+            </section>
 
-          <div class="col-md-4">
-            <div class="card custom-card h-100 shadow-sm">
-              <div class="card-img-wrapper">
-                <img src="../assets/img/locais/bannerLAG.jpg" class="card-img-top" alt="Avenida Contorno">
-                <div class="badges-container">
-                  <span class="category-badge badge-ciclismo">Ciclismo</span>
-                  <span class="category-badge">Ar Livre</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Avenida Contorno</h5>
-                <p class="card-text">
-                  A principal artéria para quem gosta de pedalar longas distâncias.
-                </p>
-                <ul class="list-unstyled mt-3 mb-4 details-list">
-                  <li><i class="fa-solid fa-location-dot text-primary-custom"></i> Saída para Riachão</li>
-                  <li><i class="fa-regular fa-clock text-primary-custom"></i> Pico: 05h - 07h</li>
-                </ul>
-              </div>
-              <div class="card-footer bg-white border-0 pb-3">
-                <a href="#" class="btn btn-outline-custom w-100">Ver no Mapa</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card custom-card h-100 shadow-sm">
-              <div class="card-img-wrapper">
-                <img src="../assets/img/locais/bannerLAG.jpg" class="card-img-top" alt="Academia Pública">
-                <div class="badges-container">
-                  <span class="category-badge badge-academia">Academia</span>
-                  <span class="category-badge">Ar Livre</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Academia da Cidade</h5>
-                <p class="card-text">
-                  Equipamentos públicos disponíveis para fortalecimento muscular.
-                </p>
-                <ul class="list-unstyled mt-3 mb-4 details-list">
-                  <li><i class="fa-solid fa-location-dot text-primary-custom"></i> Bairro Matinha</li>
-                  <li><i class="fa-regular fa-clock text-primary-custom"></i> Pico: 18h - 20h</li>
-                </ul>
-              </div>
-              <div class="card-footer bg-white border-0 pb-3">
-                <a href="#" class="btn btn-outline-custom w-100">Ver no Mapa</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card custom-card h-100 shadow-sm">
-              <div class="card-img-wrapper">
-                <img src="../assets/img/locais/bannerLAG.jpg" class="card-img-top" alt="Estádio Barretão">
-                <div class="badges-container">
-                  <span class="category-badge badge-futebol">Futebol</span>
-                  <span class="category-badge">Ar Livre</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Estádio Barretão</h5>
-                <p class="card-text">
-                  O palco das grandes emoções do Lagarto FC. Além dos jogos oficiais, o entorno é usado para corridas.
-                </p>
-                <ul class="list-unstyled mt-3 mb-4 details-list">
-                  <li><i class="fa-solid fa-location-dot text-primary-custom"></i> Bairro Matinha</li>
-                  <li><i class="fa-regular fa-calendar text-primary-custom"></i> Jogos / Eventos</li>
-                </ul>
-              </div>
-              <div class="card-footer bg-white border-0 pb-3">
-                <a href="#" class="btn btn-outline-custom w-100">Ver no Mapa</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card custom-card h-100 shadow-sm">
-              <div class="card-img-wrapper">
-                <img src="../assets/img/locais/bannerLAG.jpg" class="card-img-top" alt="Praça do Skate">
-                <div class="badges-container">
-                  <span class="category-badge badge-radical">Radical</span>
-                  <span class="category-badge badge-lazer">Lazer</span>
-                  <span class="category-badge">Ar Livre</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Praça Filomeno Hora</h5>
-                <p class="card-text">
-                  Ponto de encontro da juventude. Possui áreas lisas ideais para a prática de skate e patins.
-                </p>
-                <ul class="list-unstyled mt-3 mb-4 details-list">
-                  <li><i class="fa-solid fa-location-dot text-primary-custom"></i> Centro</li>
-                  <li><i class="fa-regular fa-clock text-primary-custom"></i> Pico: 16h - 22h</li>
-                </ul>
-              </div>
-              <div class="card-footer bg-white border-0 pb-3">
-                <a href="#" class="btn btn-outline-custom w-100">Ver no Mapa</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card custom-card h-100 shadow-sm">
-              <div class="card-img-wrapper">
-                <img src="../assets/img/locais/bannerLAG.jpg" class="card-img-top" alt="Ginásio Ribeirão">
-                <div class="badges-container">
-                  <span class="category-badge badge-indoor">Indoor</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Ginásio O Ribeirão</h5>
-                <p class="card-text">
-                  Referência para futsal, vôlei e basquete. O ginásio recebe competições escolares e amadoras.
-                </p>
-                <ul class="list-unstyled mt-3 mb-4 details-list">
-                  <li><i class="fa-solid fa-location-dot text-primary-custom"></i> Próx. ao Mercado</li>
-                  <li><i class="fa-regular fa-clock text-primary-custom"></i> Agendamento</li>
-                </ul>
-              </div>
-              <div class="card-footer bg-white border-0 pb-3">
-                <a href="#" class="btn btn-outline-custom w-100">Ver no Mapa</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card custom-card h-100 shadow-sm">
-              <div class="card-img-wrapper">
-                <img src="../assets/img/locais/bannerLAG.jpg" class="card-img-top" alt="Balneário Bica">
-                <div class="badges-container">
-                  <span class="category-badge badge-natureza">Natureza</span>
-                  <span class="category-badge badge-lazer">Lazer</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Balneário Bica</h5>
-                <p class="card-text">
-                  Um refúgio verde dentro da cidade. Além das piscinas de água natural, possui trilhas curtas.
-                </p>
-                <ul class="list-unstyled mt-3 mb-4 details-list">
-                  <li><i class="fa-solid fa-location-dot text-primary-custom"></i> Parque da Bica</li>
-                  <li><i class="fa-regular fa-sun text-primary-custom"></i> Fins de Semana</li>
-                </ul>
-              </div>
-              <div class="card-footer bg-white border-0 pb-3">
-                <a href="#" class="btn btn-outline-custom w-100">Ver no Mapa</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card custom-card h-100 shadow-sm">
-              <div class="card-img-wrapper">
-                <img src="../assets/img/locais/bannerLAG.jpg" class="card-img-top" alt="Barragem Dionísio Machado">
-                <div class="badges-container">
-                  <span class="category-badge badge-natureza">Natureza</span>
-                  <span class="category-badge badge-lazer">Lazer</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Barragem Dionísio Machado</h5>
-                <p class="card-text">
-                  O cartão postal para o pôr do sol. A orla da barragem é muito utilizada para caminhadas leves e piqueniques.
-                </p>
-                <ul class="list-unstyled mt-3 mb-4 details-list">
-                  <li><i class="fa-solid fa-location-dot text-primary-custom"></i> Zona Oeste</li>
-                  <li><i class="fa-regular fa-clock text-primary-custom"></i> Tarde / Pôr do Sol</li>
-                </ul>
-              </div>
-              <div class="card-footer bg-white border-0 pb-3">
-                <a href="#" class="btn btn-outline-custom w-100">Ver no Mapa</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card custom-card h-100 shadow-sm">
-              <div class="card-img-wrapper">
-                <img src="../assets/img/locais/bannerLAG.jpg" class="card-img-top" alt="Praça da Piedade">
-                <div class="badges-container">
-                  <span class="category-badge badge-historia">História</span>
-                  <span class="category-badge badge-lazer">Lazer</span>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Praça da Piedade</h5>
-                <p class="card-text">
-                  Onde a história e o lazer se encontram. O entorno da igreja matriz oferece espaço seguro para crianças.
-                </p>
-                <ul class="list-unstyled mt-3 mb-4 details-list">
-                  <li><i class="fa-solid fa-location-dot text-primary-custom"></i> Centro Histórico</li>
-                  <li><i class="fa-regular fa-star text-primary-custom"></i> Noite / Eventos</li>
-                </ul>
-              </div>
-              <div class="card-footer bg-white border-0 pb-3">
-                <a href="#" class="btn btn-outline-custom w-100">Ver no Mapa</a>
-              </div>
-            </div>
-          </div>
-
-        </div> </div> </section>
-
-    <script src="../assets/js/main.js"></script>
+            </div> 
+        </div> 
+    </section>
+    
+    <div id="footer-component"></div>
+    <script src="../assets/js/locais.js"></script>
+    <script src="../assets/js/components.js"></script> <script src="../assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

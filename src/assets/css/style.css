@@ -1,130 +1,3 @@
-/* 
-   RESET / BASE STYLES
-
-/* 1) Box sizing mais previsível */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* 2) Zerar margem/padding padrões para elementos blocos comuns */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, main, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
-}
-
-/* 3) HTML5 display reset para navegadores antigos */
-article, aside, details, figcaption, figure,
-footer, header, main, menu, nav, section {
-  display: block;
-}
-
-/* 4) Root / body básicos */
-html {
-  /* define fonte base e facilita rems */
-  font-size: 16px;
-  -webkit-text-size-adjust: 100%;
-  overflow-y: scroll;
-}
-
-body {
-  line-height: 1.4;        /* leitura agradável */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #ffffff;
-  color: #111;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  min-height: 100vh;
-}
-
-/* 5) Remover bullets e estilos de listas */
-ol, ul {
-  list-style: none;
-}
-
-/* 6) Links sem estilos indesejados; permitir estilo visual por classe */
-a {
-  color: inherit;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-/* 7) Imagens e vídeos responsivos */
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* 8) Tabelas: colapsar bordas por padrão */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* 9) Formularios: herdar tipografia (melhora consistência) */
-button, input, select, textarea {
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: none;
-  outline: none;
-}
-
-/* 10) Botões: cursor e aparência mínima */
-button {
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: transparent;
-}
-
-/* 11) Controle de foco acessível (visível) */
-:focus {
-  outline: 3px solid rgba(1, 158, 227, 0.45); /* azul claro sem ser agressivo */
-  outline-offset: 2px;
-}
-
-/* 12) Inputs desativados */
-[disabled] {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-/* 13) Texto preformatado */
-pre {
-  white-space: pre-wrap; /* quebra linhas quando necessário */
-  word-wrap: break-word;
-}
-
-/* 14) Pequenas utilidades */
-.hidden {
-  display: none !important;
-}
-.visually-hidden {
-  position: absolute !important;
-  height: 1px; width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
-}
-
-/* Fim do reset */
-
-
 /* --- VARIÁVEIS DE CORES --- */
 
 :root {
@@ -133,6 +6,17 @@ pre {
   --icon-hover: #019ee3;       
   --nav-text: #FFFFFF; /* Texto do menu */
   --overlay-color: rgba(0, 0, 0, 0.7); /* Overlay escuro */
+  --font-main: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+/* Utilitário para o fundo cinza padrão do site */
+.bg-gray-theme {
+  background-color: #eeeeee;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #eeeeee;
 }
 
 /* --- ESTRUTURA PRINCIPAL (HEADER) --- */
@@ -243,7 +127,7 @@ pre {
 }
 
 .hero-title {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
   font-size: 4.5rem; 
   font-weight: 700;
   color: var(--primary-color);
@@ -254,7 +138,7 @@ pre {
 }
 
 .hero-subtitle {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
   font-size: 1.1rem;
   color: #f0f0f0;
   letter-spacing: 3px;
@@ -336,7 +220,7 @@ pre {
 }
 
 .section-title {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
   font-size: 2.5rem;
   color: var(--text-color);
   margin-bottom: 1rem;
@@ -439,7 +323,7 @@ pre {
 
 /* Conteúdo do Card */
 .card-title {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
   font-weight: 700;
   color: var(--text-color);
   font-size: 1.5rem;
@@ -483,7 +367,7 @@ pre {
 /* --- SEÇÃO DE DESTAQUES (INDEX) --- */
 
 .feature-title {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
   font-weight: 700;
   font-size: 2.5rem;
   color: var(--text-color);
@@ -546,7 +430,7 @@ pre {
 }
 
 .section-title {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
   font-weight: 700;
   font-size: 3rem; 
   color: var(--primary-color);
@@ -556,7 +440,7 @@ pre {
 }
 
 .feature-title {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
   font-weight: 700;
   font-size: 2.2rem;
   color: #333; 
@@ -564,7 +448,7 @@ pre {
 
 .link-arrow {
   color: var(--primary-color) !important;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.85rem;
@@ -623,4 +507,34 @@ pre {
   align-items: center;
   padding-top: 0; 
   padding-bottom: 20px;
+}
+/* --- ESTILO DE TÍTULOS DE PÁGINA --- */
+
+.title-wrapper {
+  position: relative;
+  display: inline-block; /* Necessário para a linha ficar do tamanho do texto */
+  padding-bottom: 15px;  /* Espaço para a linha não colar no texto */
+  margin-bottom: 10px;
+}
+
+/* Cria a linha colorida abaixo do título */
+.title-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza perfeitamente */
+  width: 60px; /* Tamanho da linha */
+  height: 4px; /* Espessura */
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+/* Deixa o subtítulo mais elegante */
+.subtitle-styled {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: #6c757d;
+  font-weight: 300;
 }

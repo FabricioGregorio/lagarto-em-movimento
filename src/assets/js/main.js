@@ -1,5 +1,3 @@
-/* src/assets/js/main.js */
-
 // Espera o HTML carregar completamente antes de rodar o script
 document.addEventListener('DOMContentLoaded', () => {
     

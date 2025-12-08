@@ -39,7 +39,7 @@ function renderHeader() {
                 <span>LOCAIS</span>
               </a>
             </li>
-            <li class="nav-item"><a href="${basePath}sobre.html" class="nav-link ${activePage === 'sobre' ? 'active' : ''}"><div class="icon-circle"><i class="fa-solid fa-circle-info"></i></div><span>SOBRE</span></a></li>
+            <li class="nav-item"><a href="${basePath}sobre.html" class="nav-link ${activePage === 'sobre' ? 'active' : ''}"><div class="icon-circle"><i class="fa-solid fa-circle-info"></i></div><span>SOBRE O PROJETO</span></a></li>
             <li class="nav-item"><a href="${basePath}equipe.html" class="nav-link ${activePage === 'equipe' ? 'active' : ''}"><div class="icon-circle"><i class="fa-solid fa-users"></i></div><span>EQUIPE</span></a></li>
             <li class="nav-item"><a href="${basePath}configuracoes.html" class="nav-link ${activePage === 'configuracoes' ? 'active' : ''}"><div class="icon-circle"><i class="fa-solid fa-gear"></i></div><span>CONFIGURAÇÕES</span></a></li>
           </ul>

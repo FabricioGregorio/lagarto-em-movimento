@@ -538,3 +538,19 @@ body {
   color: #6c757d;
   font-weight: 300;
 }
+
+/* --- ANIMAÇÃO DE SCROLL (FADE IN UP) --- */
+
+/* Estado inicial: Invisível e um pouco para baixo */
+.fade-in-scroll {
+  opacity: 0;
+  transform: translateY(40px); /* Empurra 40px para baixo */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* A mágica suave */
+  will-change: opacity, transform; /* Otimiza performance */
+}
+
+/* Estado final: Visível e na posição original */
+.fade-in-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

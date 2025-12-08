@@ -265,3 +265,116 @@ pre {
     display: none;
   }
 }
+
+/* --- SEÇÃO LOCAIS --- */
+.section-locais {
+  background-color: #f9f9f9; /* Fundo levemente cinza para destacar os cards brancos */
+}
+
+.section-title {
+  font-family: 'Zilla Slab', serif;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- CARD CUSTOMIZADO --- */
+.custom-card {
+  border: none;
+  border-radius: 12px; /* Cantos arredondados */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Garante que a imagem respeite o border-radius */
+}
+
+/* Efeito ao passar o mouse no Card: ele "flutua" */
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Wrapper da Imagem para posicionar o Badge */
+.card-img-wrapper {
+  position: relative;
+  height: 200px; /* Altura fixa para todas as fotos ficarem iguais */
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Corta a imagem para preencher sem esticar */
+  transition: transform 0.5s ease;
+}
+
+.custom-card:hover .card-img-top {
+  transform: scale(1.1); /* Zoom suave na foto ao passar o mouse */
+}
+
+/* Etiquetas (Badges) */
+.category-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+/* Cores diferentes para categorias (Opcional) */
+.badge-ciclismo { background-color: #2A9D8F; } /* Verde Água */
+.badge-academia { background-color: #E9C46A; color: #333; } /* Amarelo */
+
+/* Conteúdo do Card */
+.card-title {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 700;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Ícones dentro do card */
+.text-primary-custom {
+  color: var(--primary-color);
+  width: 20px; /* Alinhamento dos ícones */
+  text-align: center;
+  margin-right: 8px;
+}
+
+.details-list li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Botão Outline Customizado */
+.btn-outline-custom {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.btn-outline-custom:hover {
+  background-color: var(--primary-color);
+  color: white;
+}

@@ -36,13 +36,14 @@ html {
   /* define fonte base e facilita rems */
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-y: scroll;
 }
 
 body {
   line-height: 1.4;        /* leitura agradável */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fff;
+  background: #ffffff;
   color: #111;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   min-height: 100vh;
@@ -141,7 +142,7 @@ pre {
   position: relative;
   
   /* A imagem de fundo */
-  background-image: url('../img/locais/banner.jpg'); 
+  background-image: url('../../assets/img/locais/banner.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -217,6 +218,16 @@ pre {
   color: var(--primary-color); 
   outline: none; 
   box-shadow: none;
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+}
+
+.nav-link.active .icon-circle {
+  background-color: var(--icon-hover); /* Fundo do ícone preenchido */
+  border-color: var(--icon-hover);     /* Borda colorida */
+  /* Nota: Não coloquei o 'transform: scale' aqui para o ícone não ficar "dando zoom" parado, apenas colorido. */
 }
 
 /* --- HERO CONTENT --- */
@@ -370,10 +381,20 @@ pre {
 }
 
 /* Etiquetas (Badges) */
-.category-badge {
+/* 1. O Container que segura todas as etiquetas */
+.badges-container {
   position: absolute;
   top: 15px;
   right: 15px;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end; 
+  gap: 8px; 
+  z-index: 2;
+}
+
+/* 2. A Etiqueta em si */
+.category-badge {
   background-color: var(--primary-color);
   color: white;
   padding: 5px 12px;
@@ -381,12 +402,39 @@ pre {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* Cores diferentes para categorias */
-.badge-ciclismo { background-color: #2A9D8F; } /* Verde Água */
-.badge-academia { background-color: #e2aa1e; } /* Amarelo */
+.badge-ciclismo { 
+  background-color: #0e9686; } /* Verde Água */
+
+.badge-academia { 
+  background-color: #e2aa1e; } /* Amarelo */
+
+.badge-futebol {
+  background-color: #264653; /* Azul Petróleo Escuro */
+}
+
+.badge-radical {
+  background-color: #e73a0f; /* Laranja queimado (reforçando a identidade) */
+}
+
+.badge-indoor {
+  background-color: #6d597a; /* Roxo suave */
+}
+
+.badge-natureza {
+  background-color: #0f643e; /* Verde folha */
+}
+
+.badge-lazer {
+  background-color: #11bcf0; /* Azul claro vibrante (água/céu) */
+}
+
+.badge-historia {
+  background-color: #bc6c25; /* Marrom terra/histórico */
+}
 
 /* Conteúdo do Card */
 .card-title {
@@ -429,4 +477,29 @@ pre {
 .btn-outline-custom:hover {
   background-color: var(--primary-color);
   color: white;
+}
+
+/* --- CABEÇALHO INTERNO (Para páginas secundárias) --- */
+.internal-header {
+  height: 50vh !important; 
+  min-height: 400px;
+  position: relative;
+}
+
+.internal-header .header-overlay {
+  background-color: var(--overlay-color); 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Centralização do Título na página interna */
+.internal-header .hero-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  padding-top: 0; 
+  padding-bottom: 20px;
 }

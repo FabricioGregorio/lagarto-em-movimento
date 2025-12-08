@@ -220,6 +220,12 @@ pre {
   transform: scale(1.1);
 }
 
+.nav-link:focus {
+  color: var(--primary-color); 
+  outline: none; 
+  box-shadow: none;
+}
+
 /* --- HERO CONTENT (Conteúdo Central) --- */
 .hero-content {
   flex-grow: 1; /* Faz ocupar o resto do espaço disponível abaixo do menu */

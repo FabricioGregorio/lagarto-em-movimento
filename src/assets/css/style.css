@@ -44,7 +44,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #fff;
   color: #111;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   min-height: 100vh;
 }
 
@@ -131,7 +131,7 @@ pre {
   --icon-bg: #2F3F5D; /* Fundo dos ícones */
   --icon-hover: #019ee3;       
   --nav-text: #FFFFFF; /* Texto do menu */
-  --overlay-color: rgba(0, 0, 0, 0.65); /* Overlay escuro */
+  --overlay-color: rgba(0, 0, 0, 0.7); /* Overlay escuro */
 }
 
 /* --- ESTRUTURA PRINCIPAL (HEADER) --- */
@@ -141,7 +141,7 @@ pre {
   position: relative;
   
   /* A imagem de fundo */
-  background-image: url('../img/locais/bannerLAG.jpg'); 
+  background-image: url('../img/locais/banner.jpg'); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -156,12 +156,15 @@ pre {
   flex-direction: column; /* Coloca um elemento embaixo do outro */
 }
 
-/* --- NAVBAR (Ajustada) --- */
+/* --- NAVBAR --- */
 .main-nav {
-  padding: 30px 0;
-  background-color: transparent; /* Fundo transparente */
+  padding: 20px 0;
   width: 100%;
-  z-index: 10; /* Garante que fique acima de tudo */
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.075);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-list {
@@ -227,7 +230,7 @@ pre {
 }
 
 .hero-title {
-  font-family: 'Zilla Slab', serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-size: 4.5rem; /* Aumentei levemente */
   font-weight: 700;
   color: var(--primary-color);
@@ -238,7 +241,7 @@ pre {
 }
 
 .hero-subtitle {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   color: #f0f0f0;
   letter-spacing: 3px;
@@ -317,7 +320,7 @@ pre {
 }
 
 .section-title {
-  font-family: 'Zilla Slab', serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-size: 2.5rem;
   color: var(--text-color);
   margin-bottom: 1rem;
@@ -377,13 +380,13 @@ pre {
   z-index: 2;
 }
 
-/* Cores diferentes para categorias (Opcional) */
+/* Cores diferentes para categorias */
 .badge-ciclismo { background-color: #2A9D8F; } /* Verde Água */
 .badge-academia { background-color: #E9C46A; color: #333; } /* Amarelo */
 
 /* Conteúdo do Card */
 .card-title {
-  font-family: 'Zilla Slab', serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-weight: 700;
   color: var(--text-color);
   font-size: 1.5rem;

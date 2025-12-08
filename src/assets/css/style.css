@@ -181,7 +181,7 @@ pre {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--nav-text); /* Texto Branco */
+  color: var(--nav-text);
   font-size: 0.85rem;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -192,8 +192,8 @@ pre {
 .icon-circle {
   width: 35px;
   height: 35px;
-  background-color: var(--icon-bg); /* cor de fundo do circulo */
-  border: 1px solid rgba(255,255,255,0.3); /* Borda fina suave */
+  background-color: var(--icon-bg);
+  border: 1px solid rgba(255,255,255,0.3);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -204,7 +204,7 @@ pre {
 
 /* Hover Effects */
 .nav-link:hover {
-  color: var(--primary-color); /* Fica azul ao passar o mouse */
+  color: var(--primary-color);
 }
 
 .nav-link:hover .icon-circle {
@@ -219,19 +219,22 @@ pre {
   box-shadow: none;
 }
 
-/* --- HERO CONTENT (Conteúdo Central) --- */
+/* --- HERO CONTENT --- */
 .hero-content {
-  flex-grow: 1; /* Faz ocupar o resto do espaço disponível abaixo do menu */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza verticalmente no espaço que sobrou */
+  
+  justify-content: flex-start; /* Alinha tudo ao TOPO da área disponível */
+  padding-top: 15vh; /* Empurra o TÍTULO para baixo (posição inicial fixa) */
+  
   align-items: center;
-  padding-bottom: 50px; /* Um respiro na parte inferior */
+  padding-bottom: 50px;
 }
 
 .hero-title {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  font-size: 4.5rem; /* Aumentei levemente */
+  font-size: 4.5rem; 
   font-weight: 700;
   color: var(--primary-color);
   text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
@@ -263,6 +266,7 @@ pre {
   transition: 0.3s;
   text-decoration: none; 
   display: inline-block; 
+  margin-top: 3vh;
 }
 
 .btn-primary-custom:hover {
@@ -274,8 +278,8 @@ pre {
 .scroll-down-arrow {
   color: #fff;
   font-size: 2rem;
-  margin-top: 2rem;
-  display: inline-block; /* ESSENCIAL para o transform funcionar */
+  margin-top: 3rem;
+  display: inline-block;
   animation: bounce 2s infinite;
   opacity: 0.8;
   transition: 0.3s;
@@ -301,7 +305,7 @@ pre {
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .hero-title {
     font-size: 2.8rem;
     line-height: 1;
@@ -316,7 +320,7 @@ pre {
 
 /* --- SEÇÃO LOCAIS --- */
 .section-locais {
-  background-color: #f9f9f9; /* Fundo levemente cinza para destacar os cards brancos */
+  background-color: #eeeeee;
 }
 
 .section-title {
@@ -336,9 +340,9 @@ pre {
 /* --- CARD CUSTOMIZADO --- */
 .custom-card {
   border: none;
-  border-radius: 12px; /* Cantos arredondados */
+  border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* Garante que a imagem respeite o border-radius */
+  overflow: hidden;
 }
 
 /* Efeito ao passar o mouse no Card: ele "flutua" */
@@ -382,7 +386,7 @@ pre {
 
 /* Cores diferentes para categorias */
 .badge-ciclismo { background-color: #2A9D8F; } /* Verde Água */
-.badge-academia { background-color: #E9C46A; color: #333; } /* Amarelo */
+.badge-academia { background-color: #e2aa1e; } /* Amarelo */
 
 /* Conteúdo do Card */
 .card-title {

@@ -16,7 +16,61 @@
   </head>
   <body>
 
-    <div id="header-component"></div>
+    <header class="main-header">
+      <div class="header-overlay">
+        
+        <nav class="main-nav">
+          <ul class="nav-list">
+            
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <div class="icon-circle"><i class="fa-solid fa-house"></i></div>
+                <span>INÍCIO</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="./src/pages/locais.html" class="nav-link">
+                <div class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></div>
+                <span>LOCAIS</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="./src/pages/sobre.html" class="nav-link">
+                <div class="icon-circle"><i class="fa-solid fa-circle-info"></i></div>
+                <span>SOBRE O PROJETO</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="./src/pages/equipe.html" class="nav-link">
+                <div class="icon-circle"><i class="fa-solid fa-users"></i></div>
+                <span>EQUIPE</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="./src/pages/configuracoes.html" class="nav-link">
+                <div class="icon-circle"><i class="fa-solid fa-gear"></i></div>
+                <span>CONFIGURAÇÕES</span>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <div class="hero-content container text-center">
+          <h1 class="hero-title mt-5">LAGARTO EM MOVIMENTO</h1>
+          <p class="hero-subtitle">CONHEÇA O LAZER E ESPORTE QUE NOSSA CIDADE TEM A OFERECER!</p>
+          <a href="#destaques" class="btn btn-primary-custom">Ver mais</a>
+          <a href="#destaques" class="scroll-down-arrow">
+            <i class="fa-solid fa-chevron-down"></i>
+          </a>
+        </div>
+
+      </div>
+    </header>
 
     <section id="destaques" class="py-5 bg-white">
       <div class="container my-5">
@@ -125,9 +179,12 @@
       </div>
     </div>
 
-    <div id="footer-component"></div>
+    <footer class="bg-black py-4 text-center text-white-50">
+      <div class="container">
+        <small>&copy; 2026 Lagarto em Movimento. Projeto Acadêmico IFS.</small>
+      </div>
+    </footer>
 
-    <script src="./src/assets/js/components.js"></script> 
     <script src="./src/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>

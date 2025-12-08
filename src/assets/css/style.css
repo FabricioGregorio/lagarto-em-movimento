@@ -119,7 +119,7 @@ pre {
   }
 }
 
-/* 15) Pequenas utilidades (opcionais, úteis em projetos) */
+/* 15) Pequenas utilidades */
 .hidden {
   display: none !important;
 }
@@ -132,3 +132,136 @@ pre {
 }
 
 /* Fim do reset */
+
+
+/* --- VARIÁVEIS DE CORES --- */
+
+:root {
+  --primary-color: #1a86b4;    
+  --icon-bg: #2F3F5D; /* Fundo dos ícones */
+  --icon-hover: #019ee3;       
+  --nav-text: #FFFFFF; /* Texto do menu */
+  --overlay-color: rgba(0, 0, 0, 0.65); /* Overlay escuro */
+}
+
+/* --- ESTRUTURA PRINCIPAL (HEADER) --- */
+.main-header {
+  width: 100%;
+  height: 100vh; 
+  position: relative;
+  
+  /* A imagem de fundo */
+  background-image: url('../img/locais/bannerLAG.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* O Overlay cobre Navbar + Banner e alinha tudo verticalmente */
+.header-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+  display: flex;
+  flex-direction: column; /* Coloca um elemento embaixo do outro */
+}
+
+/* --- NAVBAR (Ajustada) --- */
+.main-nav {
+  padding: 30px 0;
+  background-color: transparent; /* Fundo transparente */
+  width: 100%;
+  z-index: 10; /* Garante que fique acima de tudo */
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--nav-text); /* Texto Branco */
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold; 
+  transition: 0.3s ease;
+}
+
+.icon-circle {
+  width: 35px;
+  height: 35px;
+  background-color: var(--icon-bg); /* cor de fundo do circulo */
+  border: 1px solid rgba(255,255,255,0.3); /* Borda fina suave */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/* Hover Effects */
+.nav-link:hover {
+  color: var(--primary-color); /* Fica azul ao passar o mouse */
+}
+
+.nav-link:hover .icon-circle {
+  background-color: var(--icon-hover);
+  border-color: var(--icon-hover);
+  transform: scale(1.1);
+}
+
+/* --- HERO CONTENT (Conteúdo Central) --- */
+.hero-content {
+  flex-grow: 1; /* Faz ocupar o resto do espaço disponível abaixo do menu */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente no espaço que sobrou */
+  align-items: center;
+  padding-bottom: 50px; /* Um respiro na parte inferior */
+}
+
+.hero-title {
+  font-family: 'Zilla Slab', serif;
+  font-size: 4.5rem; /* Aumentei levemente */
+  font-weight: 700;
+  color: var(--primary-color);
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  max-width: 700px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+    line-height: 1;
+  }
+  .nav-list {
+    gap: 15px;
+  }
+  .nav-link span {
+    display: none;
+  }
+}

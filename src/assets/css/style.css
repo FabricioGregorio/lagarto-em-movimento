@@ -225,9 +225,8 @@ pre {
 }
 
 .nav-link.active .icon-circle {
-  background-color: var(--icon-hover); /* Fundo do ícone preenchido */
-  border-color: var(--icon-hover);     /* Borda colorida */
-  /* Nota: Não coloquei o 'transform: scale' aqui para o ícone não ficar "dando zoom" parado, apenas colorido. */
+  background-color: var(--icon-hover);
+  border-color: var(--icon-hover);
 }
 
 /* --- HERO CONTENT --- */
@@ -236,8 +235,8 @@ pre {
   display: flex;
   flex-direction: column;
   
-  justify-content: flex-start; /* Alinha tudo ao TOPO da área disponível */
-  padding-top: 15vh; /* Empurra o TÍTULO para baixo (posição inicial fixa) */
+  justify-content: flex-start;
+  padding-top: 15vh;
   
   align-items: center;
   padding-bottom: 50px;
@@ -295,6 +294,8 @@ pre {
   opacity: 0.8;
   transition: 0.3s;
   cursor: pointer;
+  outline: none;
+  box-shadow: none;
 }
 
 .scroll-down-arrow:hover {
@@ -477,6 +478,126 @@ pre {
 .btn-outline-custom:hover {
   background-color: var(--primary-color);
   color: white;
+}
+
+/* --- SEÇÃO DE DESTAQUES (INDEX) --- */
+
+.feature-title {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+.tracking-wide {
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+
+/* Estilo das Imagens de Destaque */
+.feature-img {
+  width: 100%;
+  height: 350px; /* Altura fixa para manter padrão */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.feature-row:hover .feature-img {
+  transform: scale(1.02); /* Leve zoom ao passar o mouse na linha inteira */
+}
+
+/* Moldura Decorativa (Opcional - dá um toque "profissional") */
+.img-frame {
+  position: relative;
+}
+
+/* Cria um quadrado colorido atrás da foto */
+.img-frame::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  opacity: 0.2;
+  border-radius: 8px;
+  z-index: -1; /* Fica atrás da foto */
+  transition: 0.3s ease;
+}
+
+/* Desloca a moldura para a esquerda ou direita dependendo do lado */
+.frame-left::before {
+  top: 15px;
+  left: -15px;
+}
+
+.frame-right::before {
+  top: 15px;
+  right: -15px;
+}
+
+/* Efeito Hover na moldura */
+.feature-row:hover .img-frame::before {
+  top: 8px;
+  left: 8px; /* Recolhe um pouco a moldura */
+}
+.feature-row:hover .frame-right::before {
+  right: 8px;
+  left: auto;
+}
+
+.section-title {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 3rem; 
+  color: var(--primary-color);
+  text-transform: uppercase; 
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.feature-title {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #333; 
+}
+
+.link-arrow {
+  color: var(--primary-color) !important;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.link-arrow:hover {
+  color: #333 !important;
+  transform: translateX(5px);
+}
+
+.link-arrow:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* --- IMAGEM CLICÁVEL (ZOOM) --- */
+.img-clickable {
+  cursor: pointer; /* Transforma o mouse em mãozinha */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efeito extra: Brilho ao passar o mouse */
+.img-clickable:hover {
+  filter: brightness(1.1); /* Clareia levemente */
+  transform: scale(1.03); /* Aumenta um pouquinho */
 }
 
 /* --- CABEÇALHO INTERNO (Para páginas secundárias) --- */

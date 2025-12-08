@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Zilla+Slab:wght@700&display=swap" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="./src/assets/css/style.css" />
@@ -18,62 +17,167 @@
   <body>
 
     <header class="main-header">
-  
-  <div class="header-overlay">
-    
-    <nav class="main-nav">
-      <ul class="nav-list">
-  
-  <li class="nav-item">
-    <a href="#" class="nav-link active">
-      <div class="icon-circle"><i class="fa-solid fa-house"></i></div>
-      <span>INÍCIO</span>
-    </a>
-  </li>
+      <div class="header-overlay">
+        
+        <nav class="main-nav">
+          <ul class="nav-list">
+            
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <div class="icon-circle"><i class="fa-solid fa-house"></i></div>
+                <span>INÍCIO</span>
+              </a>
+            </li>
 
-  <li class="nav-item">
-    <a href="/src/pages/locais.html" class="nav-link">
-      <div class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></div>
-      <span>LOCAIS</span>
-    </a>
-  </li>
+            <li class="nav-item">
+              <a href="./src/pages/locais.html" class="nav-link">
+                <div class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></div>
+                <span>LOCAIS</span>
+              </a>
+            </li>
 
-  <li class="nav-item">
-    <a href="/src/pages/sobre.html" class="nav-link">
-      <div class="icon-circle"><i class="fa-solid fa-circle-info"></i></div>
-      <span>SOBRE O PROJETO</span>
-    </a>
-  </li>
+            <li class="nav-item">
+              <a href="./src/pages/sobre.html" class="nav-link">
+                <div class="icon-circle"><i class="fa-solid fa-circle-info"></i></div>
+                <span>SOBRE O PROJETO</span>
+              </a>
+            </li>
 
-  <li class="nav-item">
-    <a href="/src/pages/equipe.html" class="nav-link">
-      <div class="icon-circle"><i class="fa-solid fa-users"></i></div>
-      <span>EQUIPE</span>
-    </a>
-  </li>
+            <li class="nav-item">
+              <a href="./src/pages/equipe.html" class="nav-link">
+                <div class="icon-circle"><i class="fa-solid fa-users"></i></div>
+                <span>EQUIPE</span>
+              </a>
+            </li>
 
-  <li class="nav-item">
-    <a href="/src/pages/configuracoes.html" class="nav-link">
-      <div class="icon-circle"><i class="fa-solid fa-gear"></i></div>
-      <span>CONFIGURAÇÕES</span>
-    </a>
-  </li>
+            <li class="nav-item">
+              <a href="./src/pages/configuracoes.html" class="nav-link">
+                <div class="icon-circle"><i class="fa-solid fa-gear"></i></div>
+                <span>CONFIGURAÇÕES</span>
+              </a>
+            </li>
 
-</ul>
-    </nav>
+          </ul>
+        </nav>
 
-    <div class="hero-content container text-center">
-      <h1 class="hero-title mt-5">LAGARTO EM MOVIMENTO</h1>
-      <p class="hero-subtitle">CONHEÇA O LAZER E ESPORTE QUE NOSSA CIDADE TEM A OFERECER!</p>
-      <a href="#locais" class="btn btn-primary-custom">Explorar</a>
-      <a href="#locais" class="scroll-down-arrow">
-        <i class="fa-solid fa-chevron-down"></i>
-      </a>
+        <div class="hero-content container text-center">
+          <h1 class="hero-title mt-5">LAGARTO EM MOVIMENTO</h1>
+          <p class="hero-subtitle">CONHEÇA O LAZER E ESPORTE QUE NOSSA CIDADE TEM A OFERECER!</p>
+          <a href="#destaques" class="btn btn-primary-custom">Ver mais</a>
+          <a href="#destaques" class="scroll-down-arrow">
+            <i class="fa-solid fa-chevron-down"></i>
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <section id="destaques" class="py-5 bg-white">
+      <div class="container my-5">
+        
+        <div class="text-center mb-5">
+          <h2 class="section-title">Ícones de Lagarto</h2>
+          <p class="section-description">
+            Conheça as histórias por trás dos lugares onde nossa cidade se movimenta.
+          </p>
+        </div>
+
+        <div class="row align-items-center mb-5 feature-row">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="img-frame frame-left">
+              <img 
+                  src="./src/assets/img/locais/bannerLAG.jpg" 
+                  alt="Tanque Grande" 
+                  class="img-fluid rounded shadow feature-img img-clickable"
+                  data-bs-toggle="modal" 
+                  data-bs-target="#imageModal"
+                >
+            </div>
+          </div>
+          <div class="col-lg-6 ps-lg-5">
+            <span class="text-uppercase text-primary fw-bold tracking-wide">Marco Histórico</span>
+            <h3 class="feature-title mb-3">Tanque Grande</h3>
+            <p class="text-muted lead">
+              Mais do que um reservatório, é o coração da identidade lagartense.
+            </p>
+            <p>
+              Historicamente, foi o ponto de abastecimento vital para o desenvolvimento da cidade. Hoje, suas margens foram revitalizadas e transformadas em uma ampla pista de caminhada e corrida.
+            </p>
+            <a href="./src/pages/locais.html" class="link-arrow mt-3">
+              Ver localização <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row align-items-center mb-5 feature-row">
+          <div class="col-lg-6 order-2 order-lg-1 pe-lg-5">
+            <span class="text-uppercase text-primary fw-bold tracking-wide">Refúgio Natural</span>
+            <h3 class="feature-title mb-3">Balneário Bica</h3>
+            <p class="text-muted lead">
+              O pulmão verde onde Lagarto respira mais fundo.
+            </p>
+            <p>
+              Um santuário ecológico preservado dentro da zona urbana. A "Bica" não é apenas famosa por suas águas correntes e medicinais, mas por ser o ponto de encontro de famílias há gerações.
+            </p>
+            <a href="./src/pages/locais.html" class="link-arrow mt-3">
+              Ver localização <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
+            <div class="img-frame frame-right">
+              <img 
+                src="./src/assets/img/locais/bannerLAG.jpg" 
+                alt="Balneário Bica" 
+                class="img-fluid rounded shadow feature-img img-clickable" 
+                data-bs-toggle="modal" 
+                data-bs-target="#imageModal">
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center feature-row">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="img-frame frame-left">
+              <img 
+                src="./src/assets/img/locais/bannerLAG.jpg" 
+                alt="Praça da Piedade" 
+                class="img-fluid rounded shadow feature-img img-clickable"
+                data-bs-toggle="modal" 
+                data-bs-target="#imageModal"
+                >
+            </div>
+          </div>
+          <div class="col-lg-6 ps-lg-5">
+            <span class="text-uppercase text-primary fw-bold tracking-wide">Centro Cultural</span>
+            <h3 class="feature-title mb-3">Praça da Piedade</h3>
+            <p class="text-muted lead">
+              Onde a fé, a história e o convívio social se encontram.
+            </p>
+            <p>
+              Ao redor da imponente Igreja Matriz, esta praça viu Lagarto crescer. É o palco tradicional das festividades da padroeira e o local preferido para passeios noturnos.
+            </p>
+            <a href="./src/pages/locais.html" class="link-arrow mt-3">
+              Ver localização <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg"> 
+        <div class="modal-content bg-transparent border-0"> 
+
+          <div class="text-end mb-2">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+      
+          <div class="modal-body p-0 text-center">
+            <img src="" id="modalImage" class="img-fluid rounded shadow-lg" alt="Imagem Ampliada">
+          </div>
+        </div>
+      </div>
     </div>
-
-  </div>
-</header>
-
 
     <script src="./src/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

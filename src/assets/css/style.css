@@ -730,3 +730,24 @@ body:not(.dark-mode) .card-settings .card-header {
   border-bottom: 1px solid #e0e0e0 !important;
 }
 
+
+/* --- PÁGINA EQUIPE (AJUSTES DE BADGES) --- */
+/* Força o texto das etiquetas a ser branco para melhor leitura */
+.section-equipe .badge {
+  color: #ffffff !important;
+}
+
+/* Corrige a etiqueta do Fabrício (bg-light) que estava sumindo ou sem contraste */
+/* Transformamos o fundo claro em um cinza médio para destacar o texto branco */
+.section-equipe .badge.bg-light {
+  background-color: #6c757d !important; /* Cinza Secondary */
+}
+
+/* Ajusta outras cores que poderiam ter baixo contraste com texto branco */
+.section-equipe .badge.bg-warning {
+  background-color: #e0a800 !important; /* Amarelo mais escuro */
+}
+.section-equipe .badge.bg-info {
+  background-color: #138496 !important; /* Azul petróleo */
+}
+

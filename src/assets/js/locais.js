@@ -20,7 +20,7 @@ const listaLocais = [
         icon: "fa-clock"
     },
     {
-        nome: "Academia da Cidade",
+        nome: "Academias da Cidade",
         img: "../assets/img/locais/bannerLAG.jpg",
         badges: ["Academia", "Ar Livre"],
         badgesClasses: ["badge-academia", ""],
@@ -136,7 +136,9 @@ function renderLocais() {
                 </ul>
               </div>
               <div class="card-footer bg-white border-0 pb-3">
-                <a href="#" class="btn btn-outline-custom w-100">Ver no Mapa</a>
+                <button class="btn btn-outline-custom w-100 btn-map" data-local="${item.nome} Lagarto SE">
+                    <i class="fa-solid fa-map-location-dot me-2"></i> Ver no Mapa
+                </button>
               </div>
             </div>
           </div>
@@ -145,6 +147,7 @@ function renderLocais() {
 
     container.innerHTML = html;
     reativarModalImagens();
+    ativarBotoesMapa();
 }
 
 function reativarModalImagens() {
@@ -157,6 +160,39 @@ function reativarModalImagens() {
                 modalImage.src = this.src;
                 modalImage.alt = this.alt;
             });
+        });
+    }
+}
+
+function ativarBotoesMapa() {
+    const mapButtons = document.querySelectorAll('.btn-map');
+    const mapModal = new bootstrap.Modal(document.getElementById('mapModal'));
+    const mapIframe = document.getElementById('mapIframe');
+    const mapTitle = document.getElementById('mapModalLabel');
+
+    mapButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const localQuery = this.getAttribute('data-local');
+            
+            // Atualiza o título do modal
+            if(mapTitle) mapTitle.textContent = localQuery.replace(' Lagarto SE', '');
+
+            // Atualiza o iframe com a busca no Google Maps
+            // Usando a interface de embed simples (sem API Key necessária para visualização básica)
+            const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(localQuery)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+            
+            if(mapIframe) mapIframe.src = mapUrl;
+
+            mapModal.show();
+        });
+    });
+    
+    // Limpa o iframe ao fechar para parar vídeos/carregamento
+    const mapModalEl = document.getElementById('mapModal');
+    if(mapModalEl) {
+        mapModalEl.addEventListener('hidden.bs.modal', function () {
+            if(mapIframe) mapIframe.src = "";
         });
     }
 }

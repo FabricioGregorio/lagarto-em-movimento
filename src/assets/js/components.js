@@ -61,7 +61,7 @@ function renderFooter() {
     const footerHTML = `
     <footer class="bg-black py-4 text-center text-white-50">
       <div class="container">
-        <small>&copy; 2026 Lagarto em Movimento. Projeto Acadêmico IFS.</small>
+        <small>&copy; 2025 Lagarto em Movimento. Projeto Acadêmico IFS.</small>
       </div>
     </footer>
     `;

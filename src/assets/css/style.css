@@ -9,6 +9,90 @@
   --font-main: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
+/* --- TEMA ESCURO (DARK MODE) --- */
+/*
+   Quando o <body> tiver a classe 'dark-mode', estas variáveis
+   irão sobrescrever as originais definidas no :root.
+*/
+body.dark-mode {
+  /* Cores de Fundo (Inversão) */
+  --bg-primary: #121212;        /* Fundo principal bem escuro */
+  --bg-secondary: #1f1f1f;      /* Fundo de cards, painéis */
+  --text-color: #f0f0f0;        /* Cor do texto principal (claro) */
+  --text-muted: #b0b0b0;        /* Cor do texto secundário/muted */
+  
+  /* Cores de Componentes Bootstrap (ajuste manual de classes) */
+  /* Isso é opcional, mas ajuda a manter o padrão do seu tema */
+  --bs-body-bg: var(--bg-primary); 
+  --bs-body-color: var(--text-color);
+}
+
+/* Aplica o fundo escuro ao body e remove o cinza padrão */
+body.dark-mode {
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+}
+
+/* Sobrescreve classes de utilidade do Bootstrap e o seu utilitário */
+.bg-light, 
+main.py-5.bg-light,
+.bg-gray-theme,
+.section-locais { 
+    background-color: var(--bg-primary) !important;
+}
+.card,
+.card-header,
+.bg-white { 
+    background-color: var(--bg-secondary) !important;
+    border-color: #333333 !important; /* Borda mais discreta */
+}
+
+/* Opcional: Ajuste de textos para o dark mode */
+body.dark-mode .text-muted,
+body.dark-mode small.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* --- AJUSTES DE TEXTO ESPECÍFICOS PARA DARK MODE --- */
+
+/* Títulos e Descrições (Index e Geral) */
+body.dark-mode .section-description,
+body.dark-mode .feature-title,
+body.dark-mode .card-title,  
+body.dark-mode h4, 
+body.dark-mode h5 {
+    color: #ffffff !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h3,
+body.dark-mode h2 {
+    color: var(--primary-color) !important;
+}
+
+/* Textos corridos e listas */
+body.dark-mode p,
+body.dark-mode .card-text,
+body.dark-mode .details-list li {
+    color: #e0e0e0;
+}
+
+/* Etiquetas (Badges) - Página Equipe */
+body.dark-mode .badge {
+    color: #ffffff !important;
+}
+
+/* Ajuste de fundo das badges claras para garantir contraste com texto branco */
+body.dark-mode .badge.bg-light {
+    background-color: #495057 !important; /* Cinza escuro */
+}
+body.dark-mode .badge.bg-warning {
+    background-color: #b88b00 !important; /* Amarelo escuro */
+}
+body.dark-mode .badge.bg-info {
+    background-color: #138496 !important; /* Azul escuro */
+}
+
 /* Utilitário para o fundo cinza padrão do site */
 .bg-gray-theme {
   background-color: #eeeeee;
@@ -554,3 +638,76 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+/* --- REDUZIR ANIMA��ES (ACESSIBILIDADE) --- */
+body.reduce-motion *,
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+/* --- TAMANHO DA FONTE (ACESSIBILIDADE) --- */
+/* 
+   Usamos classes no <html> para controlar o tamanho base (rem).
+   O padrão dos navegadores é 16px.
+*/
+
+/* Padrão (Reset) */
+html {
+  font-size: 16px; /* 100% */
+}
+
+/* Pequeno (Opcional) */
+html.font-sm {
+  font-size: 14px;
+}
+
+/* Grande */
+html.font-lg {
+  font-size: 18px; /* +12.5% */
+}
+
+/* Muito Grande */
+html.font-xl {
+  font-size: 20px; /* +25% */
+}
+/* 
+   Usamos classes no <html> para controlar o tamanho base (rem).
+   O padr�o dos navegadores � 16px.
+*/
+
+/* Padr�o (Reset) */
+html {
+  font-size: 16px; /* 100% */
+}
+
+/* Pequeno (Opcional) */
+html.font-sm {
+  font-size: 14px;
+}
+
+/* Grande */
+html.font-lg {
+  font-size: 18px; /* +12.5% */
+}
+
+/* Muito Grande */
+html.font-xl {
+  font-size: 20px; /* +25% */
+}
+
+
+/* --- SWITCHES (CHECKBOX) NO MODO ESCURO --- */
+/* Melhora a visibilidade do componente quando desativado */
+body.dark-mode .form-switch .form-check-input {
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente claro */
+  border: 1px solid var(--primary-color);      /* Borda na cor do tema para destacar */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e"); /* Garante bolinha branca */
+}
+
+body.dark-mode .form-switch .form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+

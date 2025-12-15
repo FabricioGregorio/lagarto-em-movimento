@@ -48,7 +48,12 @@ function renderHeader() {
         <div class="hero-content container text-center">
             <h1 class="hero-title fs-1 mb-2">${heroTitle}</h1>
             <p class="hero-subtitle">${heroSubtitle}</p>
-            ${activePage === 'home' ? '<a href="#destaques" class="btn btn-primary-custom">Ver mais</a>' : ''}
+            ${activePage === 'home' ? `
+              <a href="#destaques" class="btn btn-primary-custom">Ver mais</a>
+              <a href="#destaques" class="scroll-down-arrow">
+                <i class="fa-solid fa-chevron-down"></i>
+              </a>
+            ` : ''}
         </div>
       </div>
     </header>
@@ -58,10 +63,58 @@ function renderHeader() {
 }
 
 function renderFooter() {
+    // Detecta se estamos na raiz (index) ou em subpastas para ajustar os links
+    const isIndex = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/');
+    const basePath = isIndex ? './src/pages/' : './';
+    const homePath = isIndex ? './index.html' : '../../index.html';
+
     const footerHTML = `
-    <footer class="bg-black py-4 text-center text-white-50">
-      <div class="container">
-        <small>&copy; 2025 Lagarto em Movimento. Projeto Acadêmico IFS.</small>
+    <footer class="bg-dark text-white pt-5 pb-4 border-top border-secondary">
+      <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+          
+          <!-- Coluna 1: Sobre -->
+          <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold" style="color: var(--primary-color);">Lagarto em Movimento</h5>
+            <p>
+              Guia de esporte e lazer da cidade de Lagarto/SE. Um projeto acadêmico para conectar a comunidade aos espaços públicos.
+            </p>
+          </div>
+
+          <!-- Coluna 2: Mapa do Site -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold" style="color: var(--primary-color);">Mapa do Site</h5>
+            <p><a href="${homePath}" class="text-white text-decoration-none">Início</a></p>
+            <p><a href="${basePath}locais.html" class="text-white text-decoration-none">Locais</a></p>
+            <p><a href="${basePath}equipe.html" class="text-white text-decoration-none">Equipe</a></p>
+            <p><a href="${basePath}sobre.html" class="text-white text-decoration-none">Sobre</a></p>
+          </div>
+
+          <!-- Coluna 3: Institucional -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold" style="color: var(--primary-color);">Institucional</h5>
+            <p>
+              <a href="http://www.ifs.edu.br/lagarto" target="_blank" class="text-white text-decoration-none">
+                <i class="fas fa-university me-2"></i> IFS - Campus Lagarto
+              </a>
+            </p>
+            <p>
+              <a href="https://github.com/FabricioGregorio/lagarto-em-movimento" target="_blank" class="text-white text-decoration-none">
+                <i class="fab fa-github me-2"></i> Repositório GitHub
+              </a>
+            </p>
+          </div>
+          
+        </div>
+
+        <hr class="mb-4 border-secondary">
+
+        <div class="row align-items-center">
+            <div class="col-12 text-center">
+                <p class="mb-0">© 2025 <strong>Lagarto em Movimento</strong>. Todos os direitos reservados.</p>
+            </div>
+        </div>
+
       </div>
     </footer>
     `;

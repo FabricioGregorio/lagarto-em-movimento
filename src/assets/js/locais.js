@@ -7,7 +7,8 @@ const listaLocais = [
         desc: "Um marco histórico da cidade. Além de sua importância cultural, oferece uma ampla área para caminhadas.",
         local: "Centro de Lagarto",
         extra: "Pico: 17h - 19h",
-        icon: "fa-clock"
+        icon: "fa-clock",
+        link: "locais/tanque-grande.html"
     },
     {
         nome: "Avenida Contorno",
@@ -17,7 +18,8 @@ const listaLocais = [
         desc: "A principal artéria para quem gosta de pedalar longas distâncias com segurança e espaço.",
         local: "Saída para Riachão",
         extra: "Pico: 05h - 07h",
-        icon: "fa-clock"
+        icon: "fa-clock",
+        link: "locais/avenida-contorno.html"
     },
     {
         nome: "Academias da Cidade",
@@ -27,7 +29,8 @@ const listaLocais = [
         desc: "Equipamentos públicos disponíveis para fortalecimento muscular ao ar livre.",
         local: "Bairro Matinha",
         extra: "Pico: 18h - 20h",
-        icon: "fa-clock"
+        icon: "fa-clock",
+        link: "locais/academias-da-cidade.html"
     },
     {
         nome: "Estádio Barretão",
@@ -37,7 +40,8 @@ const listaLocais = [
         desc: "O palco das grandes emoções do Lagarto FC. O entorno é muito usado para corridas.",
         local: "Bairro Matinha",
         extra: "Jogos / Eventos",
-        icon: "fa-calendar"
+        icon: "fa-calendar",
+        link: "locais/estadio-barretao.html"
     },
     {
         nome: "Praça Filomeno Hora",
@@ -47,7 +51,8 @@ const listaLocais = [
         desc: "Ponto de encontro da juventude. Possui áreas lisas ideais para a prática de skate e patins.",
         local: "Centro",
         extra: "Pico: 16h - 22h",
-        icon: "fa-clock"
+        icon: "fa-clock",
+        link: "locais/praca-filomeno-hora.html"
     },
     {
         nome: "Ginásio O Ribeirão",
@@ -57,7 +62,8 @@ const listaLocais = [
         desc: "Referência para futsal, vôlei e basquete. O ginásio recebe competições escolares e amadoras.",
         local: "Próx. ao Mercado",
         extra: "Agendamento",
-        icon: "fa-clock"
+        icon: "fa-clock",
+        link: "locais/ginasio-o-ribeirao.html"
     },
     {
         nome: "Balneário Bica",
@@ -67,7 +73,8 @@ const listaLocais = [
         desc: "Um refúgio verde dentro da cidade. Além das piscinas naturais, possui trilhas curtas.",
         local: "Parque da Bica",
         extra: "Fins de Semana",
-        icon: "fa-sun"
+        icon: "fa-sun",
+        link: "locais/balneario-bica.html"
     },
     {
         nome: "Barragem Dionísio Machado",
@@ -77,7 +84,8 @@ const listaLocais = [
         desc: "O cartão postal para o pôr do sol. A orla é utilizada para caminhadas leves e piqueniques.",
         local: "Zona Oeste",
         extra: "Tarde / Pôr do Sol",
-        icon: "fa-clock"
+        icon: "fa-clock",
+        link: "locais/barragem-dionisio-machado.html"
     },
     {
         nome: "Praça da Piedade",
@@ -87,7 +95,8 @@ const listaLocais = [
         desc: "Onde a história e o lazer se encontram. O entorno da igreja matriz oferece espaço seguro.",
         local: "Centro Histórico",
         extra: "Noite / Eventos",
-        icon: "fa-star"
+        icon: "fa-star",
+        link: "locais/praca-da-piedade.html"
     }
 ];
 
@@ -136,6 +145,9 @@ function renderLocais() {
                 </ul>
               </div>
               <div class="card-footer bg-white border-0 pb-3">
+                <a href="${item.link}" class="btn btn-primary-custom w-100 mb-2">
+                    <i class="fa-solid fa-circle-info me-2"></i> Saiba mais
+                </a>
                 <button class="btn btn-outline-custom w-100 btn-map" data-local="${item.nome} Lagarto SE">
                     <i class="fa-solid fa-map-location-dot me-2"></i> Ver no Mapa
                 </button>

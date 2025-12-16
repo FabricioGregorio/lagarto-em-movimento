@@ -838,3 +838,16 @@ footer p a:hover {
     transform: translateX(5px);
 }
 
+
+/* --- MODAL DARK MODE FIX --- */
+/* Inverte a cor do botão de fechar (X) para branco no modo escuro */
+body.dark-mode .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Garante que o fundo do modal acompanhe o tema escuro */
+body.dark-mode .modal-content {
+    background-color: var(--bg-secondary);
+    color: var(--text-color);
+}
+

@@ -37,8 +37,8 @@
                     <p class="lead">Um refúgio verde dentro da cidade. Além das piscinas naturais, possui trilhas curtas.</p>
                     
                     <div class="mt-4">
-                        <span class="badge bg-secondary me-2">Natureza</span>
-                        <span class="badge bg-secondary me-2">Lazer</span>
+                        <span class="badge badge-natureza me-2">Natureza</span>
+                        <span class="badge badge-lazer me-2">Lazer</span>
                     </div>
 
                     <!-- Galeria de Fotos Alternada -->
@@ -146,6 +146,20 @@
     </main>
 
     <div id="footer-component"></div>
+
+    <!-- Modal de Imagem Ampliada -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg"> 
+        <div class="modal-content bg-transparent border-0"> 
+          <div class="text-end mb-2">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0 text-center">
+            <img src="" id="modalImage" class="img-fluid rounded shadow-lg" alt="Imagem Ampliada">
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Modal do Mapa -->
     <div class="modal fade" id="mapModal" tabindex="-1" aria-hidden="true">

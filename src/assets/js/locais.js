@@ -209,6 +209,45 @@ function ativarBotoesMapa() {
     }
 }
 
+/**
+ * Função global para abrir o mapa (usada nas páginas internas de locais)
+ * Ex: onclick="openMap('Tanque Grande')"
+ */
+function openMap(localName) {
+    const mapModalEl = document.getElementById('mapModal');
+    if (!mapModalEl) return;
+
+    // Verifica se já existe uma instância do modal, senão cria
+    let mapModal = bootstrap.Modal.getInstance(mapModalEl);
+    if (!mapModal) {
+        mapModal = new bootstrap.Modal(mapModalEl);
+    }
+
+    const mapIframe = document.getElementById('mapIframe');
+    const mapTitle = document.getElementById('mapModalLabel');
+    
+    // Adiciona o contexto da cidade para a busca ficar correta
+    const localQuery = localName + " Lagarto SE";
+
+    // Atualiza o título do modal
+    if(mapTitle) mapTitle.textContent = localName;
+
+    // Atualiza o iframe
+    const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(localQuery)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+    
+    if(mapIframe) mapIframe.src = mapUrl;
+
+    mapModal.show();
+
+    // Limpa o iframe ao fechar (adiciona listener apenas se ainda não tiver)
+    // Nota: O listener global em ativarBotoesMapa ou aqui pode se acumular se não tomar cuidado,
+    // mas como a página recarrega na navegação, é tranquilo. 
+    // Para garantir, usamos { once: true } aqui.
+    mapModalEl.addEventListener('hidden.bs.modal', function () {
+        if(mapIframe) mapIframe.src = "";
+    }, { once: true });
+}
+
 // Chama a função assim que o arquivo carrega
 document.addEventListener('DOMContentLoaded', () => {
     renderLocais();

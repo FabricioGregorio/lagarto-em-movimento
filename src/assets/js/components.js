@@ -53,7 +53,7 @@ function renderHeader() {
           </ul>
         </nav>
 
-        <div class="hero-content container text-center">
+        <div class="hero-content container text-center mt-5">
             <h1 class="hero-title fs-1 mb-2">${heroTitle}</h1>
             <p class="hero-subtitle">${heroSubtitle}</p>
             ${activePage === 'home' ? `

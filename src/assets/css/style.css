@@ -77,6 +77,11 @@ body.dark-mode .details-list li {
     color: #e0e0e0;
 }
 
+/* Breadcrumb Active Item in Dark Mode */
+body.dark-mode .breadcrumb-item.active {
+    color: #e0e0e0 !important;
+}
+
 /* Etiquetas (Badges) - PÃ¡gina Equipe */
 body.dark-mode .badge {
     color: #ffffff !important;
@@ -653,10 +658,6 @@ body.reduce-motion *::after {
 }
 
 /* --- TAMANHO DA FONTE (ACESSIBILIDADE) --- */
-/* 
-   Usamos classes no <html> para controlar o tamanho base (rem).
-   O padrÃ£o dos navegadores Ã© 16px.
-*/
 
 /* PadrÃ£o (Reset) */
 html {
@@ -677,10 +678,6 @@ html.font-lg {
 html.font-xl {
   font-size: 20px; /* +25% */
 }
-/* 
-   Usamos classes no <html> para controlar o tamanho base (rem).
-   O padrï¿½o dos navegadores ï¿½ 16px.
-*/
 
 /* Padrï¿½o (Reset) */
 html {
@@ -717,8 +714,8 @@ body.dark-mode .form-switch .form-check-input:checked {
 }
 
 
-/* --- CARDS DE CONFIGURAÇÕES (TEMA CLARO) --- */
-/* Deixa o fundo levemente cinza para diferenciar do fundo branco/claro da página */
+/* --- CARDS DE CONFIGURAï¿½ï¿½ES (TEMA CLARO) --- */
+/* Deixa o fundo levemente cinza para diferenciar do fundo branco/claro da pï¿½gina */
 body:not(.dark-mode) .card-settings {
   background-color: #f5f5f5; 
   border: 1px solid #e0e0e0 !important;
@@ -731,14 +728,13 @@ body:not(.dark-mode) .card-settings .card-header {
 }
 
 
-/* --- PÁGINA EQUIPE (AJUSTES DE BADGES) --- */
-/* Força o texto das etiquetas a ser branco para melhor leitura */
+/* --- Pï¿½GINA EQUIPE (AJUSTES DE BADGES) --- */
+/* Forï¿½a o texto das etiquetas a ser branco para melhor leitura */
 .section-equipe .badge {
   color: #ffffff !important;
 }
 
-/* Corrige a etiqueta do Fabrício (bg-light) que estava sumindo ou sem contraste */
-/* Transformamos o fundo claro em um cinza médio para destacar o texto branco */
+/* Transformamos o fundo claro em um cinza mï¿½dio para destacar o texto branco */
 .section-equipe .badge.bg-light {
   background-color: #6c757d !important; /* Cinza Secondary */
 }
@@ -748,7 +744,7 @@ body:not(.dark-mode) .card-settings .card-header {
   background-color: #e0a800 !important; /* Amarelo mais escuro */
 }
 .section-equipe .badge.bg-info {
-  background-color: #138496 !important; /* Azul petróleo */
+  background-color: #138496 !important; /* Azul petrï¿½leo */
 }
 
 
@@ -782,7 +778,7 @@ body:not(.dark-mode) .card-settings .card-header {
 /* Efeito de Hover no Card */
 .team-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top-width: 4px !important; /* Garante que a borda colorida apareça */
+  border-top-width: 4px !important; /* Garante que a borda colorida apareï¿½a */
 }
 
 .team-card:hover {
@@ -813,7 +809,7 @@ body:not(.dark-mode) .card-settings .card-header {
 }
 
 
-/* --- AJUSTES DE RODAPÉ (DARK MODE) --- */
+/* --- AJUSTES DE RODAPï¿½ (DARK MODE) --- */
 body.dark-mode footer h5 {
     color: var(--primary-color) !important;
 }
@@ -840,7 +836,7 @@ footer p a:hover {
 
 
 /* --- MODAL DARK MODE FIX --- */
-/* Inverte a cor do botão de fechar (X) para branco no modo escuro */
+/* Inverte a cor do botï¿½o de fechar (X) para branco no modo escuro */
 body.dark-mode .btn-close {
     filter: invert(1) grayscale(100%) brightness(200%);
 }

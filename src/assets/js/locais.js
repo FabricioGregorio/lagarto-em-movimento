@@ -2,28 +2,6 @@ const imgCardPadrao = new URL('../img/locais/bannerLAG.jpg', import.meta.url).hr
 
 const listaLocais = [
     {
-        nome: "Avenida Contorno",
-        img: imgCardPadrao,
-        badges: ["Ciclismo", "Ar Livre"],
-        badgesClasses: ["badge-ciclismo", ""],
-        desc: "A principal artéria para quem gosta de pedalar longas distâncias com segurança e espaço.",
-        local: "Saída para Riachão",
-        extra: "Pico: 05h - 07h",
-        icon: "fa-clock",
-        link: "locais/avenida-contorno.html"
-    },
-    {
-        nome: "Academias da Cidade",
-        img: imgCardPadrao,
-        badges: ["Academia", "Ar Livre"],
-        badgesClasses: ["badge-academia", ""],
-        desc: "Equipamentos públicos disponíveis para fortalecimento muscular ao ar livre.",
-        local: "Bairro Matinha",
-        extra: "Pico: 18h - 20h",
-        icon: "fa-clock",
-        link: "locais/academias-da-cidade.html"
-    },
-    {
         nome: "Praça Filomeno Hora",
         img: imgCardPadrao,
         badges: ["Radical", "Lazer", "Ar Livre"],

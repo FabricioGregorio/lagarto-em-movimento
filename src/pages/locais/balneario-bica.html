@@ -32,27 +32,27 @@
 
             <div class="row g-4 align-items-start mb-4">
                 <div class="col-12 col-lg-8">
-                    <div id="localCarousel" class="carousel slide rounded shadow overflow-hidden" data-bs-ride="carousel" data-bs-interval="false">
+                    <div id="localCarousel" class="carousel slide rounded shadow overflow-hidden" data-bs-ride="carousel" data-bs-interval="5000">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
+                      <div class="carousel-item active" data-caption="Lazer e Convivência">
                                 <img src="../../assets/img/locais/bica/barzinho.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Balneário Bica" data-bs-toggle="modal" data-bs-target="#imageModal">
                             </div>
-                            <div class="carousel-item">
+                      <div class="carousel-item" data-caption="Diversão para Crianças">
                                 <img src="../../assets/img/locais/bica/ambiente-de-recreacao-infantil.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Recreação Infantil" data-bs-toggle="modal" data-bs-target="#imageModal">
                             </div>
-                            <div class="carousel-item">
+                      <div class="carousel-item" data-caption="Movimento e Saúde">
                                 <img src="../../assets/img/locais/bica/aulas-de-danca-e-zumba-na-bica.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Aulas de Dança" data-bs-toggle="modal" data-bs-target="#imageModal">
                             </div>
-                            <div class="carousel-item">
+                      <div class="carousel-item" data-caption="Esporte ao Ar Livre">
                                 <img src="../../assets/img/locais/bica/corrida-ao-lado-da-bica.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Corrida e Caminhada" data-bs-toggle="modal" data-bs-target="#imageModal">
                             </div>
-                            <div class="carousel-item">
+                      <div class="carousel-item" data-caption="Esportes Coletivos">
                                 <img src="../../assets/img/locais/bica/volei-na-bica.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Vôlei" data-bs-toggle="modal" data-bs-target="#imageModal">
                             </div>
-                            <div class="carousel-item">
+                      <div class="carousel-item" data-caption="Comércio Local">
                                 <img src="../../assets/img/locais/bica/venda-de-frutas-e-agua.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Comércio Local" data-bs-toggle="modal" data-bs-target="#imageModal">
                             </div>
-                            <div class="carousel-item">
+                      <div class="carousel-item" data-caption="Lanchinhos e Apoio">
                                 <img src="../../assets/img/locais/bica/barraquinha-de-lanche.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Barraquinha de lanche" data-bs-toggle="modal" data-bs-target="#imageModal">
                             </div>
                         </div>
@@ -65,6 +65,7 @@
                             <span class="visually-hidden">Próximo</span>
                         </button>
                     </div>
+                      <div id="carouselCaption" class="text-center small text-muted mt-2" aria-live="polite">Lazer e Convivência</div>
                 </div>
 
                 <div class="col-12 col-lg-4">
@@ -132,5 +133,21 @@
     <script type="module" src="../../assets/js/components.js"></script>
     <script type="module" src="../../assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      (() => {
+        const carousel = document.getElementById('localCarousel');
+        const captionEl = document.getElementById('carouselCaption');
+        if (!carousel || !captionEl) return;
+
+        const updateCaption = () => {
+          const activeItem = carousel.querySelector('.carousel-item.active');
+          const caption = activeItem?.getAttribute('data-caption') || '';
+          captionEl.textContent = caption;
+        };
+
+        updateCaption();
+        carousel.addEventListener('slid.bs.carousel', updateCaption);
+      })();
+    </script>
   </body>
 </html>

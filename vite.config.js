@@ -10,7 +10,6 @@ export default defineConfig({
         return repoName ? `/${repoName}/` : '/';
       })()
     : '/',
-  appType: 'mpa', // Garante que o Vite funcione como Multi-Page App e não SPA
   build: {
     rollupOptions: {
       input: {
@@ -20,8 +19,6 @@ export default defineConfig({
         equipe: resolve(__dirname, 'src/pages/equipe.html'),
         configuracoes: resolve(__dirname, 'src/pages/configuracoes.html'),
         // Sub-páginas de locais
-        academias: resolve(__dirname, 'src/pages/locais/academias-da-cidade.html'),
-        avenida: resolve(__dirname, 'src/pages/locais/avenida-contorno.html'),
         balneario: resolve(__dirname, 'src/pages/locais/balneario-bica.html'),
         filomeno: resolve(__dirname, 'src/pages/locais/praca-filomeno-hora.html'),
 

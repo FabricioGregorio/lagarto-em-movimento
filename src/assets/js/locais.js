@@ -96,7 +96,7 @@ const listaLocais = [
         badgesClasses: ["badge-historia", "badge-lazer"],
         desc: "Ponto de encontro e passagem, com espaço para descanso.",
         local: "Lagarto/SE",
-        extra: "A definir",
+        extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-da-ladeira-do-rosario.html"
     },

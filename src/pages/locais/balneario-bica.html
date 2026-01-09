@@ -32,7 +32,39 @@
 
             <div class="row g-4 align-items-start mb-4">
                 <div class="col-12 col-lg-8">
-                    <img src="../../assets/img/locais/bica/barzinho.jpg" class="img-fluid rounded shadow w-100 local-cover-img" alt="Balneário Bica">
+                    <div id="localCarousel" class="carousel slide rounded shadow overflow-hidden" data-bs-ride="carousel" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../../assets/img/locais/bica/barzinho.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Balneário Bica" data-bs-toggle="modal" data-bs-target="#imageModal">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../assets/img/locais/bica/ambiente-de-recreacao-infantil.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Recreação Infantil" data-bs-toggle="modal" data-bs-target="#imageModal">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../assets/img/locais/bica/aulas-de-danca-e-zumba-na-bica.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Aulas de Dança" data-bs-toggle="modal" data-bs-target="#imageModal">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../assets/img/locais/bica/corrida-ao-lado-da-bica.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Corrida e Caminhada" data-bs-toggle="modal" data-bs-target="#imageModal">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../assets/img/locais/bica/volei-na-bica.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Vôlei" data-bs-toggle="modal" data-bs-target="#imageModal">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../assets/img/locais/bica/venda-de-frutas-e-agua.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Comércio Local" data-bs-toggle="modal" data-bs-target="#imageModal">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../assets/img/locais/bica/barraquinha-de-lanche.jpg" class="d-block w-100 local-cover-img img-clickable" alt="Barraquinha de lanche" data-bs-toggle="modal" data-bs-target="#imageModal">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#localCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#localCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="col-12 col-lg-4">
@@ -59,102 +91,6 @@
             <div class="mt-4">
                 <span class="badge badge-natureza me-2">Natureza</span>
                 <span class="badge badge-lazer me-2">Lazer</span>
-            </div>
-
-            <!-- Galeria de Fotos Alternada -->
-            <div class="content-gallery mt-5">
-                        
-                        <!-- Foto 1 (Esquerda) -->
-                        <div class="row align-items-center mb-5 gallery-item fade-in-scroll">
-                            <div class="col-md-6">
-                                <div class="img-frame frame-left">
-                                    <img src="../../assets/img/locais/bica/ambiente-de-recreacao-infantil.jpg" class="img-fluid rounded shadow img-clickable" alt="Recreação Infantil" data-bs-toggle="modal" data-bs-target="#imageModal">
-                                </div>
-                            </div>
-                            <div class="col-md-6 ps-md-4">
-                                <h4 class="gallery-title">Diversão para Crianças</h4>
-                                <p class="gallery-caption text-muted">Ambiente de recreação infantil, perfeito para as crianças brincarem com segurança e contato com a natureza.</p>
-                            </div>
-                        </div>
-
-                        <!-- Foto 2 (Direita) -->
-                        <div class="row align-items-center mb-5 gallery-item flex-md-row-reverse fade-in-scroll">
-                            <div class="col-md-6">
-                                <div class="img-frame frame-right">
-                                    <img src="../../assets/img/locais/bica/aulas-de-danca-e-zumba-na-bica.jpg" class="img-fluid rounded shadow img-clickable" alt="Aulas de Dança" data-bs-toggle="modal" data-bs-target="#imageModal">
-                                </div>
-                            </div>
-                            <div class="col-md-6 pe-md-4 text-md-end">
-                                <h4 class="gallery-title">Movimento e Saúde</h4>
-                                <p class="gallery-caption text-muted">Aulas de dança e zumba animam o espaço, promovendo saúde e integração social ao ar livre.</p>
-                            </div>
-                        </div>
-
-                        <!-- Foto 3 (Esquerda) -->
-                        <div class="row align-items-center mb-5 gallery-item fade-in-scroll">
-                            <div class="col-md-6">
-                                <div class="img-frame frame-left">
-                                    <img src="../../assets/img/locais/bica/corrida-ao-lado-da-bica.jpg" class="img-fluid rounded shadow img-clickable" alt="Corrida e Caminhada" data-bs-toggle="modal" data-bs-target="#imageModal">
-                                </div>
-                            </div>
-                            <div class="col-md-6 ps-md-4">
-                                <h4 class="gallery-title">Esporte ao Ar Livre</h4>
-                                <p class="gallery-caption text-muted">Área ideal para corridas e caminhadas, cercada por verde e ar puro.</p>
-                            </div>
-                        </div>
-
-                        <!-- Foto 4 (Direita) -->
-                        <div class="row align-items-center mb-5 gallery-item flex-md-row-reverse fade-in-scroll">
-                            <div class="col-md-6">
-                                <div class="img-frame frame-right">
-                                    <img src="../../assets/img/locais/bica/volei-na-bica.jpg" class="img-fluid rounded shadow img-clickable" alt="Vôlei" data-bs-toggle="modal" data-bs-target="#imageModal">
-                                </div>
-                            </div>
-                            <div class="col-md-6 pe-md-4 text-md-end">
-                                <h4 class="gallery-title">Esportes Coletivos</h4>
-                                <p class="gallery-caption text-muted">Quadras de areia disponíveis para a prática de vôlei e futevôlei com os amigos.</p>
-                            </div>
-                        </div>
-
-                        <!-- Foto 5 (Esquerda) -->
-                        <div class="row align-items-center mb-5 gallery-item fade-in-scroll">
-                            <div class="col-md-6">
-                                <div class="img-frame frame-left">
-                                    <img src="../../assets/img/locais/bica/barzinho.jpg" class="img-fluid rounded shadow img-clickable" alt="Convivência" data-bs-toggle="modal" data-bs-target="#imageModal">
-                                </div>
-                            </div>
-                            <div class="col-md-6 ps-md-4">
-                                <h4 class="gallery-title">Lazer e Convivência</h4>
-                                <p class="gallery-caption text-muted">Espaços de convivência e quiosques para aproveitar o dia com a família e amigos.</p>
-                            </div>
-                        </div>
-
-                        <!-- Foto 6 (Direita) -->
-                        <div class="row align-items-center mb-5 gallery-item flex-md-row-reverse fade-in-scroll">
-                            <div class="col-md-6">
-                                <div class="img-frame frame-right">
-                                    <img src="../../assets/img/locais/bica/venda-de-frutas-e-agua.jpg" class="img-fluid rounded shadow img-clickable" alt="Comércio Local" data-bs-toggle="modal" data-bs-target="#imageModal">
-                                </div>
-                            </div>
-                            <div class="col-md-6 pe-md-4 text-md-end">
-                                <h4 class="gallery-title">Comércio Local</h4>
-                                <p class="gallery-caption text-muted">Opções de frutas frescas e hidratação disponíveis no local.</p>
-                            </div>
-                        </div>
-
-                        <!-- Foto 7 (Esquerda) -->
-                        <div class="row align-items-center mb-5 gallery-item fade-in-scroll">
-                            <div class="col-md-6">
-                                <div class="img-frame frame-left">
-                                    <img src="../../assets/img/locais/bica/barraquinha-de-lanche.jpg" class="img-fluid rounded shadow img-clickable" alt="Barraquinha de lanche" data-bs-toggle="modal" data-bs-target="#imageModal">
-                                </div>
-                            </div>
-                            <div class="col-md-6 ps-md-4">
-                                <h4 class="gallery-title">Lanchinhos e Apoio</h4>
-                                <p class="gallery-caption text-muted">Pontos de apoio com lanches para recarregar as energias durante o passeio.</p>
-                            </div>
-                        </div>
-
             </div>
         </div>
     </main>

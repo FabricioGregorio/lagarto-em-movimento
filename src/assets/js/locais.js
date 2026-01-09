@@ -46,17 +46,6 @@ const listaLocais = [
         link: "locais/balneario-bica.html"
     },
     {
-        nome: "Praça da Piedade",
-        img: imgCardPadrao,
-        badges: ["História", "Lazer"],
-        badgesClasses: ["badge-historia", "badge-lazer"],
-        desc: "Onde a história e o lazer se encontram. O entorno da igreja matriz oferece espaço seguro.",
-        local: "Centro Histórico",
-        extra: "Noite / Eventos",
-        icon: "fa-star",
-        link: "locais/praca-da-piedade.html"
-    },
-    {
         nome: "Praça Santa Teresinha",
         img: imgCardPadrao,
         badges: ["Lazer", "Ar Livre"],

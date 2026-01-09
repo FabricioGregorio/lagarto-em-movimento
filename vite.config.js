@@ -23,7 +23,6 @@ export default defineConfig({
         academias: resolve(__dirname, 'src/pages/locais/academias-da-cidade.html'),
         avenida: resolve(__dirname, 'src/pages/locais/avenida-contorno.html'),
         balneario: resolve(__dirname, 'src/pages/locais/balneario-bica.html'),
-        piedade: resolve(__dirname, 'src/pages/locais/praca-da-piedade.html'),
         filomeno: resolve(__dirname, 'src/pages/locais/praca-filomeno-hora.html'),
 
         // Novas páginas de locais

@@ -123,15 +123,15 @@ function renderLocais() {
         // Monta o Card HTML
         html += `
         <div class="col-md-6 col-lg-4">
-            <div class="card custom-card h-100 shadow-sm">
+                        <div class="card custom-card h-100 shadow-sm" data-href="${item.link}" role="link" tabindex="0" aria-label="Abrir detalhes de ${item.nome}">
               <div class="card-img-wrapper">
-                <img 
-                    src="${item.img}" 
-                    class="card-img-top img-clickable" 
-                    alt="${item.nome}"
-                    data-bs-toggle="modal" 
-                    data-bs-target="#imageModal"
-                >
+                                <a href="${item.link}" aria-label="Abrir detalhes de ${item.nome}">
+                                    <img 
+                                            src="${item.img}" 
+                                            class="card-img-top" 
+                                            alt="${item.nome}"
+                                    >
+                                </a>
                 <div class="badges-container">
                     ${badgesHTML}
                 </div>
@@ -158,8 +158,37 @@ function renderLocais() {
     });
 
     container.innerHTML = html;
+    ativarClickCardsLocais();
     reativarModalImagens();
     ativarBotoesMapa();
+}
+
+function ativarClickCardsLocais() {
+    const cards = document.querySelectorAll('.custom-card[data-href]');
+
+    cards.forEach(card => {
+        // Indicativo visual (sem depender de CSS global novo)
+        card.style.cursor = 'pointer';
+
+        const navigate = () => {
+            const href = card.getAttribute('data-href');
+            if (href) window.location.href = href;
+        };
+
+        card.addEventListener('click', (e) => {
+            // Não intercepta interações internas (link, botão, imagem/modal, etc)
+            if (e.target.closest('a, button, .img-clickable, [data-bs-toggle="modal"]')) return;
+            navigate();
+        });
+
+        card.addEventListener('keydown', (e) => {
+            // Acessibilidade: Enter/Espaço no card navega
+            if (e.key !== 'Enter' && e.key !== ' ') return;
+            if (e.target !== card) return;
+            e.preventDefault();
+            navigate();
+        });
+    });
 }
 
 function reativarModalImagens() {

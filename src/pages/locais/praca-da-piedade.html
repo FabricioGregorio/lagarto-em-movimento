@@ -19,7 +19,7 @@
     <div id="header-component"></div>
 
     <main class="py-5 bg-light">
-        <div class="container fade-in-scroll">
+        <div class="container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../locais.html">Locais</a></li>
@@ -27,36 +27,37 @@
                 </ol>
             </nav>
 
-            <div class="row">
-                <div class="col-lg-8">
-                    <h1 class="font-zilla text-primary mb-4">Praça da Piedade</h1>
-                    <img src="../../assets/img/locais/bannerLAG.jpg" class="img-fluid rounded shadow mb-4 w-100" alt="Praça da Piedade">
-                    
-                    <h3 class="mb-3">Sobre o Local</h3>
-                    <p class="lead">Onde a história e o lazer se encontram. O entorno da igreja matriz oferece espaço seguro.</p>
-                    
-                    <div class="mt-4">
-                        <span class="badge badge-historia me-2">História</span>
-                        <span class="badge badge-lazer me-2">Lazer</span>
+            <h1 class="font-zilla text-primary mb-4">Praça da Piedade</h1>
+
+            <div class="row g-4 align-items-start mb-4">
+              <div class="col-12 col-lg-8">
+                <img src="../../assets/img/locais/bannerLAG.jpg" class="img-fluid rounded shadow w-100" alt="Praça da Piedade">
+              </div>
+
+              <div class="col-12 col-lg-4">
+                <div class="card border-0 shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title mb-3">Informações</h5>
+                    <ul class="list-unstyled">
+                      <li class="mb-2"><i class="fa-solid fa-map-pin text-primary me-2"></i> <strong>Local:</strong> Centro Histórico</li>
+                      <li class="mb-2"><i class="fa-solid fa-star text-primary me-2"></i> <strong>Horário:</strong> Noite / Eventos</li>
+                    </ul>
+                    <div class="d-grid gap-2 mt-4">
+                      <button class="btn btn-primary-custom" onclick="openMap('Praça da Piedade')">
+                        <i class="fa-solid fa-map me-2"></i> Ver no Mapa
+                      </button>
                     </div>
+                  </div>
                 </div>
-                
-                <div class="col-lg-4 mt-4 mt-lg-0">
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title mb-3">Informações</h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fa-solid fa-map-pin text-primary me-2"></i> <strong>Local:</strong> Centro Histórico</li>
-                                <li class="mb-2"><i class="fa-solid fa-star text-primary me-2"></i> <strong>Horário:</strong> Noite / Eventos</li>
-                            </ul>
-                            <div class="d-grid gap-2 mt-4">
-                                <button class="btn btn-primary-custom" onclick="openMap('Praça da Piedade')">
-                                    <i class="fa-solid fa-map me-2"></i> Ver no Mapa
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
+            </div>
+
+            <h3 class="mb-3">Sobre o Local</h3>
+            <p class="lead">Onde a história e o lazer se encontram. O entorno da igreja matriz oferece espaço seguro.</p>
+
+            <div class="mt-4">
+              <span class="badge badge-historia me-2">História</span>
+              <span class="badge badge-lazer me-2">Lazer</span>
             </div>
         </div>
     </main>

@@ -2,6 +2,28 @@ const imgCardPadrao = new URL('../img/locais/bannerLAG.jpg', import.meta.url).hr
 
 const listaLocais = [
     {
+        nome: "Centro de Iniciação ao Esporte",
+        img: imgCardPadrao,
+        badges: ["Indoor", "Academia"],
+        badgesClasses: ["badge-indoor", "badge-academia"],
+        desc: "Espaço voltado à iniciação esportiva e atividades físicas, com estrutura para treinamentos.",
+        local: "Lagarto/SE",
+        extra: "A definir",
+        icon: "fa-clock",
+        link: "locais/centro-de-iniciacao-ao-esporte.html"
+    },
+    {
+        nome: "Travessa da Bica",
+        img: imgCardPadrao,
+        badges: ["Lazer", "Ar Livre"],
+        badgesClasses: ["badge-lazer", ""],
+        desc: "Área de acesso e circulação próxima ao Balneário da Bica, usada para caminhadas e deslocamento.",
+        local: "Lagarto/SE",
+        extra: "A definir",
+        icon: "fa-clock",
+        link: "locais/travessa-da-bica.html"
+    },
+    {
         nome: "Praça Filomeno Hora",
         img: imgCardPadrao,
         badges: ["Radical", "Lazer", "Ar Livre"],
@@ -14,7 +36,7 @@ const listaLocais = [
     },
     {
         nome: "Balneário Bica",
-        img: new URL('../img/locais/bica/barzinho.jpg', import.meta.url).href,
+        img: new URL('../img/locais/balneario/barzinho.jpg', import.meta.url).href,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "Um refúgio verde dentro da cidade. Além das piscinas naturais, possui trilhas curtas.",

@@ -8,6 +8,11 @@
     object-position: center;
 }
 
+/* Garante que todas as fotos do carousel fiquem centralizadas (sobrescreve ajustes pontuais) */
+.carousel .local-cover-img {
+    object-position: center center !important;
+}
+
 .gallery-title {
     font-family: var(--font-main);
     font-weight: 700;

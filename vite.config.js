@@ -19,6 +19,8 @@ export default defineConfig({
         equipe: resolve(__dirname, 'src/pages/equipe.html'),
         configuracoes: resolve(__dirname, 'src/pages/configuracoes.html'),
         // Sub-páginas de locais
+        centroIniciacaoEsporte: resolve(__dirname, 'src/pages/locais/centro-de-iniciacao-ao-esporte.html'),
+        travessaDaBica: resolve(__dirname, 'src/pages/locais/travessa-da-bica.html'),
         balneario: resolve(__dirname, 'src/pages/locais/balneario-bica.html'),
         filomeno: resolve(__dirname, 'src/pages/locais/praca-filomeno-hora.html'),
 

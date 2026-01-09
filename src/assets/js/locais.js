@@ -1,7 +1,9 @@
+const imgCardPadrao = new URL('../img/locais/bannerLAG.jpg', import.meta.url).href;
+
 const listaLocais = [
     {
         nome: "Tanque Grande",
-        img: "../assets/img/locais/bannerLAG.jpg",
+        img: imgCardPadrao,
         badges: ["História", "Ar Livre"],
         badgesClasses: ["badge-historia", ""], // Se deixar vazio, usa padrão
         desc: "Um marco histórico da cidade. Além de sua importância cultural, oferece uma ampla área para caminhadas.",
@@ -12,7 +14,7 @@ const listaLocais = [
     },
     {
         nome: "Avenida Contorno",
-        img: "../assets/img/locais/bannerLAG.jpg",
+        img: imgCardPadrao,
         badges: ["Ciclismo", "Ar Livre"],
         badgesClasses: ["badge-ciclismo", ""],
         desc: "A principal artéria para quem gosta de pedalar longas distâncias com segurança e espaço.",
@@ -23,7 +25,7 @@ const listaLocais = [
     },
     {
         nome: "Academias da Cidade",
-        img: "../assets/img/locais/bannerLAG.jpg",
+        img: imgCardPadrao,
         badges: ["Academia", "Ar Livre"],
         badgesClasses: ["badge-academia", ""],
         desc: "Equipamentos públicos disponíveis para fortalecimento muscular ao ar livre.",
@@ -34,7 +36,7 @@ const listaLocais = [
     },
     {
         nome: "Estádio Barretão",
-        img: "../assets/img/locais/bannerLAG.jpg",
+        img: imgCardPadrao,
         badges: ["Futebol", "Ar Livre"],
         badgesClasses: ["badge-futebol", ""],
         desc: "O palco das grandes emoções do Lagarto FC. O entorno é muito usado para corridas.",
@@ -45,7 +47,7 @@ const listaLocais = [
     },
     {
         nome: "Praça Filomeno Hora",
-        img: "../assets/img/locais/bannerLAG.jpg",
+        img: imgCardPadrao,
         badges: ["Radical", "Lazer", "Ar Livre"],
         badgesClasses: ["badge-radical", "badge-lazer", ""],
         desc: "Ponto de encontro da juventude. Possui áreas lisas ideais para a prática de skate e patins.",
@@ -56,7 +58,7 @@ const listaLocais = [
     },
     {
         nome: "Ginásio O Ribeirão",
-        img: "../assets/img/locais/bannerLAG.jpg",
+        img: imgCardPadrao,
         badges: ["Indoor"],
         badgesClasses: ["badge-indoor"],
         desc: "Referência para futsal, vôlei e basquete. O ginásio recebe competições escolares e amadoras.",
@@ -67,7 +69,7 @@ const listaLocais = [
     },
     {
         nome: "Balneário Bica",
-        img: "../assets/img/locais/bannerLAG.jpg",
+        img: imgCardPadrao,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "Um refúgio verde dentro da cidade. Além das piscinas naturais, possui trilhas curtas.",
@@ -78,7 +80,7 @@ const listaLocais = [
     },
     {
         nome: "Barragem Dionísio Machado",
-        img: "../assets/img/locais/bannerLAG.jpg",
+        img: imgCardPadrao,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "O cartão postal para o pôr do sol. A orla é utilizada para caminhadas leves e piqueniques.",
@@ -89,7 +91,7 @@ const listaLocais = [
     },
     {
         nome: "Praça da Piedade",
-        img: "../assets/img/locais/bannerLAG.jpg",
+        img: imgCardPadrao,
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         desc: "Onde a história e o lazer se encontram. O entorno da igreja matriz oferece espaço seguro.",

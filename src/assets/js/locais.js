@@ -47,12 +47,12 @@ const listaLocais = [
     },
     {
         nome: "Praça Santa Teresinha",
-        img: imgCardPadrao,
+        img: new URL('../img/locais/teresinha/praca-visao-geral.JPEG', import.meta.url).href,
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Espaço público para lazer, caminhada e convivência.",
         local: "Lagarto/SE",
-        extra: "A definir",
+        extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-santa-teresinha.html"
     },
@@ -124,12 +124,12 @@ const listaLocais = [
     },
     {
         nome: "Barragem Dionísio",
-        img: imgCardPadrao,
+        img: new URL('../img/locais/dionisio/capa.JPEG', import.meta.url).href,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "Área para contemplação, caminhada leve e lazer ao ar livre.",
         local: "Lagarto/SE",
-        extra: "Tarde / Pôr do sol",
+        extra: "Livre",
         icon: "fa-clock",
         link: "locais/barragem-dionisio.html"
     }

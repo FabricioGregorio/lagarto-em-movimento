@@ -47,12 +47,12 @@ const listaLocais = [
     },
     {
         nome: "Praça Santa Teresinha",
-        img: new URL('../img/locais/teresinha/praca-visao-geral.JPEG', import.meta.url).href,
+        img: imgCardPadrao,
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Espaço público para lazer, caminhada e convivência.",
         local: "Lagarto/SE",
-        extra: "Livre",
+        extra: "A definir",
         icon: "fa-clock",
         link: "locais/praca-santa-teresinha.html"
     },
@@ -91,7 +91,7 @@ const listaLocais = [
     },
     {
         nome: "Praça da Ladeira do Rosário",
-        img: new URL('../img/locais/ladeira/capa.JPEG', import.meta.url).href,
+        img: new URL('../img/locais/travessa/capa.JPEG', import.meta.url).href,
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         desc: "Ponto de encontro e passagem, com espaço para descanso.",
@@ -123,13 +123,13 @@ const listaLocais = [
         link: "locais/parque-das-palmeiras.html"
     },
     {
-        nome: "Barragem Dionísio Machado",
-         img: new URL('../img/locais/dionisio/capa.JPEG', import.meta.url).href,
+        nome: "Barragem Dionísio",
+        img: imgCardPadrao,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "Área para contemplação, caminhada leve e lazer ao ar livre.",
         local: "Lagarto/SE",
-        extra: "Livre",
+        extra: "Tarde / Pôr do sol",
         icon: "fa-clock",
         link: "locais/barragem-dionisio.html"
     }
@@ -319,5 +319,5 @@ if (typeof window !== 'undefined') {
 
 // Chama a função assim que o arquivo carrega
 document.addEventListener('DOMContentLoaded', () => {
-      renderLocais();
+    renderLocais();
 });

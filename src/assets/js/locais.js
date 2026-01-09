@@ -2,17 +2,6 @@ const imgCardPadrao = new URL('../img/locais/bannerLAG.jpg', import.meta.url).hr
 
 const listaLocais = [
     {
-        nome: "Tanque Grande",
-        img: imgCardPadrao,
-        badges: ["História", "Ar Livre"],
-        badgesClasses: ["badge-historia", ""], // Se deixar vazio, usa padrão
-        desc: "Um marco histórico da cidade. Além de sua importância cultural, oferece uma ampla área para caminhadas.",
-        local: "Centro de Lagarto",
-        extra: "Pico: 17h - 19h",
-        icon: "fa-clock",
-        link: "locais/tanque-grande.html"
-    },
-    {
         nome: "Avenida Contorno",
         img: imgCardPadrao,
         badges: ["Ciclismo", "Ar Livre"],
@@ -35,17 +24,6 @@ const listaLocais = [
         link: "locais/academias-da-cidade.html"
     },
     {
-        nome: "Estádio Barretão",
-        img: imgCardPadrao,
-        badges: ["Futebol", "Ar Livre"],
-        badgesClasses: ["badge-futebol", ""],
-        desc: "O palco das grandes emoções do Lagarto FC. O entorno é muito usado para corridas.",
-        local: "Bairro Matinha",
-        extra: "Jogos / Eventos",
-        icon: "fa-calendar",
-        link: "locais/estadio-barretao.html"
-    },
-    {
         nome: "Praça Filomeno Hora",
         img: imgCardPadrao,
         badges: ["Radical", "Lazer", "Ar Livre"],
@@ -57,19 +35,8 @@ const listaLocais = [
         link: "locais/praca-filomeno-hora.html"
     },
     {
-        nome: "Ginásio O Ribeirão",
-        img: imgCardPadrao,
-        badges: ["Indoor"],
-        badgesClasses: ["badge-indoor"],
-        desc: "Referência para futsal, vôlei e basquete. O ginásio recebe competições escolares e amadoras.",
-        local: "Próx. ao Mercado",
-        extra: "Agendamento",
-        icon: "fa-clock",
-        link: "locais/ginasio-o-ribeirao.html"
-    },
-    {
         nome: "Balneário Bica",
-        img: imgCardPadrao,
+        img: new URL('../img/locais/bica/barzinho.jpg', import.meta.url).href,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "Um refúgio verde dentro da cidade. Além das piscinas naturais, possui trilhas curtas.",
@@ -77,17 +44,6 @@ const listaLocais = [
         extra: "Fins de Semana",
         icon: "fa-sun",
         link: "locais/balneario-bica.html"
-    },
-    {
-        nome: "Barragem Dionísio Machado",
-        img: imgCardPadrao,
-        badges: ["Natureza", "Lazer"],
-        badgesClasses: ["badge-natureza", "badge-lazer"],
-        desc: "O cartão postal para o pôr do sol. A orla é utilizada para caminhadas leves e piqueniques.",
-        local: "Zona Oeste",
-        extra: "Tarde / Pôr do Sol",
-        icon: "fa-clock",
-        link: "locais/barragem-dionisio-machado.html"
     },
     {
         nome: "Praça da Piedade",
@@ -99,6 +55,94 @@ const listaLocais = [
         extra: "Noite / Eventos",
         icon: "fa-star",
         link: "locais/praca-da-piedade.html"
+    },
+    {
+        nome: "Praça Santa Teresinha",
+        img: imgCardPadrao,
+        badges: ["Lazer", "Ar Livre"],
+        badgesClasses: ["badge-lazer", ""],
+        desc: "Espaço público para lazer, caminhada e convivência.",
+        local: "Lagarto/SE",
+        extra: "A definir",
+        icon: "fa-clock",
+        link: "locais/praca-santa-teresinha.html"
+    },
+    {
+        nome: "Praça Nossa Senhora da Piedade",
+        img: imgCardPadrao,
+        badges: ["História", "Lazer"],
+        badgesClasses: ["badge-historia", "badge-lazer"],
+        desc: "Área tradicional no centro, com espaço para lazer e circulação.",
+        local: "Centro de Lagarto",
+        extra: "Eventos / Convivência",
+        icon: "fa-star",
+        link: "locais/praca-nossa-senhora-da-piedade.html"
+    },
+    {
+        nome: "Praça José Domingo Vieira",
+        img: imgCardPadrao,
+        badges: ["Lazer", "Ar Livre"],
+        badgesClasses: ["badge-lazer", ""],
+        desc: "Praça para convivência, descanso e atividades ao ar livre.",
+        local: "Lagarto/SE",
+        extra: "A definir",
+        icon: "fa-clock",
+        link: "locais/praca-jose-domingo-vieira.html"
+    },
+    {
+        nome: "Praça do Gomes",
+        img: imgCardPadrao,
+        badges: ["Lazer", "Ar Livre"],
+        badgesClasses: ["badge-lazer", ""],
+        desc: "Espaço público para lazer e convivência ao ar livre.",
+        local: "Lagarto/SE",
+        extra: "A definir",
+        icon: "fa-clock",
+        link: "locais/praca-do-gomes.html"
+    },
+    {
+        nome: "Praça da Ladeira do Rosário",
+        img: imgCardPadrao,
+        badges: ["História", "Lazer"],
+        badgesClasses: ["badge-historia", "badge-lazer"],
+        desc: "Ponto de encontro e passagem, com espaço para descanso.",
+        local: "Lagarto/SE",
+        extra: "A definir",
+        icon: "fa-clock",
+        link: "locais/praca-da-ladeira-do-rosario.html"
+    },
+    {
+        nome: "Praça do Rosário",
+        img: imgCardPadrao,
+        badges: ["História", "Lazer"],
+        badgesClasses: ["badge-historia", "badge-lazer"],
+        desc: "Praça tradicional para lazer, convivência e passagem.",
+        local: "Lagarto/SE",
+        extra: "A definir",
+        icon: "fa-clock",
+        link: "locais/praca-do-rosario.html"
+    },
+    {
+        nome: "Parque das Palmeiras",
+        img: imgCardPadrao,
+        badges: ["Natureza", "Lazer"],
+        badgesClasses: ["badge-natureza", "badge-lazer"],
+        desc: "Área verde para caminhada, descanso e atividades ao ar livre.",
+        local: "Lagarto/SE",
+        extra: "A definir",
+        icon: "fa-sun",
+        link: "locais/parque-das-palmeiras.html"
+    },
+    {
+        nome: "Barragem Dionísio",
+        img: imgCardPadrao,
+        badges: ["Natureza", "Lazer"],
+        badgesClasses: ["badge-natureza", "badge-lazer"],
+        desc: "Área para contemplação, caminhada leve e lazer ao ar livre.",
+        local: "Lagarto/SE",
+        extra: "Tarde / Pôr do sol",
+        icon: "fa-clock",
+        link: "locais/barragem-dionisio.html"
     }
 ];
 

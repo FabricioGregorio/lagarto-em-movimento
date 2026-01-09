@@ -1,5 +1,13 @@
 /* --- ESTILOS ESPECÍFICOS PARA PÁGINAS DE LOCAIS --- */
 
+/* Imagem de capa (hero) das páginas individuais */
+.local-cover-img {
+    width: 100%;
+    height: clamp(240px, 40vw, 460px);
+    object-fit: cover;
+    object-position: center;
+}
+
 .gallery-title {
     font-family: var(--font-main);
     font-weight: 700;
@@ -24,11 +32,18 @@ body.dark-mode .gallery-caption {
 /* Ajuste de espaçamento nas imagens da galeria */
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: clamp(220px, 34vw, 380px);
     object-fit: cover;
+    /* Leve foco mais para baixo (evita cortar rodapé de algumas fotos) */
+    object-position: center 65%;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
+
+/* Ajuste fino de enquadramento (use quando uma foto específica estiver cortando mal) */
+.img-focus-top { object-position: center top !important; }
+.img-focus-center { object-position: center center !important; }
+.img-focus-bottom { object-position: center bottom !important; }
 
 .gallery-item:hover img {
     transform: scale(1.02);
@@ -38,6 +53,8 @@ body.dark-mode .gallery-caption {
 .img-frame {
     position: relative;
     z-index: 1;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 .img-frame::before {

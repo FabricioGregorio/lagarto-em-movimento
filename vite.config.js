@@ -2,6 +2,14 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
+  // No GitHub Pages o site fica em /<repo>/, então precisamos ajustar o base.
+  // Em outros ambientes (dev local, Vercel etc.) mantemos '/'.
+  base: process.env.GITHUB_ACTIONS === 'true'
+    ? (() => {
+        const repoName = (process.env.GITHUB_REPOSITORY || '').split('/')[1];
+        return repoName ? `/${repoName}/` : '/';
+      })()
+    : '/',
   appType: 'mpa', // Garante que o Vite funcione como Multi-Page App e não SPA
   build: {
     rollupOptions: {

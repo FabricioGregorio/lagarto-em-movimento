@@ -47,7 +47,7 @@ const listaLocais = [
     },
     {
         nome: "Praça Santa Teresinha",
-        img: imgCardPadrao,
+        img: new URL('../img/locais/teresinha/praca-visao-geral.JPEG', import.meta.url).href,
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Espaço público para lazer, caminhada e convivência.",
@@ -123,8 +123,8 @@ const listaLocais = [
         link: "locais/parque-das-palmeiras.html"
     },
     {
-        nome: "Barragem Dionísio",
-        img: imgCardPadrao,
+        nome: "Barragem Dionísio Machado",
+         img: new URL('../img/locais/dionisio/capa.JPEG', import.meta.url).href,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "Área para contemplação, caminhada leve e lazer ao ar livre.",

@@ -3,7 +3,7 @@ const imgCardPadrao = new URL('../img/locais/bannerLAG.jpg', import.meta.url).hr
 const listaLocais = [
     {
         nome: "Centro de Iniciação ao Esporte",
-        img: imgCardPadrao,
+        img: new URL('../img/locais/cie/capa.jpg', import.meta.url).href,
         badges: ["Indoor", "Academia"],
         badgesClasses: ["badge-indoor", "badge-academia"],
         desc: "Espaço voltado à iniciação esportiva e atividades físicas, com estrutura para treinamentos.",
@@ -14,7 +14,7 @@ const listaLocais = [
     },
     {
         nome: "Travessa da Bica",
-        img: imgCardPadrao,
+        img: new URL('../img/locais/travessa/capa.JPEG', import.meta.url).href,
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Área de acesso e circulação próxima ao Balneário da Bica, usada para caminhadas e deslocamento.",
@@ -25,7 +25,7 @@ const listaLocais = [
     },
     {
         nome: "Praça Filomeno Hora",
-        img: imgCardPadrao,
+        img: new URL('../img/locais/filomeno/capa.JPEG', import.meta.url).href,
         badges: ["Radical", "Lazer", "Ar Livre"],
         badgesClasses: ["badge-radical", "badge-lazer", ""],
         desc: "Ponto de encontro da juventude. Possui áreas lisas ideais para a prática de skate e patins.",
@@ -36,7 +36,7 @@ const listaLocais = [
     },
     {
         nome: "Balneário Bica",
-        img: new URL('../img/locais/balneario/barzinho.jpg', import.meta.url).href,
+        img: new URL('../img/locais/balneario/capa.JPEG', import.meta.url).href,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "Um refúgio verde dentro da cidade. Além das piscinas naturais, possui trilhas curtas.",
@@ -58,7 +58,7 @@ const listaLocais = [
     },
     {
         nome: "Praça Nossa Senhora da Piedade",
-        img: imgCardPadrao,
+        img: new URL('../img/locais/piedade/praca-capa.JPEG', import.meta.url).href,
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         desc: "Área tradicional no centro, com espaço para lazer e circulação.",
@@ -69,7 +69,7 @@ const listaLocais = [
     },
     {
         nome: "Praça José Domingo Vieira",
-        img: imgCardPadrao,
+        img: new URL('../img/locais/domingo/capa.JPEG', import.meta.url).href,
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Praça para convivência, descanso e atividades ao ar livre.",
@@ -80,7 +80,7 @@ const listaLocais = [
     },
     {
         nome: "Praça do Gomes",
-        img: imgCardPadrao,
+        img: new URL('../img/locais/gomes/capa.JPEG', import.meta.url).href,
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Espaço público para lazer e convivência ao ar livre.",
@@ -91,7 +91,7 @@ const listaLocais = [
     },
     {
         nome: "Praça da Ladeira do Rosário",
-        img: imgCardPadrao,
+        img: new URL('../img/locais/travessa/capa.JPEG', import.meta.url).href,
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         desc: "Ponto de encontro e passagem, com espaço para descanso.",
@@ -102,7 +102,7 @@ const listaLocais = [
     },
     {
         nome: "Praça do Rosário",
-        img: imgCardPadrao,
+        img: new URL('../img/locais/rosario/capa.JPEG', import.meta.url).href,
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         desc: "Praça tradicional para lazer, convivência e passagem.",
@@ -113,7 +113,7 @@ const listaLocais = [
     },
     {
         nome: "Parque das Palmeiras",
-        img: imgCardPadrao,
+        img: new URL('../img/locais/palmeiras/capa.JPEG', import.meta.url).href,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "Área verde para caminhada, descanso e atividades ao ar livre.",

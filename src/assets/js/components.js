@@ -3,21 +3,22 @@ document.addEventListener('DOMContentLoaded', () => {
     renderFooter();
 });
 
+function getBasePath() {
+  const host = window.location.host;
+  const path = window.location.pathname;
+  const pathSegments = path.replace(/^\//, '').split('/').filter(Boolean);
+
+  // GitHub Pages: https://<user>.github.io/<repo>/...
+  if (host.endsWith('github.io') && pathSegments.length > 0) {
+    return `/${pathSegments[0]}/`;
+  }
+
+  return '/';
+}
+
 function renderHeader() {
-    // Calcula o caminho relativo para a raiz baseado na profundidade atual
-    const path = window.location.pathname;
-    const pathSegments = path.replace(/^\//, '').split('/').filter(s => s.length > 0);
-    
-    let depth = 0;
-    if (pathSegments.length === 0 || (pathSegments.length === 1 && pathSegments[0] === 'index.html')) {
-        depth = 0;
-    } else if (path.endsWith('/')) {
-        depth = pathSegments.length;
-    } else {
-        depth = pathSegments.length - 1;
-    }
-    
-    const rootPath = depth === 0 ? './' : '../'.repeat(depth);
+  const basePath = getBasePath();
+  const path = window.location.pathname;
 
     // Pega o título da página atual para saber qual aba ativar e o título do Hero
     let activePage = '';
@@ -36,20 +37,20 @@ function renderHeader() {
         <nav class="main-nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="${rootPath}index.html" class="nav-link ${activePage === 'home' ? 'active' : ''}">
+              <a href="${basePath}index.html" class="nav-link ${activePage === 'home' ? 'active' : ''}">
                 <div class="icon-circle"><i class="fa-solid fa-house"></i></div>
                 <span>INÍCIO</span>
               </a>
             </li>
             <li class="nav-item">
-              <a href="${rootPath}src/pages/locais.html" class="nav-link ${activePage === 'locais' ? 'active' : ''}">
+              <a href="${basePath}src/pages/locais.html" class="nav-link ${activePage === 'locais' ? 'active' : ''}">
                 <div class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></div>
                 <span>LOCAIS</span>
               </a>
             </li>
-            <li class="nav-item"><a href="${rootPath}src/pages/sobre.html" class="nav-link ${activePage === 'sobre' ? 'active' : ''}"><div class="icon-circle"><i class="fa-solid fa-circle-info"></i></div><span>SOBRE O PROJETO</span></a></li>
-            <li class="nav-item"><a href="${rootPath}src/pages/equipe.html" class="nav-link ${activePage === 'equipe' ? 'active' : ''}"><div class="icon-circle"><i class="fa-solid fa-users"></i></div><span>EQUIPE</span></a></li>
-            <li class="nav-item"><a href="${rootPath}src/pages/configuracoes.html" class="nav-link ${activePage === 'configuracoes' ? 'active' : ''}"><div class="icon-circle"><i class="fa-solid fa-gear"></i></div><span>CONFIGURAÇÕES</span></a></li>
+            <li class="nav-item"><a href="${basePath}src/pages/sobre.html" class="nav-link ${activePage === 'sobre' ? 'active' : ''}"><div class="icon-circle"><i class="fa-solid fa-circle-info"></i></div><span>SOBRE O PROJETO</span></a></li>
+            <li class="nav-item"><a href="${basePath}src/pages/equipe.html" class="nav-link ${activePage === 'equipe' ? 'active' : ''}"><div class="icon-circle"><i class="fa-solid fa-users"></i></div><span>EQUIPE</span></a></li>
+            <li class="nav-item"><a href="${basePath}src/pages/configuracoes.html" class="nav-link ${activePage === 'configuracoes' ? 'active' : ''}"><div class="icon-circle"><i class="fa-solid fa-gear"></i></div><span>CONFIGURAÇÕES</span></a></li>
           </ul>
         </nav>
 
@@ -71,20 +72,7 @@ function renderHeader() {
 }
 
 function renderFooter() {
-    // Calcula o caminho relativo para a raiz
-    const path = window.location.pathname;
-    const pathSegments = path.replace(/^\//, '').split('/').filter(s => s.length > 0);
-    
-    let depth = 0;
-    if (pathSegments.length === 0 || (pathSegments.length === 1 && pathSegments[0] === 'index.html')) {
-        depth = 0;
-    } else if (path.endsWith('/')) {
-        depth = pathSegments.length;
-    } else {
-        depth = pathSegments.length - 1;
-    }
-    
-    const rootPath = depth === 0 ? './' : '../'.repeat(depth);
+    const basePath = getBasePath();
 
     const footerHTML = `
     <footer class="bg-dark text-white pt-5 pb-4 border-top border-secondary">
@@ -102,10 +90,10 @@ function renderFooter() {
           <!-- Coluna 2: Mapa do Site -->
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold" style="color: var(--primary-color);">Mapa do Site</h5>
-            <p><a href="${rootPath}index.html" class="text-white text-decoration-none">Início</a></p>
-            <p><a href="${rootPath}src/pages/locais.html" class="text-white text-decoration-none">Locais</a></p>
-            <p><a href="${rootPath}src/pages/equipe.html" class="text-white text-decoration-none">Equipe</a></p>
-            <p><a href="${rootPath}src/pages/sobre.html" class="text-white text-decoration-none">Sobre</a></p>
+            <p><a href="${basePath}index.html" class="text-white text-decoration-none">Início</a></p>
+            <p><a href="${basePath}src/pages/locais.html" class="text-white text-decoration-none">Locais</a></p>
+            <p><a href="${basePath}src/pages/equipe.html" class="text-white text-decoration-none">Equipe</a></p>
+            <p><a href="${basePath}src/pages/sobre.html" class="text-white text-decoration-none">Sobre</a></p>
           </div>
 
           <!-- Coluna 3: Institucional -->

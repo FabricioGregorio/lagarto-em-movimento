@@ -277,6 +277,11 @@ function openMap(localName) {
     }, { once: true });
 }
 
+// Necessário para funcionar com onclick="openMap('...')" em HTML quando o script é module
+if (typeof window !== 'undefined') {
+    window.openMap = openMap;
+}
+
 // Chama a função assim que o arquivo carrega
 document.addEventListener('DOMContentLoaded', () => {
     renderLocais();

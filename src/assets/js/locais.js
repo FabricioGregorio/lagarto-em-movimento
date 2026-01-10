@@ -27,7 +27,7 @@ const listaLocais = [
         nome: "Praça Filomeno Hora",
         img: new URL('../img/locais/filomeno/capa.JPEG', import.meta.url).href,
         badges: ["Lazer", "Ar Livre"],
-        badgesClasses: ["badge-radical", "badge-lazer", ""],
+        badgesClasses: ["badge-lazer", ""],
         desc: "Ponto de encontro da juventude. Possui áreas lisas ideais para a prática de skate e patins.",
         local: "Centro",
         extra: "Livre",
@@ -198,6 +198,21 @@ function renderLocais() {
     ativarBotoesMapa();
 }
 
+function aplicarBlurBgNosCarousels() {
+    const imgs = document.querySelectorAll('.carousel .carousel-item img.local-cover-img');
+
+    imgs.forEach((img) => {
+        const carouselItem = img.closest('.carousel-item');
+        if (!carouselItem) return;
+
+        const src = img.currentSrc || img.src;
+        if (!src) return;
+
+        carouselItem.style.setProperty('--carousel-bg', `url("${src}")`);
+        carouselItem.classList.add('has-blur-bg');
+    });
+}
+
 function ativarClickCardsLocais() {
     const cards = document.querySelectorAll('.custom-card[data-href]');
 
@@ -320,4 +335,5 @@ if (typeof window !== 'undefined') {
 // Chama a função assim que o arquivo carrega
 document.addEventListener('DOMContentLoaded', () => {
     renderLocais();
+    aplicarBlurBgNosCarousels();
 });

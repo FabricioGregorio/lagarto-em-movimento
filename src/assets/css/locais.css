@@ -15,7 +15,49 @@
 .carousel .local-cover-img {
     object-fit: contain;
     object-position: center bottom;
-    background-color: #000;
+    background-color: transparent;
+}
+
+/* Efeito "blurred background" no carousel:
+   - o fundo do slide é a mesma imagem com blur intenso
+   - a imagem principal fica nítida centralizada por cima
+   Requer JS para setar `--carousel-bg` em cada `.carousel-item`. */
+.carousel .carousel-item {
+    position: relative;
+}
+
+.carousel .carousel-item.has-blur-bg::before {
+    content: "";
+    position: absolute;
+    inset: -32px;
+    background-image: var(--carousel-bg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(28px);
+    transform: scale(1.1);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.carousel .carousel-item.has-blur-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.carousel .carousel-item.has-blur-bg > img {
+    position: relative;
+    z-index: 2;
+}
+
+/* Garante que os controles do Bootstrap fiquem clicáveis acima do overlay */
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next,
+.carousel .carousel-indicators {
+    z-index: 3;
 }
 
 /* Centraliza qualquer imagem dentro do carousel (mesmo se faltar w-100/d-block) */

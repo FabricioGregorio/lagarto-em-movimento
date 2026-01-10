@@ -113,6 +113,10 @@ body {
   background-color: var(--bg-primary);
 }
 
+.font-zilla {
+  font-family: 'Zilla Slab', serif;
+}
+
 /* --- ESTRUTURA PRINCIPAL (HEADER) --- */
 .main-header {
   width: 100%;
@@ -344,6 +348,13 @@ body:not(.dark-mode) .card .bg-white {
   color: #666;
   max-width: 700px;
   margin: 0 auto;
+}
+
+/* Na seção de apresentação, o texto deve ocupar a largura e não ficar centralizado */
+#sobre-cidade .section-description {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* --- CARD CUSTOMIZADO --- */

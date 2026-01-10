@@ -91,7 +91,7 @@ const listaLocais = [
     },
     {
         nome: "Praça José Josué da Silva (Ladeira do Rosário)",
-        img: new URL('../img/locais/travessa/capa.JPEG', import.meta.url).href,
+        img: new URL('../img/locais/ladeira/capa.JPEG', import.meta.url).href,
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         desc: "Ponto de encontro e passagem, com espaço para descanso.",

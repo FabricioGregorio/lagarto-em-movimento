@@ -130,6 +130,22 @@ body {
   background-attachment: fixed;
 }
 
+/* Hero específico da página Equipe */
+body.page-equipe .main-header {
+  background-image: url('../../assets/img/equipe/ifs.JPG');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  /* “Zoom out” leve sem perder o preenchimento (desktop) */
+  background-size: 100% auto;
+}
+
+/* Fallback para telas mais estreitas/altas: garante preenchimento total */
+@media (max-width: 768px) {
+  body.page-equipe .main-header {
+    background-size: cover;
+  }
+}
+
 /* O Overlay cobre Navbar + Banner e alinha tudo verticalmente */
 .header-overlay {
   width: 100%;

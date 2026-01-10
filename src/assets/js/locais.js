@@ -2,6 +2,41 @@ const imgCardPadrao = new URL('../img/locais/bannerLAG.jpg', import.meta.url).hr
 
 const listaLocais = [
     {
+        nome: "Balneário da Bica José Agnaldo da Silva",
+        img: new URL('../img/locais/balneario/capa.JPEG', import.meta.url).href,
+        badges: ["Natureza", "Lazer"],
+        badgesClasses: ["badge-natureza", "badge-lazer"],
+        desc: "Um refúgio verde dentro da cidade. Além das piscinas naturais, possui trilhas curtas.",
+        local: "Localizado às margens da avenida Contorno (rodovia SE-270)",
+        extra: "Ter-Sex 06-18h e Sáb-Dom 06-17h (fechado segundas)",
+        icon: "fa-clock",
+        link: "locais/balneario-bica.html"
+    },
+    {
+        nome: "Barragem Dionísio Machado",
+        img: new URL('../img/locais/dionisio/capa.JPEG', import.meta.url).href,
+        badges: ["Natureza", "Lazer"],
+        badgesClasses: ["badge-natureza", "badge-lazer"],
+        desc: "Área para contemplação, caminhada leve e lazer ao ar livre.",
+        local: "Zona Rural de Lagarto.",
+        extra: "Livre",
+        icon: "fa-clock",
+        link: "locais/barragem-dionisio.html"
+    },
+    {
+        nome: "Parque das Palmeiras",
+        img: new URL('../img/locais/palmeiras/capa.JPEG', import.meta.url).href,
+        badges: ["Natureza", "Lazer"],
+        badgesClasses: ["badge-natureza", "badge-lazer"],
+        desc: "Área verde para caminhada, descanso e atividades ao ar livre.",
+        local: "Estrada Parque das Palmeiras, Povoado Brejo",
+        extra: "Horário: 08h:00–18h:00; Semana inteira",
+        icon: "fa-clock",
+        link: "locais/parque-das-palmeiras.html"
+    },
+
+    // Locais de esporte / atividade física
+    {
         nome: "Centro de Iniciação ao Esporte",
         img: new URL('../img/locais/cie/capa.jpg', import.meta.url).href,
         badges: ["Indoor", "Esportes"],
@@ -23,27 +58,51 @@ const listaLocais = [
         icon: "fa-clock",
         link: "locais/travessa-da-bica.html"
     },
+
+    // Praças (agrupadas ao final)
+    {
+        nome: "Praça Nossa Senhora da Piedade",
+        img: new URL('../img/locais/piedade/praca-capa.JPEG', import.meta.url).href,
+        badges: ["História", "Lazer"],
+        badgesClasses: ["badge-historia", "badge-lazer"],
+        desc: "Área tradicional no centro, com espaço para lazer e circulação.",
+        local: "R. Cel. Souza Freire, Centro",
+        extra: "Livre",
+        icon: "fa-clock",
+        link: "locais/praca-nossa-senhora-da-piedade.html"
+    },
+    {
+        nome: "Praça do Rosário",
+        img: new URL('../img/locais/rosario/capa.JPEG', import.meta.url).href,
+        badges: ["História", "Lazer"],
+        badgesClasses: ["badge-historia", "badge-lazer"],
+        desc: "Praça tradicional para lazer, convivência e passagem.",
+        local: "Praça do Rosário, com acesso pela Av. Nossa Senhora da Piedade - Centro",
+        extra: "Livre",
+        icon: "fa-clock",
+        link: "locais/praca-do-rosario.html"
+    },
     {
         nome: "Praça Filomeno Hora",
         img: new URL('../img/locais/filomeno/capa.JPEG', import.meta.url).href,
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Ponto de encontro da juventude. Possui áreas lisas ideais para a prática de skate e patins.",
-        local: "Centro",
+        local: "Praça Filomeno Hora, com acesso pela Rua Dr. Lupicínio Barros, s/n - Centro",
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-filomeno-hora.html"
     },
     {
-        nome: "Balneário da Bica José Agnaldo da Silva",
-        img: new URL('../img/locais/balneario/capa.JPEG', import.meta.url).href,
-        badges: ["Natureza", "Lazer"],
-        badgesClasses: ["badge-natureza", "badge-lazer"],
-        desc: "Um refúgio verde dentro da cidade. Além das piscinas naturais, possui trilhas curtas.",
-        local: "Centro",
-        extra: "Fins de Semana",
-        icon: "fa-sun",
-        link: "locais/balneario-bica.html"
+        nome: "Praça do Gomes",
+        img: new URL('../img/locais/gomes/capa.JPEG', import.meta.url).href,
+        badges: ["Lazer", "Ar Livre"],
+        badgesClasses: ["badge-lazer", ""],
+        desc: "Espaço público para lazer e convivência ao ar livre.",
+        local: "Praça Jeremias Monteiro de Carvalho, 113 - São José, 49400-000",
+        extra: "Livre",
+        icon: "fa-clock",
+        link: "locais/praca-do-gomes.html"
     },
     {
         nome: "Praça Santa Teresinha",
@@ -57,37 +116,15 @@ const listaLocais = [
         link: "locais/praca-santa-teresinha.html"
     },
     {
-        nome: "Praça Nossa Senhora da Piedade",
-        img: new URL('../img/locais/piedade/praca-capa.JPEG', import.meta.url).href,
-        badges: ["História", "Lazer"],
-        badgesClasses: ["badge-historia", "badge-lazer"],
-        desc: "Área tradicional no centro, com espaço para lazer e circulação.",
-        local: "Centro",
-        extra: "Eventos / Convivência",
-        icon: "fa-star",
-        link: "locais/praca-nossa-senhora-da-piedade.html"
-    },
-    {
         nome: "Praça José Domingo Vieira",
         img: new URL('../img/locais/domingo/capa.JPEG', import.meta.url).href,
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Praça para convivência, descanso e atividades ao ar livre.",
-        local: "Rua José Barreto de Souza, 1-107, CEP 49.400-000",
+        local: "Rua José Barreto de Souza, 1-107, 49.400-000",
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-jose-domingo-vieira.html"
-    },
-    {
-        nome: "Praça do Gomes",
-        img: new URL('../img/locais/gomes/capa.JPEG', import.meta.url).href,
-        badges: ["Lazer", "Ar Livre"],
-        badgesClasses: ["badge-lazer", ""],
-        desc: "Espaço público para lazer e convivência ao ar livre.",
-        local: "Praça Jeremias Monteiro de Carvalho, 113 - São José, Lagarto - SE, 49400-000",
-        extra: "Livre",
-        icon: "fa-clock",
-        link: "locais/praca-do-gomes.html"
     },
     {
         nome: "Praça José Josué da Silva (Ladeira do Rosário)",
@@ -99,39 +136,6 @@ const listaLocais = [
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-da-ladeira-do-rosario.html"
-    },
-    {
-        nome: "Praça do Rosário",
-        img: new URL('../img/locais/rosario/capa.JPEG', import.meta.url).href,
-        badges: ["História", "Lazer"],
-        badgesClasses: ["badge-historia", "badge-lazer"],
-        desc: "Praça tradicional para lazer, convivência e passagem.",
-        local: "Centro",
-        extra: "Livre",
-        icon: "fa-clock",
-        link: "locais/praca-do-rosario.html"
-    },
-    {
-        nome: "Parque das Palmeiras",
-        img: new URL('../img/locais/palmeiras/capa.JPEG', import.meta.url).href,
-        badges: ["Natureza", "Lazer"],
-        badgesClasses: ["badge-natureza", "badge-lazer"],
-        desc: "Área verde para caminhada, descanso e atividades ao ar livre.",
-        local: "Estrada Parque das Palmeiras, Povoado Brejo",
-        extra: "Horário: 08h:00–18h:00; Semana inteira",
-        icon: "fa-sun",
-        link: "locais/parque-das-palmeiras.html"
-    },
-    {
-        nome: "Barragem Dionísio Machado",
-        img: new URL('../img/locais/dionisio/capa.JPEG', import.meta.url).href,
-        badges: ["Natureza", "Lazer"],
-        badgesClasses: ["badge-natureza", "badge-lazer"],
-        desc: "Área para contemplação, caminhada leve e lazer ao ar livre.",
-        local: "Zona Rural de Lagarto.",
-        extra: "Livre",
-        icon: "fa-clock",
-        link: "locais/barragem-dionisio.html"
     }
 ];
 

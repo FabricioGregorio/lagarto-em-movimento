@@ -301,6 +301,11 @@ body.page-equipe .main-header {
   opacity: 1;
 }
 
+.custom-justify {
+    text-align: justify;
+    line-height: 1.6; /* Melhora o espaçamento entre linhas */
+}
+
 /* Animação de "pulo" */
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

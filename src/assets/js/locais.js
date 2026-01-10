@@ -4,10 +4,10 @@ const listaLocais = [
     {
         nome: "Centro de Iniciação ao Esporte",
         img: new URL('../img/locais/cie/capa.jpg', import.meta.url).href,
-        badges: ["Indoor", "Academia"],
-        badgesClasses: ["badge-indoor", "badge-academia"],
+        badges: ["Indoor", "Esportes"],
+        badgesClasses: ["badge-indoor", "badge-esportes"],
         desc: "Espaço voltado à iniciação esportiva e atividades físicas, com estrutura para treinamentos.",
-        local: "Lagarto/SE",
+        local: "Rua Tiradentes, s/n, no Conjunto Matinha, no Bairro Aldemar de Carvalho",
         extra: "A definir",
         icon: "fa-clock",
         link: "locais/centro-de-iniciacao-ao-esporte.html"
@@ -18,15 +18,15 @@ const listaLocais = [
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Área de acesso e circulação próxima ao Balneário da Bica, usada para caminhadas e deslocamento.",
-        local: "Lagarto/SE",
-        extra: "A definir",
+        local: "Avenida Sindicalista Antônio Francisco da Rocha",
+        extra: "Livre",
         icon: "fa-clock",
         link: "locais/travessa-da-bica.html"
     },
     {
         nome: "Praça Filomeno Hora",
         img: new URL('../img/locais/filomeno/capa.JPEG', import.meta.url).href,
-        badges: ["Radical", "Lazer", "Ar Livre"],
+        badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-radical", "badge-lazer", ""],
         desc: "Ponto de encontro da juventude. Possui áreas lisas ideais para a prática de skate e patins.",
         local: "Centro",
@@ -40,7 +40,7 @@ const listaLocais = [
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "Um refúgio verde dentro da cidade. Além das piscinas naturais, possui trilhas curtas.",
-        local: "Parque da Bica",
+        local: "Centro",
         extra: "Fins de Semana",
         icon: "fa-sun",
         link: "locais/balneario-bica.html"
@@ -51,7 +51,7 @@ const listaLocais = [
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Espaço público para lazer, caminhada e convivência.",
-        local: "Lagarto/SE",
+        local: "R. Josefa de Farias Júnior, 50-94 - Novo Horizonte",
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-santa-teresinha.html"
@@ -62,7 +62,7 @@ const listaLocais = [
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         desc: "Área tradicional no centro, com espaço para lazer e circulação.",
-        local: "Centro de Lagarto",
+        local: "Centro",
         extra: "Eventos / Convivência",
         icon: "fa-star",
         link: "locais/praca-nossa-senhora-da-piedade.html"
@@ -73,8 +73,8 @@ const listaLocais = [
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Praça para convivência, descanso e atividades ao ar livre.",
-        local: "Lagarto/SE",
-        extra: "A definir",
+        local: "Rua José Barreto de Souza, 1-107, CEP 49.400-000",
+        extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-jose-domingo-vieira.html"
     },
@@ -84,18 +84,18 @@ const listaLocais = [
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Espaço público para lazer e convivência ao ar livre.",
-        local: "Lagarto/SE",
-        extra: "A definir",
+        local: "Praça Jeremias Monteiro de Carvalho, 113 - São José, Lagarto - SE, 49400-000",
+        extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-do-gomes.html"
     },
     {
-        nome: "Praça da Ladeira do Rosário",
+        nome: "Praça José Josué da Silva (Ladeira do Rosário)",
         img: new URL('../img/locais/travessa/capa.JPEG', import.meta.url).href,
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         desc: "Ponto de encontro e passagem, com espaço para descanso.",
-        local: "Lagarto/SE",
+        local: "Avenida José Josué da Silva (antiga Ladeira do Rosário)",
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-da-ladeira-do-rosario.html"
@@ -106,8 +106,8 @@ const listaLocais = [
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         desc: "Praça tradicional para lazer, convivência e passagem.",
-        local: "Lagarto/SE",
-        extra: "A definir",
+        local: "Centro",
+        extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-do-rosario.html"
     },
@@ -117,8 +117,8 @@ const listaLocais = [
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "Área verde para caminhada, descanso e atividades ao ar livre.",
-        local: "Lagarto/SE",
-        extra: "A definir",
+        local: "Estrada Parque das Palmeiras, Povoado Brejo",
+        extra: "Horário: 08h:00–18h:00; Semana inteira",
         icon: "fa-sun",
         link: "locais/parque-das-palmeiras.html"
     },
@@ -128,8 +128,8 @@ const listaLocais = [
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "Área para contemplação, caminhada leve e lazer ao ar livre.",
-        local: "Lagarto/SE",
-        extra: "Livre",
+        local: "Endereço: Zona Rural de Lagarto.",
+        extra: "Horário: Tarde / Pôr do sol",
         icon: "fa-clock",
         link: "locais/barragem-dionisio.html"
     }

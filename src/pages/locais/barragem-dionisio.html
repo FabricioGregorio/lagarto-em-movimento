@@ -34,37 +34,37 @@
                 <div class="col-12 col-lg-8">
                     <div id="localCarousel" class="carousel slide rounded shadow overflow-hidden" data-bs-ride="carousel" data-bs-interval="5000">
                   <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active" data-caption="Vista principal da Barragem Dionísio.">
                       <img src="../../assets/img/locais/dionisio/capa.JPEG" class="d-block w-100 local-cover-img" alt="Barragem Dionísio">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Entrada da Barragem Dionísio.">
                       <img src="../../assets/img/locais/dionisio/entrada.JPEG" class="d-block w-100 local-cover-img" alt="Entrada da Barragem Dionísio">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Rio na Barragem Dionísio.">
                       <img src="../../assets/img/locais/dionisio/rio.JPEG" class="d-block w-100 local-cover-img" alt="Rio na Barragem Dionísio">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Rio e pescadores na barragem.">
                       <img src="../../assets/img/locais/dionisio/rio-e-pescadores.JPEG" class="d-block w-100 local-cover-img" alt="Rio e pescadores">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Rede de pesca usada no local.">
                       <img src="../../assets/img/locais/dionisio/rede-de-pesca.JPEG" class="d-block w-100 local-cover-img" alt="Rede de pesca">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Peixe recém-pescado (1).">
                       <img src="../../assets/img/locais/dionisio/peixe-1.JPEG" class="d-block w-100 local-cover-img" alt="Peixe recém-pescado">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Peixe recém-pescado (2).">
                       <img src="../../assets/img/locais/dionisio/peixe-2.JPEG" class="d-block w-100 local-cover-img" alt="Peixe recém-pescado">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Peixe recém-pescado (3).">
                       <img src="../../assets/img/locais/dionisio/peixe-3.JPEG" class="d-block w-100 local-cover-img" alt="Peixe recém-pescado">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Peixe recém-pescado (4).">
                       <img src="../../assets/img/locais/dionisio/peixe-4.JPEG" class="d-block w-100 local-cover-img" alt="Peixe recém-pescado">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Peixe preparado na fogueira.">
                       <img src="../../assets/img/locais/dionisio/peixe-na-fogueira.JPEG" class="d-block w-100 local-cover-img" alt="Peixe na fogueira">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Barzinho próximo à barragem.">
                       <img src="../../assets/img/locais/dionisio/barzinho-proximo-a-barragem.JPEG" class="d-block w-100 local-cover-img" alt="Barzinho próximo à barragem">
                     </div>
                   </div>
@@ -77,6 +77,7 @@
                     <span class="visually-hidden">Próximo</span>
                   </button>
                 </div>
+                <div id="carouselCaption" class="text-center text-muted mt-2" style="font-size: 0.85rem;" aria-live="polite">Vista principal da Barragem Dionísio.</div>
                 </div>
 
                 <div class="col-12 col-lg-4">
@@ -84,8 +85,8 @@
                         <div class="card-body">
                             <h5 class="card-title mb-3">Informações</h5>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fa-solid fa-map-pin text-primary me-2"></i> <strong>Local:</strong> Endereço: Zona Rural de Lagarto.</li>
-                                <li class="mb-2"><i class="fa-solid fa-clock text-primary me-2"></i> <strong>Horário:</strong> Tarde / Pôr do sol</li>
+                                <li class="mb-2"><i class="fa-solid fa-map-pin text-primary me-2"></i> <strong>Local:</strong> Zona Rural de Lagarto.</li>
+                                <li class="mb-2"><i class="fa-solid fa-clock text-primary me-2"></i> <strong>Horário:</strong> Livre</li>
                             </ul>
                             <div class="d-grid gap-2 mt-4">
                                 <button class="btn btn-primary-custom" onclick="openMap('Barragem Dionísio')">
@@ -136,5 +137,22 @@
     <script type="module" src="../../assets/js/components.js"></script>
     <script type="module" src="../../assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const carousel = document.getElementById('localCarousel');
+        const captionEl = document.getElementById('carouselCaption');
+        if (!carousel || !captionEl) return;
+
+        const updateCaption = () => {
+          const activeItem = carousel.querySelector('.carousel-item.active');
+          const caption = activeItem?.getAttribute('data-caption');
+          if (caption) captionEl.textContent = caption;
+        };
+
+        updateCaption();
+        carousel.addEventListener('slid.bs.carousel', updateCaption);
+      });
+    </script>
   </body>
 </html>

@@ -8,7 +8,7 @@ const listaLocais = [
         badgesClasses: ["badge-indoor", "badge-esportes"],
         desc: "Espaço voltado à iniciação esportiva e atividades físicas, com estrutura para treinamentos.",
         local: "Rua Tiradentes, s/n, no Conjunto Matinha, no Bairro Aldemar de Carvalho",
-        extra: "A definir",
+        extra: "Horário: 08h - 18h; Segunda a Sexta",
         icon: "fa-clock",
         link: "locais/centro-de-iniciacao-ao-esporte.html"
     },
@@ -30,12 +30,12 @@ const listaLocais = [
         badgesClasses: ["badge-radical", "badge-lazer", ""],
         desc: "Ponto de encontro da juventude. Possui áreas lisas ideais para a prática de skate e patins.",
         local: "Centro",
-        extra: "Pico: 16h - 22h",
+        extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-filomeno-hora.html"
     },
     {
-        nome: "Balneário Bica",
+        nome: "Balneário da Bica José Agnaldo da Silva",
         img: new URL('../img/locais/balneario/capa.JPEG', import.meta.url).href,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
@@ -123,13 +123,13 @@ const listaLocais = [
         link: "locais/parque-das-palmeiras.html"
     },
     {
-        nome: "Barragem Dionísio",
+        nome: "Barragem Dionísio Machado",
         img: new URL('../img/locais/dionisio/capa.JPEG', import.meta.url).href,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "Área para contemplação, caminhada leve e lazer ao ar livre.",
-        local: "Endereço: Zona Rural de Lagarto.",
-        extra: "Horário: Tarde / Pôr do sol",
+        local: "Zona Rural de Lagarto.",
+        extra: "Livre",
         icon: "fa-clock",
         link: "locais/barragem-dionisio.html"
     }

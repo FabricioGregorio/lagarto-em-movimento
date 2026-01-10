@@ -8,9 +8,14 @@
     object-position: center;
 }
 
-/* Garante que todas as fotos do carousel fiquem centralizadas (sobrescreve ajustes pontuais) */
+/* Nos carousels, evita o efeito de "zoom" do cover:
+   - `contain` mostra a imagem inteira (sem corte)
+   - `object-position: bottom` mantém a parte inferior visível
+   Obs: pode aparecer "borda" (letterbox) dependendo da proporção da foto. */
 .carousel .local-cover-img {
-    object-position: center center !important;
+    object-fit: contain;
+    object-position: center bottom;
+    background-color: #000;
 }
 
 /* Centraliza qualquer imagem dentro do carousel (mesmo se faltar w-100/d-block) */

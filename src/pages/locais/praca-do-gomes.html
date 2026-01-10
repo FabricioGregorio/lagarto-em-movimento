@@ -34,28 +34,28 @@
                 <div class="col-12 col-lg-8">
                     <div id="localCarousel" class="carousel slide rounded shadow overflow-hidden" data-bs-ride="carousel" data-bs-interval="5000">
                   <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active" data-caption="Praça do Gomes">
                       <img src="../../assets/img/locais/gomes/capa.JPEG" class="d-block w-100 local-cover-img" alt="Praça do Gomes">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Arcos da Praça do Gomes">
                       <img src="../../assets/img/locais/gomes/arcos-da-praca.JPEG" class="d-block w-100 local-cover-img" alt="Arcos da Praça do Gomes">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Passarela com flores e plantas">
                       <img src="../../assets/img/locais/gomes/passarela-com-flores-e-plantas.JPEG" class="d-block w-100 local-cover-img" alt="Passarela com flores e plantas">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Árvores e plantas">
                       <img src="../../assets/img/locais/gomes/arvores-e-plantas.JPEG" class="d-block w-100 local-cover-img" alt="Árvores e plantas">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Academia da Saúde">
                       <img src="../../assets/img/locais/gomes/academia-da-saude.JPEG" class="d-block w-100 local-cover-img" alt="Academia da Saúde">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Barracas de pastel e água de coco">
                       <img src="../../assets/img/locais/gomes/barracas-de-pastel-e-agua-de-coco.JPEG" class="d-block w-100 local-cover-img" alt="Barracas de pastel e água de coco">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Barracas de amendoim e mandioca">
                       <img src="../../assets/img/locais/gomes/barracas-de-amendoim-e-mandioca.JPEG" class="d-block w-100 local-cover-img" alt="Barracas de amendoim e mandioca">
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-caption="Estádio Paulo Barreto de Menezes">
                       <img src="../../assets/img/locais/gomes/estadio-paulo-barreto-de-menezes.JPEG" class="d-block w-100 local-cover-img" alt="Estádio Paulo Barreto de Menezes">
                     </div>
                   </div>
@@ -68,6 +68,8 @@
                     <span class="visually-hidden">Próximo</span>
                   </button>
                 </div>
+
+                <div id="carouselCaption" class="text-muted mt-2 text-center" aria-live="polite">Praça do Gomes</div>
                 </div>
 
                 <div class="col-12 col-lg-4">
@@ -121,5 +123,24 @@
     <script type="module" src="../../assets/js/components.js"></script>
     <script type="module" src="../../assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const carouselEl = document.getElementById('localCarousel')
+        const captionEl = document.getElementById('carouselCaption')
+
+        if (!carouselEl || !captionEl) return
+
+        const setCaptionFromActive = () => {
+          const activeItem = carouselEl.querySelector('.carousel-item.active')
+          const caption = activeItem?.getAttribute('data-caption')
+          captionEl.textContent = caption || ''
+        }
+
+        setCaptionFromActive()
+
+        carouselEl.addEventListener('slid.bs.carousel', setCaptionFromActive)
+      })
+    </script>
   </body>
 </html>

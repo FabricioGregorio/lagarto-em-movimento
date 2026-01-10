@@ -7,8 +7,8 @@ const listaLocais = [
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
         desc: "Um refúgio verde dentro da cidade. Além das piscinas naturais, possui trilhas curtas.",
-        local: "Localizado às margens da avenida Contorno (rodovia SE-270)",
-        extra: "Ter-Sex 06-18h e Sáb-Dom 06-17h (fechado segundas)",
+        local: "Localizado às margens da avenida Contorno (rodovia SE-270).",
+        extra: "Horário: 08h:00–20h:00; Semana inteira.",
         icon: "fa-clock",
         link: "locais/balneario-bica.html"
     },
@@ -77,7 +77,7 @@ const listaLocais = [
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         desc: "Praça tradicional para lazer, convivência e passagem.",
-        local: "Praça do Rosário, com acesso pela Av. Nossa Senhora da Piedade - Centro",
+        local: "Praça do Rosário, com acesso pela Av. Nossa Senhora da Piedade - Centro.",
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-do-rosario.html"
@@ -88,7 +88,7 @@ const listaLocais = [
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Ponto de encontro da juventude. Possui áreas lisas ideais para a prática de skate e patins.",
-        local: "Praça Filomeno Hora, com acesso pela Rua Dr. Lupicínio Barros, s/n - Centro",
+        local: "Praça Filomeno Hora, com acesso pela Rua Dr. Lupicínio Barros, s/n - Centro.",
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-filomeno-hora.html"
@@ -99,7 +99,7 @@ const listaLocais = [
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Espaço público para lazer e convivência ao ar livre.",
-        local: "Praça Jeremias Monteiro de Carvalho, 113 - São José, 49400-000",
+        local: "Praça Jeremias Monteiro de Carvalho, 113 - São José.",
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-do-gomes.html"
@@ -110,7 +110,7 @@ const listaLocais = [
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Espaço público para lazer, caminhada e convivência.",
-        local: "R. Josefa de Farias Júnior, 50-94 - Novo Horizonte",
+        local: "R. Josefa de Farias Júnior, 50-94 - Novo Horizonte.",
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-santa-teresinha.html"
@@ -121,7 +121,7 @@ const listaLocais = [
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
         desc: "Praça para convivência, descanso e atividades ao ar livre.",
-        local: "Rua José Barreto de Souza, 1-107, 49.400-000",
+        local: "Rua José Barreto de Souza, 1-107.",
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-jose-domingo-vieira.html"
@@ -132,7 +132,7 @@ const listaLocais = [
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         desc: "Ponto de encontro e passagem, com espaço para descanso.",
-        local: "Avenida José Josué da Silva (antiga Ladeira do Rosário)",
+        local: "Avenida José Josué da Silva (Ladeira do Rosário).",
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-da-ladeira-do-rosario.html"

@@ -60,6 +60,13 @@
     z-index: 3;
 }
 
+/* --- LEGENDAS DO CARROSSEL --- */
+#carouselCaption {
+    font-size: 0.85rem !important;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
 /* Centraliza qualquer imagem dentro do carousel (mesmo se faltar w-100/d-block) */
 .carousel .carousel-item.active,
 .carousel .carousel-item-next,

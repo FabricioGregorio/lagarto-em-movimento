@@ -755,7 +755,6 @@ html.font-xl {
   font-size: 20px; /* +25% */
 }
 
-
 /* --- SWITCHES (CHECKBOX) NO MODO ESCURO --- */
 /* Melhora a visibilidade do componente quando desativado */
 body.dark-mode .form-switch .form-check-input {

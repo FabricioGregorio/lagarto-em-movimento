@@ -163,20 +163,33 @@ function renderLocais() {
 
     container.innerHTML = html;
     
-    // Inicializa os comportamentos após renderizar
     ativarClickCardsLocais();
     reativarModalImagens();
     ativarBotoesMapa();
 }
 
-// Lógica de Filtragem integrada
+// NOVA FUNÇÃO: Aplica o efeito de fundo no carrossel
+function aplicarBlurBgNosCarousels() {
+    const imgs = document.querySelectorAll('.carousel .carousel-item img.local-cover-img');
+    imgs.forEach((img) => {
+        const carouselItem = img.closest('.carousel-item');
+        if (!carouselItem) return;
+
+        const src = img.getAttribute('src');
+        if (!src) return;
+
+        // Define a variável CSS e a classe que ativa o efeito do locais.css
+        carouselItem.style.setProperty('--carousel-bg', `url("${src}")`);
+        carouselItem.classList.add('has-blur-bg');
+    });
+}
+
 function ativarFiltros() {
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('filter-btn')) {
             const btn = e.target;
             const filtroEscolhido = btn.getAttribute('data-filter');
 
-            // Gerencia visual dos botões
             document.querySelectorAll('.filter-btn').forEach(b => {
                 b.classList.remove('btn-primary', 'active');
                 b.classList.add('btn-outline-primary');
@@ -184,7 +197,6 @@ function ativarFiltros() {
             btn.classList.add('btn-primary', 'active');
             btn.classList.remove('btn-outline-primary');
 
-            // Filtra os cards
             const cards = document.querySelectorAll('.filter-item');
             cards.forEach(card => {
                 const categorias = card.getAttribute('data-category') || '';
@@ -210,11 +222,12 @@ function ativarBotoesMapa() {
     mapButtons.forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
-            e.stopPropagation(); // Evita navegar para o link do card
+            e.stopPropagation(); 
             
             const localQuery = this.getAttribute('data-local');
             if(mapTitle) mapTitle.textContent = localQuery.replace(' Lagarto SE', '');
 
+            // CORREÇÃO: trocado 1{ por ${
             const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(localQuery)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
             
             if(mapIframe) mapIframe.src = mapUrl;
@@ -252,6 +265,11 @@ function reativarModalImagens() {
 
 // Inicialização Única
 document.addEventListener('DOMContentLoaded', () => {
-    renderLocais();
-    ativarFiltros();
+    renderLocais();      // Para a página de listagem
+    ativarFiltros();     // Para a página de listagem
+    
+    // ATIVAÇÃO DO EFEITO: Importante para as páginas individuais (como Balneário)
+    aplicarBlurBgNosCarousels(); 
+    reativarModalImagens();
+    ativarBotoesMapa();
 });

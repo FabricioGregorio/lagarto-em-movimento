@@ -53,13 +53,13 @@ function renderHeader() {
             <li class="nav-item"><a href="${basePath}src/pages/configuracoes.html" class="nav-link ${activePage === 'configuracoes' ? 'active' : ''}"><div class="icon-circle"><i class="fa-solid fa-gear"></i></div><span>CONFIGURAÇÕES</span></a></li>
           </ul>
         </nav>
-
+        
         <div class="hero-content container text-center mt-5">
             <h1 class="hero-title fs-1 mb-2">${heroTitle}</h1>
             <p class="hero-subtitle">${heroSubtitle}</p>
             ${activePage === 'home' ? `
               <a href="${basePath}src/pages/locais.html" class="btn btn-primary-custom">Ver mais</a>
-              <a href="#destaques" class="scroll-down-arrow">
+              <a href="#sobre-cidade" class="scroll-down-arrow">
                 <i class="fa-solid fa-chevron-down"></i>
               </a>
             ` : ''}

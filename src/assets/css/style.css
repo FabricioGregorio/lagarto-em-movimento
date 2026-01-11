@@ -713,8 +713,12 @@ body.reduce-motion *::after {
   scroll-behavior: auto !important;
 }
 
-/* --- TAMANHO DA FONTE (ACESSIBILIDADE) --- */
+/* --- SCROLL SUAVE PARA LINKS INTERNOS --- */
+html {
+  scroll-behavior: smooth;
+}
 
+/* --- TAMANHO DA FONTE (ACESSIBILIDADE) --- */
 /* Padrão (Reset) */
 html {
   font-size: 16px; /* 100% */

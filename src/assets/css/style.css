@@ -5,7 +5,7 @@
   --icon-bg: #2F3F5D; /* Fundo dos ícones */
   --icon-hover: #019ee3;       
   --nav-text: #FFFFFF; /* Texto do menu */
-  --overlay-color: rgba(0, 0, 0, 0.7); /* Overlay escuro */
+  --overlay-color: rgba(0, 0, 0, 0.5); /* Overlay escuro */
   --font-main: 'Poppins', Arial, Helvetica, sans-serif;
 
   /* Cores base do tema claro */
@@ -157,7 +157,7 @@ body.page-equipe .main-header {
 
 /* --- NAVBAR --- */
 .main-nav {
-  padding: 20px 0;
+  padding: 20px 0 5px 0;
   width: 100%;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.075);

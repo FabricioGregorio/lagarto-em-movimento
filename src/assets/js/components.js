@@ -25,7 +25,7 @@ function renderHeader() {
     let heroTitle = '';
     let heroSubtitle = '';
 
-    if(path.includes('locais')) { activePage = 'locais'; heroTitle = 'GUIA DE LOCAIS'; heroSubtitle = 'Todos os pontos de esporte e lazer mapeados'; }
+    if(path.includes('locais')) { activePage = 'locais'; heroTitle = 'GUIA DE LOCAIS'; heroSubtitle = 'Venha viver a cidade: conheça nossos pontos de esporte e lazer.'; }
     else if(path.includes('sobre')) { activePage = 'sobre'; heroTitle = 'SOBRE O PROJETO'; heroSubtitle = 'Nossa missão e história'; }
     else if(path.includes('equipe')) { activePage = 'equipe'; heroTitle = 'QUEM FAZ ACONTECER'; heroSubtitle = 'Alunos do IFS - Campus Lagarto'; }
     else if(path.includes('configuracoes')) { activePage = 'configuracoes'; heroTitle = 'AJUSTES'; heroSubtitle = 'Personalize sua experiência'; }

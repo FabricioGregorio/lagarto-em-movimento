@@ -1,3 +1,5 @@
+// locais.js
+
 const imgCardPadrao = new URL('../img/locais/bannerLAG.jpg', import.meta.url).href;
 
 const listaLocais = [
@@ -6,6 +8,7 @@ const listaLocais = [
         img: new URL('../img/locais/balneario/capa.JPEG', import.meta.url).href,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
+        categorias: "natureza lazer acessibilidade", // Categoria para o filtro
         desc: "Um refúgio verde dentro da cidade. Além das piscinas naturais, possui trilhas curtas.",
         local: "Localizado às margens da avenida Contorno (rodovia SE-270).",
         extra: "Horário: 08h:00–20h:00; Semana inteira.",
@@ -17,6 +20,7 @@ const listaLocais = [
         img: new URL('../img/locais/dionisio/capa.JPEG', import.meta.url).href,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
+        categorias: "natureza lazer",
         desc: "Área para contemplação, caminhada leve e lazer ao ar livre.",
         local: "Zona Rural de Lagarto.",
         extra: "Livre",
@@ -28,19 +32,19 @@ const listaLocais = [
         img: new URL('../img/locais/palmeiras/capa.JPEG', import.meta.url).href,
         badges: ["Natureza", "Lazer"],
         badgesClasses: ["badge-natureza", "badge-lazer"],
+        categorias: "natureza lazer familia",
         desc: "Área verde para caminhada, descanso e atividades ao ar livre.",
         local: "Estrada Parque das Palmeiras, Povoado Brejo",
         extra: "Horário: 08h:00–18h:00; Semana inteira",
         icon: "fa-clock",
         link: "locais/parque-das-palmeiras.html"
     },
-
-    // Locais de esporte / atividade física
     {
         nome: "Centro de Iniciação ao Esporte",
         img: new URL('../img/locais/cie/capa.jpg', import.meta.url).href,
         badges: ["Indoor", "Esportes"],
         badgesClasses: ["badge-indoor", "badge-esportes"],
+        categorias: "infra esportes",
         desc: "Espaço voltado à iniciação esportiva e atividades físicas, com estrutura para treinamentos.",
         local: "Rua Tiradentes, s/n, no Conjunto Matinha, no Bairro Aldemar de Carvalho",
         extra: "Horário: 08h - 18h; Segunda a Sexta",
@@ -52,19 +56,19 @@ const listaLocais = [
         img: new URL('../img/locais/travessa/capa.JPEG', import.meta.url).href,
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
+        categorias: "lazer acessibilidade",
         desc: "Área de acesso e circulação próxima ao Balneário da Bica, usada para caminhadas e deslocamento.",
         local: "Avenida Sindicalista Antônio Francisco da Rocha",
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/travessa-da-bica.html"
     },
-
-    // Praças (agrupadas ao final)
     {
         nome: "Praça Nossa Senhora da Piedade",
         img: new URL('../img/locais/piedade/praca-capa.JPEG', import.meta.url).href,
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
+        categorias: "historia lazer",
         desc: "Área tradicional no centro, com espaço para lazer e circulação.",
         local: "R. Cel. Souza Freire, Centro",
         extra: "Livre",
@@ -76,6 +80,7 @@ const listaLocais = [
         img: new URL('../img/locais/rosario/capa.JPEG', import.meta.url).href,
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
+        categorias: "lazer familia historia",
         desc: "Praça tradicional para lazer, convivência e passagem.",
         local: "Praça do Rosário, com acesso pela Av. Nossa Senhora da Piedade - Centro.",
         extra: "Livre",
@@ -87,6 +92,7 @@ const listaLocais = [
         img: new URL('../img/locais/filomeno/capa.JPEG', import.meta.url).href,
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
+        categorias: "lazer familia acessibilidade",
         desc: "Ponto de encontro da juventude. Possui áreas lisas ideais para a prática de skate e patins.",
         local: "Praça Filomeno Hora, com acesso pela Rua Dr. Lupicínio Barros, s/n - Centro.",
         extra: "Livre",
@@ -94,64 +100,28 @@ const listaLocais = [
         link: "locais/praca-filomeno-hora.html"
     },
     {
-        nome: "Praça do Gomes",
-        img: new URL('../img/locais/gomes/capa.JPEG', import.meta.url).href,
-        badges: ["Lazer", "Ar Livre"],
-        badgesClasses: ["badge-lazer", ""],
-        desc: "Espaço público para lazer e convivência ao ar livre.",
-        local: "Praça Jeremias Monteiro de Carvalho, 113 - São José.",
-        extra: "Livre",
-        icon: "fa-clock",
-        link: "locais/praca-do-gomes.html"
-    },
-    {
         nome: "Praça Santa Teresinha",
         img: new URL('../img/locais/teresinha/praca-visao-geral.JPEG', import.meta.url).href,
         badges: ["Lazer", "Ar Livre"],
         badgesClasses: ["badge-lazer", ""],
+        categorias: "lazer acessibilidade",
         desc: "Espaço público para lazer, caminhada e convivência.",
         local: "R. Josefa de Farias Júnior, 50-94 - Novo Horizonte.",
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-santa-teresinha.html"
-    },
-    {
-        nome: "Praça José Domingo Vieira",
-        img: new URL('../img/locais/domingo/capa.JPEG', import.meta.url).href,
-        badges: ["Lazer", "Ar Livre"],
-        badgesClasses: ["badge-lazer", ""],
-        desc: "Praça para convivência, descanso e atividades ao ar livre.",
-        local: "Rua José Barreto de Souza, 1-107.",
-        extra: "Livre",
-        icon: "fa-clock",
-        link: "locais/praca-jose-domingo-vieira.html"
-    },
-    {
-        nome: "Praça José Josué da Silva (Ladeira do Rosário)",
-        img: new URL('../img/locais/ladeira/capa.JPEG', import.meta.url).href,
-        badges: ["História", "Lazer"],
-        badgesClasses: ["badge-historia", "badge-lazer"],
-        desc: "Ponto de encontro e passagem, com espaço para descanso.",
-        local: "Avenida José Josué da Silva (Ladeira do Rosário).",
-        extra: "Livre",
-        icon: "fa-clock",
-        link: "locais/praca-da-ladeira-do-rosario.html"
     }
 ];
 
 function renderLocais() {
     const container = document.getElementById('locais-container');
-    
-    // Verificação de segurança: se não achar o container (ex: está na página Home), para o script.
     if (!container) return; 
 
     let html = '';
 
     listaLocais.forEach(item => {
-        // Lógica para montar as badges (etiquetas coloridas)
         let badgesHTML = '';
         item.badges.forEach((textoBadge, index) => {
-            // Pega a classe correspondente ou usa uma padrão
             let classeCor = 'bg-primary';
             if (item.badgesClasses && item.badgesClasses[index]) {
                 classeCor = item.badgesClasses[index];
@@ -159,18 +129,13 @@ function renderLocais() {
             badgesHTML += `<span class="category-badge ${classeCor}">${textoBadge}</span>`;
         });
 
-        // Monta o Card HTML
         html += `
-        <div class="col-md-6 col-lg-4">
-                        <div class="card custom-card h-100 shadow-sm" data-href="${item.link}" role="link" tabindex="0" aria-label="Abrir detalhes de ${item.nome}">
+        <div class="col-md-6 col-lg-4 filter-item" data-category="${item.categorias}">
+            <div class="card custom-card h-100 shadow-sm" data-href="${item.link}" role="link" tabindex="0" aria-label="Abrir detalhes de ${item.nome}">
               <div class="card-img-wrapper">
-                                <a href="${item.link}" aria-label="Abrir detalhes de ${item.nome}">
-                                    <img 
-                                            src="${item.img}" 
-                                            class="card-img-top" 
-                                            alt="${item.nome}"
-                                    >
-                                </a>
+                <a href="${item.link}" aria-label="Abrir detalhes de ${item.nome}">
+                    <img src="${item.img}" class="card-img-top" alt="${item.nome}">
+                </a>
                 <div class="badges-container">
                     ${badgesHTML}
                 </div>
@@ -192,152 +157,101 @@ function renderLocais() {
                 </button>
               </div>
             </div>
-          </div>
+        </div>
         `;
     });
 
     container.innerHTML = html;
+    
+    // Inicializa os comportamentos após renderizar
     ativarClickCardsLocais();
     reativarModalImagens();
     ativarBotoesMapa();
 }
 
-function aplicarBlurBgNosCarousels() {
-    const imgs = document.querySelectorAll('.carousel .carousel-item img.local-cover-img');
+// Lógica de Filtragem integrada
+function ativarFiltros() {
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('filter-btn')) {
+            const btn = e.target;
+            const filtroEscolhido = btn.getAttribute('data-filter');
 
-    imgs.forEach((img) => {
-        const carouselItem = img.closest('.carousel-item');
-        if (!carouselItem) return;
-
-        const src = img.currentSrc || img.src;
-        if (!src) return;
-
-        carouselItem.style.setProperty('--carousel-bg', `url("${src}")`);
-        carouselItem.classList.add('has-blur-bg');
-    });
-}
-
-function ativarClickCardsLocais() {
-    const cards = document.querySelectorAll('.custom-card[data-href]');
-
-    cards.forEach(card => {
-        // Indicativo visual (sem depender de CSS global novo)
-        card.style.cursor = 'pointer';
-
-        const navigate = () => {
-            const href = card.getAttribute('data-href');
-            if (href) window.location.href = href;
-        };
-
-        card.addEventListener('click', (e) => {
-            // Não intercepta interações internas (link, botão, imagem/modal, etc)
-            if (e.target.closest('a, button, .img-clickable, [data-bs-toggle="modal"]')) return;
-            navigate();
-        });
-
-        card.addEventListener('keydown', (e) => {
-            // Acessibilidade: Enter/Espaço no card navega
-            if (e.key !== 'Enter' && e.key !== ' ') return;
-            if (e.target !== card) return;
-            e.preventDefault();
-            navigate();
-        });
-    });
-}
-
-function reativarModalImagens() {
-    const clickableImages = document.querySelectorAll('.img-clickable');
-    const modalImage = document.getElementById('modalImage');
-
-    if (clickableImages.length > 0 && modalImage) {
-        clickableImages.forEach((img) => {
-            img.addEventListener('click', function() {
-                modalImage.src = this.src;
-                modalImage.alt = this.alt;
+            // Gerencia visual dos botões
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.classList.remove('btn-primary', 'active');
+                b.classList.add('btn-outline-primary');
             });
-        });
-    }
+            btn.classList.add('btn-primary', 'active');
+            btn.classList.remove('btn-outline-primary');
+
+            // Filtra os cards
+            const cards = document.querySelectorAll('.filter-item');
+            cards.forEach(card => {
+                const categorias = card.getAttribute('data-category') || '';
+                if (filtroEscolhido === 'all' || categorias.split(' ').includes(filtroEscolhido)) {
+                    card.classList.remove('d-none');
+                } else {
+                    card.classList.add('d-none');
+                }
+            });
+        }
+    });
 }
 
 function ativarBotoesMapa() {
     const mapButtons = document.querySelectorAll('.btn-map');
-    const mapModal = new bootstrap.Modal(document.getElementById('mapModal'));
+    const modalEl = document.getElementById('mapModal');
+    if (!modalEl) return;
+    
+    const mapModal = new bootstrap.Modal(modalEl);
     const mapIframe = document.getElementById('mapIframe');
     const mapTitle = document.getElementById('mapModalLabel');
 
     mapButtons.forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
-            const localQuery = this.getAttribute('data-local');
+            e.stopPropagation(); // Evita navegar para o link do card
             
-            // Atualiza o título do modal
+            const localQuery = this.getAttribute('data-local');
             if(mapTitle) mapTitle.textContent = localQuery.replace(' Lagarto SE', '');
 
-            // Atualiza o iframe com a busca no Google Maps
-            // Usando a interface de embed simples (sem API Key necessária para visualização básica)
             const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(localQuery)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
             
             if(mapIframe) mapIframe.src = mapUrl;
-
             mapModal.show();
         });
     });
-    
-    // Limpa o iframe ao fechar para parar vídeos/carregamento
-    const mapModalEl = document.getElementById('mapModal');
-    if(mapModalEl) {
-        mapModalEl.addEventListener('hidden.bs.modal', function () {
-            if(mapIframe) mapIframe.src = "";
-        });
-    }
-}
 
-/**
- * Função global para abrir o mapa (usada nas páginas internas de locais)
- * Ex: onclick="openMap('Tanque Grande')"
- */
-function openMap(localName) {
-    const mapModalEl = document.getElementById('mapModal');
-    if (!mapModalEl) return;
-
-    // Verifica se já existe uma instância do modal, senão cria
-    let mapModal = bootstrap.Modal.getInstance(mapModalEl);
-    if (!mapModal) {
-        mapModal = new bootstrap.Modal(mapModalEl);
-    }
-
-    const mapIframe = document.getElementById('mapIframe');
-    const mapTitle = document.getElementById('mapModalLabel');
-    
-    // Adiciona o contexto da cidade para a busca ficar correta
-    const localQuery = localName + " Lagarto SE";
-
-    // Atualiza o título do modal
-    if(mapTitle) mapTitle.textContent = localName;
-
-    // Atualiza o iframe
-    const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(localQuery)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
-    
-    if(mapIframe) mapIframe.src = mapUrl;
-
-    mapModal.show();
-
-    // Limpa o iframe ao fechar (adiciona listener apenas se ainda não tiver)
-    // Nota: O listener global em ativarBotoesMapa ou aqui pode se acumular se não tomar cuidado,
-    // mas como a página recarrega na navegação, é tranquilo. 
-    // Para garantir, usamos { once: true } aqui.
-    mapModalEl.addEventListener('hidden.bs.modal', function () {
+    modalEl.addEventListener('hidden.bs.modal', () => {
         if(mapIframe) mapIframe.src = "";
-    }, { once: true });
+    });
 }
 
-// Necessário para funcionar com onclick="openMap('...')" em HTML quando o script é module
-if (typeof window !== 'undefined') {
-    window.openMap = openMap;
+function ativarClickCardsLocais() {
+    document.querySelectorAll('.custom-card[data-href]').forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('a, button')) return;
+            const href = card.getAttribute('data-href');
+            if (href) window.location.href = href;
+        });
+    });
 }
 
-// Chama a função assim que o arquivo carrega
+function reativarModalImagens() {
+    const modalImage = document.getElementById('modalImage');
+    document.querySelectorAll('.img-clickable').forEach(img => {
+        img.addEventListener('click', () => {
+            if(modalImage) {
+                modalImage.src = img.src;
+                modalImage.alt = img.alt;
+            }
+        });
+    });
+}
+
+// Inicialização Única
 document.addEventListener('DOMContentLoaded', () => {
     renderLocais();
-    aplicarBlurBgNosCarousels();
+    ativarFiltros();
 });

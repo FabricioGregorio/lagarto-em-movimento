@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Locais - Lagarto em Movimento</title>
@@ -16,41 +16,51 @@
 
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/locais.css" />
-  </head>
-  <body>
+</head>
+<body>
 
     <div id="header-component"></div>
 
     <div class="bg-gray-theme py-5 text-center">
-    <div class="container">
-        
-        <div class="title-wrapper fade-in-scroll">
-            <h1 class="font-zilla text-uppercase mb-0" style="color: var(--primary-color);">Guia Completo</h1>
+        <div class="container">
+            <div class="title-wrapper fade-in-scroll">
+                <h1 class="font-zilla text-uppercase mb-0" style="color: var(--primary-color);">Guia Completo</h1>
+            </div>
+            <p class="subtitle-styled fade-in-scroll">Todos os pontos mapeados na cidade</p>
         </div>
-
-        <p class="subtitle-styled fade-in-scroll">Todos os pontos mapeados na cidade</p>
-
     </div>
-</div>
 
     <section id="locais" class="py-5 section-locais">
         <div class="container">
-            <div class="row g-4">
             
-            <section id="locais" class="py-5 section-locais">
-                <div class="container">
-                    <div class="row g-4" id="locais-container">
+            <div class="mb-4">
+                <button class="btn btn-outline-dark d-flex align-items-center gap-2 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiltros" aria-expanded="false">
+                    <i class="fa-solid fa-filter"></i> 
+                    <span>Filtrar</span>
+                </button>
+
+                <div class="collapse" id="collapseFiltros">
+                    <div class="d-flex flex-wrap gap-2 p-3 bg-light rounded border shadow-sm">
+                        <button class="btn btn-sm rounded-pill filter-btn active" data-filter="all">Tudo</button>
+                        <button class="btn btn-sm rounded-pill filter-btn" data-filter="lazer">Lazer</button>
+                        <button class="btn btn-sm rounded-pill filter-btn" data-filter="natureza">Natureza</button>
+                        <button class="btn btn-sm rounded-pill filter-btn" data-filter="historia">História</button>
+                        <button class="btn btn-sm rounded-pill filter-btn" data-filter="familia">Família</button>
+                        <button class="btn btn-sm rounded-pill filter-btn" data-filter="infra">Infraestrutura</button>
+                        <button class="btn btn-sm rounded-pill filter-btn" data-filter="esportes">Esportes</button>
+                        <button class="btn btn-sm rounded-pill filter-btn" data-filter="acessibilidade">Acessibilidade</button>
                     </div>
                 </div>
-            </section>
+            </div>
+            
+            <div class="row g-4" id="locais-container">
+                </div> 
 
-            </div> 
         </div> 
     </section>
     
     <div id="footer-component"></div>
 
-    <!-- Modal do Mapa -->
     <div class="modal fade" id="mapModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -67,9 +77,11 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script type="module" src="../assets/js/locais.js"></script>
     <script type="module" src="../assets/js/components.js"></script>
     <script type="module" src="../assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    
+</body>
 </html>

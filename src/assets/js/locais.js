@@ -11,7 +11,7 @@ const listaLocais = [
         categorias: "natureza lazer acessibilidade", // Categoria para o filtro
         desc: "Um refúgio verde dentro da cidade. Além das piscinas naturais, possui trilhas curtas.",
         local: "Localizado às margens da avenida Contorno (rodovia SE-270).",
-        extra: "Horário: 08h:00–20h:00; Semana inteira.",
+        extra: "Horário: 08:00h às 20:00h; Semana inteira.",
         icon: "fa-clock",
         link: "locais/balneario-bica.html"
     },
@@ -35,7 +35,7 @@ const listaLocais = [
         categorias: "natureza lazer familia",
         desc: "Área verde para caminhada, descanso e atividades ao ar livre.",
         local: "Estrada Parque das Palmeiras, Povoado Brejo",
-        extra: "Horário: 08h:00–18h:00; Semana inteira",
+        extra: "Horário: 08:00h às 18:00h; Semana inteira",
         icon: "fa-clock",
         link: "locais/parque-das-palmeiras.html"
     },
@@ -47,7 +47,7 @@ const listaLocais = [
         categorias: "infra esportes",
         desc: "Espaço voltado à iniciação esportiva e atividades físicas, com estrutura para treinamentos.",
         local: "Rua Tiradentes, s/n, no Conjunto Matinha, no Bairro Aldemar de Carvalho",
-        extra: "Horário: 08h - 18h; Segunda a Sexta",
+        extra: "Horário: 08:00h às 18:00h; Segunda a Sexta",
         icon: "fa-clock",
         link: "locais/centro-de-iniciacao-ao-esporte.html"
     },

@@ -113,7 +113,7 @@ const listaLocais = [
     },
     {
         nome: "Parque Zezé Rocha",
-        img: new URL('../img/locais/zeze/zeze1.JPG', import.meta.url).href,
+        img: new URL('../img/locais/zeze/zeze1.jpg', import.meta.url).href,
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         categorias: "historia lazer familia",

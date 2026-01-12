@@ -905,3 +905,52 @@ body.dark-mode .modal-content {
     background-color: var(--bg-secondary);
     color: var(--text-color);
 }
+
+/* --- EFEITO DE HOVER COM ÍCONE EM IMAGENS CLICÁVEIS --- */
+/* Container para o efeito de hover na imagem */
+.img-hover-container {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 8px; /* Mesma curvatura da sua imagem */
+}
+
+/* Estilo do ícone que aparece no hover */
+.img-hover-container .hover-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem; /* Tamanho do ícone */
+    color: white;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 10;
+    pointer-events: none; /* Garante que o clique passe para a imagem e abra o modal */
+}
+
+/* Overlay escuro que aparece atrás do ícone */
+.img-hover-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Sombra preta com 50% de transparência */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+/* Ativação do ícone e do overlay ao passar o mouse */
+.img-hover-container:hover .hover-icon,
+.img-hover-container:hover::after {
+    opacity: 1;
+}
+
+/* Pequeno zoom na imagem no hover (opcional, para combinar com seus cards) */
+.img-hover-container:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}

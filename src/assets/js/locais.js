@@ -111,18 +111,6 @@ const listaLocais = [
         icon: "fa-clock",
         link: "locais/praca-santa-teresinha.html"
     },
-    {
-        nome: "Parque Zezé Rocha",
-        img: new URL('../img/locais/zeze/zeze1.jpg', import.meta.url).href,
-        badges: ["História", "Lazer"],
-        badgesClasses: ["badge-historia", "badge-lazer"],
-        categorias: "historia lazer familia",
-        desc: "Um dos palcos mais tradicionais da vaquejada no Nordeste, unindo desporto equestre e cultura.",
-        local: "Rodovia Lourival Baptista, Lagarto - SE",
-        extra: "Variável conforme eventos",
-        icon: "fa-calendar-check",
-        link: "locais/parque-zeze-rocha.html"
-    },
     
 ];
 

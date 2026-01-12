@@ -150,12 +150,12 @@ const listaLocais = [
         img: new URL('../img/locais/zeze/zeze1.jpg', import.meta.url).href,
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
-        categorias: "lazer historia acessibilidade",
+        categorias: "lazer historia",
         desc: "Ponto de encontro e passagem, com espaço para descanso.",
-        local: "Avenida José Josué da Silva (Ladeira do Rosário).",
-        extra: "Livre",
+        local: "Rodovia Lourival Baptista, Lagarto - SE.",
+        extra: "Consulte agenda de eventos",
         icon: "fa-clock",
-        link: "locais/parque-zeze-rocha.html"
+        link: "locais/parque-zeze.html"
     },
     
 ];

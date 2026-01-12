@@ -151,11 +151,24 @@ const listaLocais = [
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         categorias: "lazer historia acessibilidade",
-        desc: "Ícone da cultura e tradição das vaquejadas, o parque é palco de grandes eventos e lazer em Lagarto."
+        desc: "Ícone da cultura e tradição das vaquejadas, o parque é palco de grandes eventos e lazer em Lagarto.",
         local: "Rodovia Lourival Baptista, Lagarto - SE.",
         extra: "Consulte agenda de eventos",
         icon: "fa-clock",
-        link: "locais/parque-zeze.html"
+        link: "locais/parque-zeze-rocha.html"
+    },
+
+    {
+        nome: "Ginásio do Ribeirão",
+        img: new URL('../img/locais/ribeirao/ginasio.jfif', import.meta.url).href,
+        badges: ["Indoor", "Esportes"],
+        badgesClasses: ["badge-indoor", "badge-esportes"],
+        categorias: "infra esportes",
+        desc: "Espaço coberto para jogos de quadra, treinos e eventos esportivos.",
+        local: "Av. Sindicalista Antônio Francisco da Rocha",
+        extra: "Conforme atividades e eventos",
+        icon: "fa-clock",
+        link: "locais/ginasio-ribeirao.html"
     },
     
 ];

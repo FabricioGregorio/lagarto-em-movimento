@@ -8,14 +8,41 @@
     object-position: center;
 }
 
-/* Nos carousels, evita o efeito de "zoom" do cover:
-   - `contain` mostra a imagem inteira (sem corte)
-   - `object-position: bottom` mantém a parte inferior visível
-   Obs: pode aparecer "borda" (letterbox) dependendo da proporção da foto. */
+/* --- CAROUSEL (PÁGINAS DE LOCAIS) ---
+   Torna o carousel responsivo e consistente entre fotos com proporções diferentes.
+   - Define uma altura responsiva (baseada em vh) para evitar "pulos"/quebras
+   - Desktop: `contain` + blur background (mostra a foto inteira)
+   - Mobile: `cover` (evita imagem muito pequena com faixas) */
+.carousel {
+    --carousel-h: clamp(220px, 52vh, 520px);
+}
+
+.carousel .carousel-inner,
+.carousel .carousel-item {
+    height: var(--carousel-h);
+}
+
+.carousel .carousel-item {
+    overflow: hidden;
+}
+
 .carousel .local-cover-img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    object-position: center bottom;
+    object-position: center;
     background-color: transparent;
+}
+
+@media (max-width: 576px) {
+    .carousel {
+        --carousel-h: clamp(200px, 42vh, 420px);
+    }
+
+    .carousel .local-cover-img {
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 /* Efeito "blurred background" no carousel:

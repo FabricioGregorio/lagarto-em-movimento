@@ -133,16 +133,18 @@ body {
 /* Hero específico da página Equipe */
 body.page-equipe .main-header {
   background-image: url('../../assets/img/equipe/ifs.JPG');
-  background-position: center bottom;
   background-repeat: no-repeat;
-  /* “Zoom out” leve sem perder o preenchimento (desktop) */
-  background-size: 100% auto;
+  /* Responsivo: sempre preenche o header sem "quebrar" */
+  background-size: cover;
+  background-position: center bottom;
+  /* Evita bugs/"pulos" de background-attachment: fixed em mobile */
+  background-attachment: scroll;
 }
 
-/* Fallback para telas mais estreitas/altas: garante preenchimento total */
+/* Ajuste fino de enquadramento em telas menores */
 @media (max-width: 768px) {
   body.page-equipe .main-header {
-    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -441,6 +443,14 @@ body:not(.dark-mode) .card .bg-white {
 
 .badge-academia { 
   background-color: #e2aa1e; } /* Amarelo */
+
+.badge-infra {
+  background-color: #2a9d8f; /* Verde-azulado (infraestrutura) */
+}
+
+.badge-esportes {
+  background-color: #1d4ed8; /* Azul (esportes) */
+}
 
 .badge-futebol {
   background-color: #264653; /* Azul Petróleo Escuro */

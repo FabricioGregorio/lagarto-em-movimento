@@ -150,8 +150,8 @@ const listaLocais = [
         img: new URL('../img/locais/zeze/zeze1.jpg', import.meta.url).href,
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
-        categorias: "lazer historia",
-        desc: "Ponto de encontro e passagem, com espaço para descanso.",
+        categorias: "lazer historia acessibilidade",
+        desc: "Ícone da cultura e tradição das vaquejadas, o parque é palco de grandes eventos e lazer em Lagarto."
         local: "Rodovia Lourival Baptista, Lagarto - SE.",
         extra: "Consulte agenda de eventos",
         icon: "fa-clock",

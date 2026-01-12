@@ -151,7 +151,7 @@ const listaLocais = [
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         categorias: "lazer historia acessibilidade",
-        desc: "Ponto de encontro e passagem, com espaço para descanso.",
+        desc: "Ícone da cultura e tradição das vaquejadas, o parque é palco de grandes eventos e lazer em Lagarto.",
         local: "Avenida José Josué da Silva (Ladeira do Rosário).",
         extra: "Livre",
         icon: "fa-clock",

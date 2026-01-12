@@ -1,5 +1,3 @@
-// locais.js
-
 const imgCardPadrao = new URL('../img/locais/bannerLAG.jpg', import.meta.url).href;
 
 const listaLocais = [
@@ -111,6 +109,42 @@ const listaLocais = [
         icon: "fa-clock",
         link: "locais/praca-santa-teresinha.html"
     },
+        {
+        nome: "Praça do Gomes",
+        img: new URL('../img/locais/gomes/capa.JPEG', import.meta.url).href,
+        badges: ["Lazer", "Ar Livre"],
+        badgesClasses: ["badge-lazer", ""],
+        categorias: "lazer acessibilidade",
+        desc: "Espaço público para lazer e convivência ao ar livre.",
+        local: "Praça Jeremias Monteiro de Carvalho, 113 - São José.",
+        extra: "Livre",
+        icon: "fa-clock",
+        link: "locais/praca-do-gomes.html"
+    },
+    {
+        nome: "Praça José Domingo Vieira",
+        img: new URL('../img/locais/domingo/capa.JPEG', import.meta.url).href,
+        badges: ["Lazer", "Ar Livre"],
+        badgesClasses: ["badge-lazer", ""],
+        categorias: "lazer acessibilidade",
+        desc: "Praça para convivência, descanso e atividades ao ar livre.",
+        local: "Rua José Barreto de Souza, 1-107.",
+        extra: "Livre",
+        icon: "fa-clock",
+        link: "locais/praca-jose-domingo-vieira.html"
+    },
+    {
+        nome: "Praça José Josué da Silva (Ladeira do Rosário)",
+        img: new URL('../img/locais/ladeira/capa.JPEG', import.meta.url).href,
+        badges: ["História", "Lazer"],
+        badgesClasses: ["badge-historia", "badge-lazer"],
+        categorias: "lazer historia acessibilidade",
+        desc: "Ponto de encontro e passagem, com espaço para descanso.",
+        local: "Avenida José Josué da Silva (Ladeira do Rosário).",
+        extra: "Livre",
+        icon: "fa-clock",
+        link: "locais/praca-da-ladeira-do-rosario.html"
+    }
     
 ];
 

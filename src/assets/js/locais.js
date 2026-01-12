@@ -151,11 +151,11 @@ const listaLocais = [
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         categorias: "lazer historia acessibilidade",
-        desc: "Ícone da cultura e tradição das vaquejadas, o parque é palco de grandes eventos e lazer em Lagarto.",
-        local: "Avenida José Josué da Silva (Ladeira do Rosário).",
-        extra: "Livre",
+        desc: "Ícone da cultura e tradição das vaquejadas, o parque é palco de grandes eventos e lazer em Lagarto."
+        local: "Rodovia Lourival Baptista, Lagarto - SE.",
+        extra: "Consulte agenda de eventos",
         icon: "fa-clock",
-        link: "locais/parque-zeze-rocha.html"
+        link: "locais/parque-zeze.html"
     },
     
 ];

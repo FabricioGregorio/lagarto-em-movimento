@@ -144,7 +144,19 @@ const listaLocais = [
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-da-ladeira-do-rosario.html"
-    }
+    },
+    {
+        nome: "Parque Zezé Rocha",
+        img: new URL('../img/locais/zeze/zeze1.jpg', import.meta.url).href,
+        badges: ["História", "Lazer"],
+        badgesClasses: ["badge-historia", "badge-lazer"],
+        categorias: "lazer historia acessibilidade",
+        desc: "Ponto de encontro e passagem, com espaço para descanso.",
+        local: "Avenida José Josué da Silva (Ladeira do Rosário).",
+        extra: "Livre",
+        icon: "fa-clock",
+        link: "locais/parque-zeze-rocha.html"
+    },
     
 ];
 

@@ -151,12 +151,24 @@ const listaLocais = [
         badges: ["História", "Lazer"],
         badgesClasses: ["badge-historia", "badge-lazer"],
         categorias: "lazer historia acessibilidade",
-        desc: "Ícone da cultura e tradição das vaquejadas, o parque é palco de grandes eventos e lazer em Lagarto."
+        desc: "Ícone da cultura e tradição das vaquejadas, o parque é palco de grandes eventos e lazer em Lagarto.",
         local: "Rodovia Lourival Baptista, Lagarto - SE.",
         extra: "Consulte agenda de eventos",
         icon: "fa-clock",
         link: "locais/parque-zeze.html"
     },
+    {
+    nome: "Estádio Barretão",
+    img: new URL('../img/locais/barretao/barretao1.jpg', import.meta.url).href,
+    badges: ["Futebol", "Esportes"],
+    badgesClasses: ["badge-futebol", "badge-esportes"],
+    categorias: "esportes lazer",
+    desc: "O coração do futebol lagartense, casa do Lagarto FC e palco de grandes emoções desportivas.",
+    local: "Praça Jeremias Monteiro de Carvalho, Centro",
+    extra: "Conforme eventos e treinos",
+    icon: "fa-futbol",
+    link: "locais/estadio-barretao.html"
+},
     
 ];
 

@@ -34,6 +34,7 @@ export default defineConfig({
         parqueDasPalmeiras: resolve(__dirname, 'src/pages/locais/parque-das-palmeiras.html'),
         parqueZezeRocha: resolve(__dirname, 'src/pages/locais/parque-zeze-rocha.html'),
         barragemDionisio: resolve(__dirname, 'src/pages/locais/barragem-dionisio.html'),
+        estadioBarretao: resolve(__dirname, 'src/pages/locais/estadio-barretao.html'),
       },
     },
   },

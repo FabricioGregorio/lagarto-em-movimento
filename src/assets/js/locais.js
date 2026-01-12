@@ -111,18 +111,6 @@ const listaLocais = [
         icon: "fa-clock",
         link: "locais/praca-santa-teresinha.html"
     },
-    {
-        nome: "Parque Zezé Rocha",
-        img: new URL('../img/locais/zeze/zeze1.jpg', import.meta.url).href,
-        badges: ["História", "Lazer"],
-        badgesClasses: ["badge-historia", "badge-lazer"],
-        categorias: "historia lazer familia",
-        desc: "Ícone da cultura e tradição das vaquejadas, o parque é palco de grandes eventos e lazer em Lagarto.",
-        local: "Rodovia Lourival Baptista, Lagarto - SE.",
-        extra: "Consulte agenda de eventos",
-        icon: "fa-calendar-check",
-        link: "locais/parque-zeze-rocha.html"
-    },
     
 ];
 

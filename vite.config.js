@@ -32,6 +32,7 @@ export default defineConfig({
         ladeiraRosario: resolve(__dirname, 'src/pages/locais/praca-da-ladeira-do-rosario.html'),
         rosario: resolve(__dirname, 'src/pages/locais/praca-do-rosario.html'),
         parqueDasPalmeiras: resolve(__dirname, 'src/pages/locais/parque-das-palmeiras.html'),
+        parqueZezeRocha: resolve(__dirname, 'src/pages/locais/parque-zeze-rocha.html'),
         barragemDionisio: resolve(__dirname, 'src/pages/locais/barragem-dionisio.html'),
       },
     },

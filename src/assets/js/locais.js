@@ -1,5 +1,36 @@
 const imgCardPadrao = new URL('../img/locais/bannerLAG.jpg', import.meta.url).href;
 
+let filtroAtual = 'all';
+let termoBuscaAtual = '';
+
+function normalizarTexto(valor) {
+    return (valor || '')
+        .toString()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .trim();
+}
+
+function aplicarFiltrosNaListagem() {
+    const cards = document.querySelectorAll('.filter-item');
+    if (!cards.length) return;
+
+    cards.forEach(card => {
+        const categorias = (card.getAttribute('data-category') || '').split(' ').filter(Boolean);
+        const textoBusca = card.getAttribute('data-search') || '';
+
+        const passaCategoria = (filtroAtual === 'all') || categorias.includes(filtroAtual);
+        const passaBusca = !termoBuscaAtual || textoBusca.includes(termoBuscaAtual);
+
+        if (passaCategoria && passaBusca) {
+            card.classList.remove('d-none');
+        } else {
+            card.classList.add('d-none');
+        }
+    });
+}
+
 const listaLocais = [
     {
         nome: "Balneário da Bica José Agnaldo da Silva",
@@ -201,8 +232,10 @@ function renderLocais() {
             badgesHTML += `<span class="category-badge ${classeCor}">${textoBadge}</span>`;
         });
 
-        html += `
-        <div class="col-md-6 col-lg-4 filter-item" data-category="${item.categorias}">
+                const textoBusca = normalizarTexto(`${item.nome} ${item.desc} ${item.local}`);
+
+                html += `
+                <div class="col-md-6 col-lg-4 filter-item" data-category="${item.categorias}" data-search="${textoBusca}">
             <div class="card custom-card h-100 shadow-sm" data-href="${item.link}" role="link" tabindex="0" aria-label="Abrir detalhes de ${item.nome}">
               <div class="card-img-wrapper">
                 <a href="${item.link}" aria-label="Abrir detalhes de ${item.nome}">
@@ -238,6 +271,9 @@ function renderLocais() {
     ativarClickCardsLocais();
     reativarModalImagens();
     ativarBotoesMapa();
+
+    // Aplica filtros atuais (categoria + busca) após renderizar
+    aplicarFiltrosNaListagem();
 }
 
 // NOVA FUNÇÃO: Aplica o efeito de fundo no carrossel
@@ -260,7 +296,8 @@ function ativarFiltros() {
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('filter-btn')) {
             const btn = e.target;
-            const filtroEscolhido = btn.getAttribute('data-filter');
+            const filtroEscolhido = btn.getAttribute('data-filter') || 'all';
+            filtroAtual = filtroEscolhido;
 
             document.querySelectorAll('.filter-btn').forEach(b => {
                 b.classList.remove('btn-primary', 'active');
@@ -269,17 +306,31 @@ function ativarFiltros() {
             btn.classList.add('btn-primary', 'active');
             btn.classList.remove('btn-outline-primary');
 
-            const cards = document.querySelectorAll('.filter-item');
-            cards.forEach(card => {
-                const categorias = card.getAttribute('data-category') || '';
-                if (filtroEscolhido === 'all' || categorias.split(' ').includes(filtroEscolhido)) {
-                    card.classList.remove('d-none');
-                } else {
-                    card.classList.add('d-none');
-                }
-            });
+            aplicarFiltrosNaListagem();
         }
     });
+}
+
+function ativarPesquisa() {
+    const input = document.getElementById('search-locais');
+    if (!input) return;
+
+    const clearBtn = document.getElementById('clear-search');
+
+    const onInput = () => {
+        termoBuscaAtual = normalizarTexto(input.value);
+        aplicarFiltrosNaListagem();
+    };
+
+    input.addEventListener('input', onInput);
+
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            input.value = '';
+            input.focus();
+            onInput();
+        });
+    }
 }
 
 function ativarBotoesMapa() {
@@ -339,6 +390,7 @@ function reativarModalImagens() {
 document.addEventListener('DOMContentLoaded', () => {
     renderLocais();      // Para a página de listagem
     ativarFiltros();     // Para a página de listagem
+    ativarPesquisa();    // Busca em tempo real (página de listagem)
     
     // ATIVAÇÃO DO EFEITO: Importante para as páginas individuais (como Balneário)
     aplicarBlurBgNosCarousels(); 

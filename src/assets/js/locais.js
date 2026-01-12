@@ -110,7 +110,20 @@ const listaLocais = [
         extra: "Livre",
         icon: "fa-clock",
         link: "locais/praca-santa-teresinha.html"
-    }
+    },
+    {
+        nome: "Parque Zezé Rocha",
+        img: new URL('../img/locais/zeze/zeze1.JPG', import.meta.url).href,
+        badges: ["História", "Lazer"],
+        badgesClasses: ["badge-historia", "badge-lazer"],
+        categorias: "historia lazer familia",
+        desc: "Ícone da cultura e tradição das vaquejadas, o parque é palco de grandes eventos e lazer em Lagarto.",
+        local: "Rodovia Lourival Baptista, Lagarto - SE.",
+        extra: "Consulte agenda de eventos",
+        icon: "fa-calendar-check",
+        link: "locais/parque-zeze-rocha.html"
+    },
+    
 ];
 
 function renderLocais() {
@@ -228,7 +241,7 @@ function ativarBotoesMapa() {
             if(mapTitle) mapTitle.textContent = localQuery.replace(' Lagarto SE', '');
 
             // CORREÇÃO: trocado 1{ por ${
-            const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(localQuery)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+            const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(localQuery)}&output=embed`;
             
             if(mapIframe) mapIframe.src = mapUrl;
             mapModal.show();
@@ -273,3 +286,20 @@ document.addEventListener('DOMContentLoaded', () => {
     reativarModalImagens();
     ativarBotoesMapa();
 });
+
+window.openMap = function(localQuery) {
+    const modalEl = document.getElementById('mapModal');
+    if (!modalEl) return;
+    
+    const mapModal = new bootstrap.Modal(modalEl);
+    const mapIframe = document.getElementById('mapIframe');
+    const mapTitle = document.getElementById('mapModalLabel');
+
+    if(mapTitle) mapTitle.textContent = localQuery;
+    
+    // URL formatada corretamente para o iframe do Google Maps
+    const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(localQuery + " Lagarto SE")}&output=embed`;
+    
+    if(mapIframe) mapIframe.src = mapUrl;
+    mapModal.show();
+}

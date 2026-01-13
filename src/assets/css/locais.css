@@ -228,80 +228,134 @@ body.dark-mode .gallery-caption {
     border-color: #019EE3;
 }
 
-/* Barra de pesquisa (página de listagem) */
-.locais-toolbar {
+/* Container Principal (Pílula) */
+.custom-search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 6px;
+    border-radius: 100px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px; /* Um pouco maior para caber o filtro */
+    margin: 0 auto;
+}
+
+/* O Botão de Lupa Azul da Imagem */
+.main-search-btn {
+    background-color: #1A86B4;
+    border: none;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+/*ALTERAR ESSE */
+.main-search-btn:hover {
+    opacity: 0.7;
 }
 
-.locais-search {
-    width: 100%;
-    max-width: 760px;
-    border-radius: 999px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06), inset 0 0 0 1px rgba(1, 158, 227, 0.45);
+/* Campo de Input */
+.custom-search-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #444;
+    outline: none;
 }
 
-.locais-search .input-group-text {
-    color: #019EE3;
-    border: 0;
-    border-left: 1px solid rgba(1, 158, 227, 0.12);
+/* Botão de Limpar (X) */
+.btn-clear-custom {
+    border: none;
+    background: transparent;
+    color: #999;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: color 0.2s;
 }
 
-.locais-search .form-control {
-    border: 0;
-    border-left: 1px solid rgba(1, 158, 227, 0.12);
-    padding-left: 0.75rem;
+.btn-clear-custom:hover {
+    color: #ff4d4d;
 }
 
-.locais-search .form-control:focus {
-    box-shadow: none;
+/* Divisor vertical entre busca e filtro */
+.search-divider {
+    width: 1px;
+    height: 30px;
+    background-color: #ddd;
+    margin: 0 10px;
 }
 
-.locais-search .btn-filter {
-    border: 0;
-    background-color: rgba(1, 158, 227, 0.06);
-    color: #019EE3;
+/* Botão de Filtro Estilizado */
+.btn-filter-custom {
+    background: transparent;
+    border: none;
+    color: #1A86B4;
     font-weight: 600;
+    padding: 0 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s;
 }
 
-.locais-search .btn-filter:hover {
-    background-color: rgba(1, 158, 227, 0.12);
-    color: #019EE3;
+.btn-filter-custom:hover {
+    opacity: 0.7;
 }
 
-.locais-search .btn-filter[aria-expanded="true"] {
-    background-color: rgba(1, 158, 227, 0.18);
+/* Estilo dos Filtros que aparecem embaixo */
+/* Container dos filtros (o retângulo branco de baixo) */
+.bg-custom-filter {
+    background-color: #F2F2F2 !important;
+    border: none !important; /* Removi a borda para ficar igual à imagem */
+    border-radius: 20px !important; /* Bordas mais suaves */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+    max-width: 1500px; /* Limita a largura para não esticar demais */
+    margin: 0 auto; /* Centraliza o container em si na tela */
 }
 
-.locais-search .btn-clear {
-    border: 0;
-    border-left: 1px solid rgba(1, 158, 227, 0.12);
-    color: #019EE3;
+/* Botões de filtro individuais */
+.filter-btn {
+    border: 1px solid #1A86B4 !important;
+    color: #1A86B4 !important;
+    background-color: transparent;
+    padding: 8px 20px !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
-.locais-search .btn-clear:focus {
-    box-shadow: none;
+/* Botão Ativo (Tudo) */
+.filter-btn.active {
+    background-color: #1A86B4 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(29, 161, 242, 0.3);
+}
+.filter-btn.active:hover{
+     background-color:#1A86B4 !important;
+}
+/* Efeito ao passar o mouse */
+.filter-btn:hover {
+    background-color: rgba(29, 161, 242, 0.1) !important;
+    transform: translateY(-1px);
 }
 
-.locais-search .btn-clear:hover {
-    background-color: rgba(1, 158, 227, 0.05);
-    color: #019EE3;
-}
-
-.locais-search:focus-within {
-    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.08), inset 0 0 0 2px rgba(1, 158, 227, 1);
-}
-
-@media (max-width: 767.98px) {
-    .locais-search {
-        max-width: 100%;
+/* Responsividade */
+@media (max-width: 480px) {
+    .custom-search-container {
+        padding: 4px;
     }
-
-    .locais-search .btn-filter {
-        padding-left: 0.9rem;
-        padding-right: 0.9rem;
+    .main-search-btn {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
     }
 }
-

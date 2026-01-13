@@ -36,6 +36,7 @@ export default defineConfig({
         ginasioRibeirao: resolve(__dirname, 'src/pages/locais/ginasio-ribeirao.html'),
         barragemDionisio: resolve(__dirname, 'src/pages/locais/barragem-dionisio.html'),
         estadioBarretao: resolve(__dirname, 'src/pages/locais/estadio-barretao.html'),
+        cachoeiraSaboeiro: resolve(__dirname, 'src/pages/locais/cachoeira-do-saboeiro.html'),
       },
     },
   },

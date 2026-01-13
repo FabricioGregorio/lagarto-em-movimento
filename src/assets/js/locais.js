@@ -210,8 +210,20 @@ const listaLocais = [
     desc: "O coração do futebol lagartense, casa do Lagarto FC e palco de grandes emoções desportivas.",
     local: "Praça Jeremias Monteiro de Carvalho, Centro",
     extra: "Conforme eventos e treinos",
-    icon: "fa-futbol",
+    icon: "fa-clock",
     link: "locais/estadio-barretao.html"
+},
+{
+    nome: "Cachoeira do Saboeiro",
+    img: new URL('../img/locais/saboeiro/saboeiro1.jpg', import.meta.url).href,
+    badges: ["Natureza", "Lazer"],
+    badgesClasses: ["badge-natureza", "badge-lazer"],
+    categorias: "natureza lazer",
+    desc: "Refúgio natural com queda d'água e trilhas, ideal para o ecoturismo e banhos revigorantes.",
+    local: "Povoado Saboeiro, Zona Rural de Lagarto.",
+    extra: "Livre",
+    icon: "fa-clock",
+    link: "locais/cachoeira-do-saboeiro.html"
 },
     
 ];

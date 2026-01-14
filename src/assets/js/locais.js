@@ -1,4 +1,4 @@
-const imgCardPadrao = new URL('../img/locais/bannerLAG.jpg', import.meta.url).href;
+const imgCardPadrao = `${import.meta.env.BASE_URL}lagarto.jpg`;
 
 let filtroAtual = 'all';
 let termoBuscaAtual = '';

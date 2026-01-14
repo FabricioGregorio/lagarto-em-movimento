@@ -2,14 +2,15 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  // No GitHub Pages o site fica em /<repo>/, então precisamos ajustar o base.
-  // Em outros ambientes (dev local, Vercel etc.) mantemos '/'.
-  base: process.env.GITHUB_ACTIONS === 'true'
-    ? (() => {
-        const repoName = (process.env.GITHUB_REPOSITORY || '').split('/')[1];
-        return repoName ? `/${repoName}/` : '/';
-      })()
-    : '/',
+  // GitHub Pages publica em /<repo>/, então em build de produção precisamos de base com prefixo.
+  // Isso vale tanto para builds no GitHub Actions quanto builds locais (senão o Vite gera `/assets/...`).
+  base: (() => {
+    const isProdBuild = process.env.GITHUB_ACTIONS === 'true' || process.env.NODE_ENV === 'production';
+    if (!isProdBuild) return '/';
+
+    const repoName = (process.env.GITHUB_REPOSITORY || '').split('/')[1] || 'lagarto-em-movimento';
+    return `/${repoName}/`;
+  })(),
   build: {
     rollupOptions: {
       input: {

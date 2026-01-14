@@ -130,6 +130,14 @@ body {
   background-attachment: fixed;
 }
 
+/* iOS/Safari: `background-attachment: fixed` é bugado e pode impedir o hero de renderizar.
+   Mantém o efeito no desktop, mas evita tela "sem imagem" em iPhone/iPad. */
+@supports (-webkit-touch-callout: none) {
+  .main-header {
+    background-attachment: scroll;
+  }
+}
+
 /* Hero específico da página Equipe */
 body.page-equipe .main-header {
   background-image: url('../../assets/img/equipe/ifs.JPG');

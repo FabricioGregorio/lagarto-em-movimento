@@ -348,30 +348,51 @@ function ativarPesquisa() {
 function ativarBotoesMapa() {
     const mapButtons = document.querySelectorAll('.btn-map');
     const modalEl = document.getElementById('mapModal');
-    if (!modalEl) return;
-    
-    const mapModal = new bootstrap.Modal(modalEl);
+    if (!modalEl || typeof bootstrap === 'undefined') return;
+
     const mapIframe = document.getElementById('mapIframe');
     const mapTitle = document.getElementById('mapModalLabel');
 
-    mapButtons.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation(); 
-            
-            const localQuery = this.getAttribute('data-local');
-            if(mapTitle) mapTitle.textContent = localQuery.replace(' Lagarto SE', '');
+    const cleanupModalArtifacts = () => {
+        // Só limpa se não existir outro modal aberto (ex: modal de imagem)
+        const algumModalAberto = document.querySelector('.modal.show');
+        if (algumModalAberto) return;
 
-            // CORREÇÃO: trocado 1{ por ${
+        document.querySelectorAll('.modal-backdrop').forEach((backdrop) => backdrop.remove());
+        document.body.classList.remove('modal-open');
+        document.body.style.removeProperty('overflow');
+        document.body.style.removeProperty('padding-right');
+    };
+
+    // Garante 1 (uma) instância por elemento (evita múltiplos backdrops presos)
+    const mapModal = bootstrap.Modal.getOrCreateInstance(modalEl);
+
+    // Registra o handler de fechamento apenas uma vez
+    if (!modalEl.dataset.mapModalBound) {
+        modalEl.addEventListener('hidden.bs.modal', () => {
+            if (mapIframe) mapIframe.src = "";
+            cleanupModalArtifacts();
+        });
+        modalEl.dataset.mapModalBound = '1';
+    }
+
+    // Registra clique dos botões apenas uma vez (página de cards)
+    mapButtons.forEach((btn) => {
+        if (btn.dataset.mapButtonBound) return;
+        btn.dataset.mapButtonBound = '1';
+
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const localQuery = this.getAttribute('data-local') || '';
+            if (mapTitle) mapTitle.textContent = localQuery.replace(' Lagarto SE', '');
+
             const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(localQuery)}&output=embed`;
-            
-            if(mapIframe) mapIframe.src = mapUrl;
+            if (mapIframe) mapIframe.src = mapUrl;
+
             mapModal.show();
         });
-    });
-
-    modalEl.addEventListener('hidden.bs.modal', () => {
-        if(mapIframe) mapIframe.src = "";
     });
 }
 
@@ -407,16 +428,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // ATIVAÇÃO DO EFEITO: Importante para as páginas individuais (como Balneário)
     aplicarBlurBgNosCarousels(); 
     reativarModalImagens();
-    ativarBotoesMapa();
+    // `ativarBotoesMapa()` já é chamado dentro de `renderLocais()` (página de listagem).
+    // Para páginas individuais, `openMap()` cuida de abrir o modal.
 });
 
 window.openMap = function(localQuery) {
     const modalEl = document.getElementById('mapModal');
-    if (!modalEl) return;
-    
-    const mapModal = new bootstrap.Modal(modalEl);
+    if (!modalEl || typeof bootstrap === 'undefined') return;
+
+    const mapModal = bootstrap.Modal.getOrCreateInstance(modalEl);
     const mapIframe = document.getElementById('mapIframe');
     const mapTitle = document.getElementById('mapModalLabel');
+
+    const cleanupModalArtifacts = () => {
+        const algumModalAberto = document.querySelector('.modal.show');
+        if (algumModalAberto) return;
+
+        document.querySelectorAll('.modal-backdrop').forEach((backdrop) => backdrop.remove());
+        document.body.classList.remove('modal-open');
+        document.body.style.removeProperty('overflow');
+        document.body.style.removeProperty('padding-right');
+    };
+
+    if (!modalEl.dataset.mapModalBound) {
+        modalEl.addEventListener('hidden.bs.modal', () => {
+            if (mapIframe) mapIframe.src = "";
+            cleanupModalArtifacts();
+        });
+        modalEl.dataset.mapModalBound = '1';
+    }
 
     if(mapTitle) mapTitle.textContent = localQuery;
     

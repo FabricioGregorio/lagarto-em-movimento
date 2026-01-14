@@ -239,6 +239,7 @@ body.dark-mode .gallery-caption {
     width: 100%;
     max-width: 700px; /* Um pouco maior para caber o filtro */
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* O Botão de Lupa Azul da Imagem */
@@ -271,6 +272,8 @@ body.dark-mode .gallery-caption {
     font-size: 16px;
     color: #444;
     outline: none;
+    min-width: 0; /* Permite o input encolher em flex (evita overflow no mobile) */
+    width: 100%;
 }
 
 /* Botão de Limpar (X) */
@@ -357,5 +360,22 @@ body.dark-mode .gallery-caption {
         width: 40px;
         height: 40px;
         min-width: 40px;
+    }
+
+    .custom-search-input {
+        padding: 0 10px;
+        font-size: 15px;
+    }
+
+    .btn-clear-custom {
+        padding: 0 6px;
+    }
+
+    .search-divider {
+        margin: 0 6px;
+    }
+
+    .btn-filter-custom {
+        padding: 0 10px;
     }
 }
